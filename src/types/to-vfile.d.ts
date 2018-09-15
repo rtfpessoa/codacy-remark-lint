@@ -3,6 +3,7 @@ declare module 'to-vfile' {
 
   export interface ToVFile {
     (options: string | Buffer): VFile<{}>;
+    readSync(options: string | Buffer, enconding?: string): VFile<{}>;
   }
 
   const toVFile: ToVFile;

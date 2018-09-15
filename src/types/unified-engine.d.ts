@@ -6,6 +6,10 @@ declare module 'unified-engine' {
     (results: any): void;
   }
 
+  export interface Middleware {
+    (processor: Processor, options: Options, set: any): void;
+  }
+
   export interface Options {
     processor: Processor;
     cwd?: string;
@@ -24,6 +28,8 @@ declare module 'unified-engine' {
     silent?: boolean;
     quiet?: boolean;
     frail?: boolean;
+    injectedPlugins?: Array<any>;
+    defaultConfig?: object;
   }
 
   export interface Engine {

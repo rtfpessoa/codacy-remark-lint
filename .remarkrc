@@ -1,7 +1,8 @@
 {
   "plugins": [
     "remark-preset-lint-recommended",
-    ["remark-lint-list-item-indent", false]
+    ["remark-lint-list-item-indent", false],
+    ["remark-lint-ordered-list-marker-value", "one"]
   ]
 }
 

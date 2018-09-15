@@ -4584,7 +4584,7 @@ remark-lint-ordered-list-marker-style@^1.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-ordered-list-marker-value@^1.0.0:
+remark-lint-ordered-list-marker-value@^1.0.0, remark-lint-ordered-list-marker-value@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/remark-lint-ordered-list-marker-value/-/remark-lint-ordered-list-marker-value-1.0.2.tgz#26f5f1ddfadb7c958f8e2c15cd3aa9f2be985be6"
   dependencies:
