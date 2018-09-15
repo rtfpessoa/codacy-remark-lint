@@ -1,12 +1,10 @@
 import remark from 'remark';
+import toVFile from 'to-vfile';
 import engine from 'unified-engine';
-import vFile, { VFile, VFileMessage } from 'vfile';
+import { VFile, VFileMessage } from 'vfile';
 
-export function run(fileName: string, fileContents: string): any {
-  const file = vFile({
-    contents: fileContents,
-    path: fileName
-  });
+export function run(): any {
+  const file = toVFile('README.md');
 
   const extensions = require('markdown-extensions');
 
@@ -27,7 +25,7 @@ export function run(fileName: string, fileContents: string): any {
         processor: remark(),
         rcName: '.remarkrc',
         reporter: results => {
-          return resolve(reportVFileMessagesAsIssue(file.path, results[0]));
+          return resolve(reportVFileMessagesAsIssue(results[0]));
         }
       },
       (error, code, context) => {
@@ -35,7 +33,7 @@ export function run(fileName: string, fileContents: string): any {
           return;
         }
 
-        const message = `${fileName}
+        const message = `${file.path}
         Error running processor
         
         ${error.toString()}
@@ -50,18 +48,17 @@ export function run(fileName: string, fileContents: string): any {
 }
 
 function reportVFileMessagesAsIssue(
-  fileName: string,
   vfile: VFile<{
     readonly path: string;
     readonly contents: string;
     readonly messages: ReadonlyArray<VFileMessage>;
   }>
 ): any {
-  const { messages } = vfile;
+  const { path, messages } = vfile;
 
   return messages.map((msg: VFileMessage) => {
     return {
-      fileName,
+      filename: path,
       line: msg.location.start.line || msg.line || 1,
       message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
       pattern: `${msg.source}.${msg.ruleId}`,
