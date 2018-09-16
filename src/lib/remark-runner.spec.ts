@@ -5,16 +5,24 @@ import { Configuration, EmptyConfiguration } from './codacy-configuration';
 import run from './remark-runner';
 
 test('run analysis when codacy config file is not found but has .remarkrc', async t => {
-  const testsPath = path.join(process.cwd(), 'test_samples/repositories/remark-config-file-simple');
-  const results = await run({ sourcePath: testsPath, codacyConfigurationRetriever: () => EmptyConfiguration });
+  const testsPath = path.join(
+    process.cwd(),
+    'test_samples/repositories/remark-config-file-simple'
+  );
+  const results = await run({
+    codacyConfigurationRetriever: () => EmptyConfiguration,
+    sourcePath: testsPath
+  });
 
   t.deepEqual(results, [
     {
       file: 'README.md',
       line: 7,
-      message: '[no-undefined-references] Found reference to undefined definition',
+      message:
+        '[no-undefined-references] Found reference to undefined definition',
       patternId: 'remark-lint.no-undefined-references'
-    }, {
+    },
+    {
       file: 'README.md',
       line: 10,
       message: '[ordered-list-marker-value] Marker should be `1`, was `2`',
@@ -30,7 +38,10 @@ test('run analysis when codacy config file is not found but has .remarkrc', asyn
 });
 
 test('run analysis when codacy config file is found with only files', async t => {
-  const testsPath = path.join(process.cwd(), 'test_samples/repositories/remark-config-file');
+  const testsPath = path.join(
+    process.cwd(),
+    'test_samples/repositories/remark-config-file'
+  );
   const results = await run({
     codacyConfigurationRetriever: () => {
       const config: Configuration = { files: ['SUMMARY.md'] };
@@ -43,9 +54,11 @@ test('run analysis when codacy config file is found with only files', async t =>
     {
       file: 'SUMMARY.md',
       line: 7,
-      message: '[no-undefined-references] Found reference to undefined definition',
+      message:
+        '[no-undefined-references] Found reference to undefined definition',
       patternId: 'remark-lint.no-undefined-references'
-    }, {
+    },
+    {
       file: 'SUMMARY.md',
       line: 10,
       message: '[ordered-list-marker-value] Marker should be `1`, was `2`',
@@ -61,11 +74,14 @@ test('run analysis when codacy config file is found with only files', async t =>
 });
 
 test('run analysis when codacy config file is found with files and patterns', async t => {
-  const testsPath = path.join(process.cwd(), 'test_samples/repositories/remark-config-file');
+  const testsPath = path.join(
+    process.cwd(),
+    'test_samples/repositories/remark-config-file'
+  );
   const results = await run({
     codacyConfigurationRetriever: () => {
       const config: Configuration = {
-        config: { plugins: [["remark-lint-ordered-list-marker-value", "one"]] },
+        config: { plugins: [['remark-lint-ordered-list-marker-value', 'one']] },
         files: ['SUMMARY.md']
       };
       return config;

@@ -1,7 +1,10 @@
 import remark from 'remark';
 import engine from 'unified-engine';
 import { VFile, VFileMessage } from 'vfile';
-import configFromCodacy, { Configuration, EmptyConfiguration } from './codacy-configuration';
+import configFromCodacy, {
+  Configuration,
+  EmptyConfiguration
+} from './codacy-configuration';
 
 type FileWithResults = VFile<{
   readonly path: string;
@@ -25,33 +28,39 @@ export default function run(
   options: {
     readonly sourcePath?: string;
     readonly codacyConfigPath?: string;
-    readonly codacyConfigurationRetriever?: (path: string) => Configuration
-  } = {}): Promise<ReadonlyArray<CodacyIssue>> {
-  const { sourcePath = '/src', codacyConfigPath = '/.codacyrc', codacyConfigurationRetriever = configFromCodacy } = options
-  const { files = [sourcePath], config } = codacyConfigPath ? codacyConfigurationRetriever(codacyConfigPath) : EmptyConfiguration;
+    readonly codacyConfigurationRetriever?: (path: string) => Configuration;
+  } = {}
+): Promise<ReadonlyArray<CodacyIssue>> {
+  const {
+    sourcePath = '/src',
+    codacyConfigPath = '/.codacyrc',
+    codacyConfigurationRetriever = configFromCodacy
+  } = options;
+  const { files = [sourcePath], config } = codacyConfigPath
+    ? codacyConfigurationRetriever(codacyConfigPath)
+    : EmptyConfiguration;
 
   const extensions = require('markdown-extensions');
 
   const remarkDefaults = {
-    ignoreName: '.remarkignore',
     packageField: 'remarkConfig',
     pluginPrefix: 'remark',
     presetPrefix: 'remark-preset',
     rcName: '.remarkrc'
-  }
+  };
 
-  const configurationSource = config ? { defaultConfig: config } : (
-    {
-      ...remarkDefaults,
-      defaultConfig: {
-        plugins: [
-          "remark-preset-lint-recommended",
-          ["remark-lint-list-item-indent", false],
-          ["remark-lint-ordered-list-marker-value", "one"]
-        ]
-      }
-    }
-  );
+  const configurationSource = config
+    ? { defaultConfig: config }
+    : {
+        ...remarkDefaults,
+        defaultConfig: {
+          plugins: [
+            'remark-preset-lint-recommended',
+            ['remark-lint-list-item-indent', false],
+            ['remark-lint-ordered-list-marker-value', 'one']
+          ]
+        }
+      };
 
   return new Promise((resolve, reject) => {
     return engine(
@@ -60,17 +69,22 @@ export default function run(
         cwd: sourcePath,
         extensions,
         files: [...files],
+        ignoreName: '.remarkignore',
+        pluginPrefix: 'remark',
         processor: remark(),
         reporter: (results: ReadonlyArray<FileWithResults>) => {
-          const fileCodacyIssues = results.map((fileResults: FileWithResults) => convertVFileMessagesAsIssue(fileResults));
+          const fileCodacyIssues = results.map((fileResults: FileWithResults) =>
+            convertVFileMessagesAsIssue(fileResults)
+          );
           const codacyIssues = Array<CodacyIssue>().concat(...fileCodacyIssues);
           return resolve(codacyIssues);
-        }
+        },
+        silentlyIgnore: true
       },
       (error, code, context) => {
-        if (!error) { return; }
-
-        if (context) { console.error(context); }
+        if (!error) {
+          return;
+        }
 
         const message = `Error running processor
         
@@ -85,7 +99,9 @@ export default function run(
   });
 }
 
-function convertVFileMessagesAsIssue(vfile: FileWithResults): ReadonlyArray<CodacyIssue> {
+function convertVFileMessagesAsIssue(
+  vfile: FileWithResults
+): ReadonlyArray<CodacyIssue> {
   const { path, messages } = vfile;
 
   return messages.map((msg: VFileMessage) => {

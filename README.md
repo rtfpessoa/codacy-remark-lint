@@ -1,5 +1,7 @@
 # codacy-remark-lint
 
+# codacy-remark-linta
+
 Codacy wrapper to support remark-lint analysis of Markdown files
 
 * Hello
@@ -13,3 +15,9 @@ Codacy wrapper to support remark-lint analysis of Markdown files
 1. A
 1. B
 1. C
+
+```js
+console.log("cenas");
+
+eval("cenas");
+```

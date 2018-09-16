@@ -30,6 +30,7 @@ declare module 'unified-engine' {
     frail?: boolean;
     injectedPlugins?: Array<any>;
     defaultConfig?: object;
+    silentlyIgnore?: boolean;
   }
 
   export interface Engine {
