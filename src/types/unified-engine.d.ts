@@ -35,7 +35,7 @@ declare module 'unified-engine' {
   export interface Engine {
     (
       options: Options,
-      callback: (err: Error | null, code?: any, context?: any) => void
+      callback: (err: Error | null, code?: number, context?: object) => void
     ): void;
   }
 

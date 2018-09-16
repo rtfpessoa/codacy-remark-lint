@@ -1,12 +1,17 @@
 import toVFile from 'to-vfile';
 
+export const EmptyConfiguration: Configuration = {}
+
 export default function configFromCodacy(configPath?: string): Configuration {
   const codacyConfig = readCodacyConfiguration(configPath);
-  const possibleFiles = codacyConfig ? { files: codacyConfig.files } : {};
-  const possibleConfig = codacyConfig ? { config: { plugins: configFromPatterns(codacyConfig) } } : {};
+
+  if (!codacyConfig) { return EmptyConfiguration; }
+
+  const patternsConfig = configFromPatterns(codacyConfig);
+  const possibleConfig = patternsConfig ? { config: { plugins: patternsConfig } } : {};
 
   return {
-    ...possibleFiles,
+    files: codacyConfig.files,
     ...possibleConfig
   };
 };
@@ -44,13 +49,16 @@ interface CodacyConfiguration {
 
 function readCodacyConfiguration(configPath?: string): CodacyConfiguration | undefined {
   const path = configPath || '/.codacyrc';
-  const configFileContents = toVFile.readSync(path, 'utf8').contents;
+  const configFileContents = readFile(path);
+
+  if (!configFileContents) { return; }
 
   try {
     const codacyConfigAny: any = (typeof configFileContents === 'string') ? JSON.parse(configFileContents) : configFileContents.toJSON;
     const codacyConfig: CodacyConfiguration = codacyConfigAny as CodacyConfiguration;
     return codacyConfig;
   } catch (err) {
+    // TODO: Invalid configurations should fail the analysis
     console.error(err)
     return;
   }
@@ -72,4 +80,12 @@ function configFromPatterns(codacyConfig: CodacyConfiguration): ReadonlyArray<Re
   }
 
   return;
+}
+
+function readFile(path: string): string | Buffer | undefined {
+  try {
+    return toVFile.readSync(path, 'utf8').contents;
+  } catch (error) {
+    return;
+  }
 }
