@@ -43,7 +43,9 @@ jobs:
     working_directory: ~/workdir
     steps:
       - checkout
-      - run: npm run docker
+      - run: npm run docker:build
+      - run: npm run docker:login
+      - run: npm run docker:push
 
 workflows:
   version: 2

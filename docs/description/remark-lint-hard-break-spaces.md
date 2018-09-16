@@ -1,0 +1,1 @@
+Warn when too many spaces are used to create a hard break.

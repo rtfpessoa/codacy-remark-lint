@@ -1,0 +1,1 @@
+Warn when duplicate headings are found.

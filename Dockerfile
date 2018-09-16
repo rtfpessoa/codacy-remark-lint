@@ -20,6 +20,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY --from=build /workdir/build/main /app/build/main
 COPY --from=build /workdir/package.json /app/package.json
 COPY --from=build /workdir/yarn.lock /app/yarn.lock
+COPY --from=build /workdir/docs /docs
 
 WORKDIR /app
 

@@ -1,0 +1,1 @@
+Warn when file names contain initial or final dashes.

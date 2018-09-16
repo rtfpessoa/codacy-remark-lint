@@ -1,0 +1,1 @@
+Warn for h7+ “headings”.

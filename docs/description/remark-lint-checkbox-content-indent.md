@@ -1,0 +1,1 @@
+Warn when list item checkboxes are followed by too much white-space.

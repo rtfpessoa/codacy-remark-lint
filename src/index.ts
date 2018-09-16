@@ -9,6 +9,8 @@ run().then(results => {
     process.stdout.write(JSON.stringify(result));
     process.stdout.write('\n');
   });
+
+  process.exit(0);
 });
 
 /* tslint:enable:no-expression-statement*/
