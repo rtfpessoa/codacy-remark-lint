@@ -1,29 +1,11 @@
-import toVFile from 'to-vfile';
-
-export const EmptyConfiguration: Configuration = {};
-
-export default function configFromCodacy(configPath?: string): Configuration {
-  const codacyConfig = readCodacyConfiguration(configPath);
-
-  if (!codacyConfig) {
-    return EmptyConfiguration;
-  }
-
-  const patternsConfig = configFromPatterns(codacyConfig);
-  const possibleConfig = patternsConfig
-    ? { config: { plugins: patternsConfig } }
-    : {};
-
-  return {
-    files: codacyConfig.files,
-    ...possibleConfig
-  };
-}
+import readFile from './util/file';
 
 export interface Configuration {
   readonly files?: ReadonlyArray<string>;
   readonly config?: object;
 }
+
+export const EmptyConfiguration: Configuration = {};
 
 type ParameterValueScalar = string | number | boolean | object;
 interface ParameterValueArray {
@@ -51,6 +33,24 @@ interface CodacyConfiguration {
   readonly tools?: ReadonlyArray<CodacyTool>;
 }
 
+export default function configFromCodacy(configPath?: string): Configuration {
+  const codacyConfig = readCodacyConfiguration(configPath);
+
+  if (!codacyConfig) {
+    return EmptyConfiguration;
+  }
+
+  const patternsConfig = configFromPatterns(codacyConfig);
+  const possibleConfig = patternsConfig
+    ? { config: { plugins: patternsConfig } }
+    : {};
+
+  return {
+    files: codacyConfig.files,
+    ...possibleConfig
+  };
+}
+
 function readCodacyConfiguration(
   configPath?: string
 ): CodacyConfiguration | undefined {
@@ -62,11 +62,7 @@ function readCodacyConfiguration(
   }
 
   try {
-    const codacyConfigAny: any =
-      typeof configFileContents === 'string'
-        ? JSON.parse(configFileContents)
-        : configFileContents.toJSON;
-    const codacyConfig: CodacyConfiguration = codacyConfigAny as CodacyConfiguration;
+    const codacyConfig = JSON.parse(configFileContents) as CodacyConfiguration;
     return codacyConfig;
   } catch (err) {
     // tslint:disable-next-line:no-expression-statement
@@ -80,12 +76,12 @@ function configFromPatterns(
   codacyConfig: CodacyConfiguration
 ): ReadonlyArray<ReadonlyArray<ParameterValue>> | undefined {
   if (codacyConfig.tools) {
-    const remarkTool = codacyConfig.tools.find(
+    const toolPatterns = codacyConfig.tools.find(
       (tool: CodacyTool) => tool.name === 'remark-lint'
     );
 
-    if (remarkTool && remarkTool.patterns) {
-      return remarkTool.patterns
+    if (toolPatterns && toolPatterns.patterns) {
+      return toolPatterns.patterns
         .map((pattern: CodacyPattern) => {
           if (pattern.parameters && pattern.parameters.length === 1) {
             return [pattern.patternId, pattern.parameters[0].value];
@@ -98,12 +94,4 @@ function configFromPatterns(
   }
 
   return;
-}
-
-function readFile(path: string): string | Buffer | undefined {
-  try {
-    return toVFile.readSync(path, 'utf8').contents;
-  } catch (error) {
-    return;
-  }
 }

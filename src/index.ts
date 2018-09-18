@@ -6,8 +6,7 @@ import run from './lib/remark-runner';
 
 run().then(results => {
   results.forEach(result => {
-    process.stdout.write(JSON.stringify(result));
-    process.stdout.write('\n');
+    process.stdout.write(`${JSON.stringify(result)}\n`);
   });
 
   process.exit(0);
