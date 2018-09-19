@@ -1,6 +1,5 @@
 import { Tag } from 'dox';
 
-/* Find the first tag in `tags` with a type set to `key`. */
 export function find(
   tags: ReadonlyArray<Tag>,
   key: string
@@ -12,7 +11,6 @@ export function find(
   return tagOpt ? tagOpt.string : tagOpt;
 }
 
-/* Find the first tag in `tags` with a type set to `key`. */
 export function findAll(
   tags: ReadonlyArray<Tag>,
   key: string

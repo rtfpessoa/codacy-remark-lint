@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import path from 'path';
 import rule, { Rule } from './util/rule';
 import rules from './util/rules';
