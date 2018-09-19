@@ -13,9 +13,6 @@ exports.plugins = [
   require('remark-preset-lint-recommended'),
   require('remark-preset-lint-markdown-style-guide'),
   [require('remark-lint-unordered-list-marker-style'), 'consistent'],
-  [require('remark-lint-code'), {
-    "js": require('remark-lint-code-eslint')
-  }],
   require('remark-lint-no-dead-urls'),
   require('remark-lint-heading-whitespace'),
   [require('remark-lint-write-good'), ["warn", {
