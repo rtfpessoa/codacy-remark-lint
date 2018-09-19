@@ -10,7 +10,7 @@ test('run analysis when codacy config file is not found but has .remarkrc', asyn
     'test_samples/repositories/remark-config-file-simple'
   );
   const results = await run({
-    codacyConfigurationRetriever: () => EmptyConfiguration,
+    getCodacyConfiguration: () => EmptyConfiguration,
     sourcePath: testsPath
   });
 
@@ -43,7 +43,7 @@ test('run analysis when codacy config file is found with only files', async t =>
     'test_samples/repositories/remark-config-file'
   );
   const results = await run({
-    codacyConfigurationRetriever: () => {
+    getCodacyConfiguration: () => {
       const config: Configuration = { files: ['SUMMARY.md'] };
       return config;
     },
@@ -79,7 +79,7 @@ test('run analysis when codacy config file is found with files and patterns', as
     'test_samples/repositories/remark-config-file'
   );
   const results = await run({
-    codacyConfigurationRetriever: () => {
+    getCodacyConfiguration: () => {
       const config: Configuration = {
         config: { plugins: [['remark-lint-ordered-list-marker-value', 'one']] },
         files: ['SUMMARY.md']

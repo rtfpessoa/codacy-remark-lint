@@ -19,30 +19,31 @@ interface CodacyIssue {
   readonly line: number;
 }
 
-// interface CodacyFileError {
-//   readonly file: string;
-//   readonly message?: string;
-// }
+interface AnalysisFailure {
+  readonly error: Error;
+  readonly message: string;
+}
 
 export default function run(
   options: {
     readonly sourcePath?: string;
     readonly codacyConfigPath?: string;
-    readonly codacyConfigurationRetriever?: (path: string) => Configuration;
+    readonly getCodacyConfiguration?: (path: string) => Configuration;
   } = {}
 ): Promise<ReadonlyArray<CodacyIssue>> {
   const {
     sourcePath = '/src',
     codacyConfigPath = '/.codacyrc',
-    codacyConfigurationRetriever = configFromCodacy
+    getCodacyConfiguration = configFromCodacy
   } = options;
-  const { files = [sourcePath], config } = codacyConfigPath
-    ? codacyConfigurationRetriever(codacyConfigPath)
-    : EmptyConfiguration;
 
   const extensions = require('markdown-extensions');
 
-  const remarkDefaults = {
+  const { files = [sourcePath], config } = codacyConfigPath
+    ? getCodacyConfiguration(codacyConfigPath)
+    : EmptyConfiguration;
+
+  const remarkLocalDefaults = {
     packageField: 'remarkConfig',
     pluginPrefix: 'remark',
     presetPrefix: 'remark-preset',
@@ -52,7 +53,7 @@ export default function run(
   const configurationSource = config
     ? { defaultConfig: config }
     : {
-        ...remarkDefaults,
+        ...remarkLocalDefaults,
         defaultConfig: {
           plugins: [
             'remark-preset-lint-recommended',
@@ -72,44 +73,67 @@ export default function run(
         ignoreName: '.remarkignore',
         pluginPrefix: 'remark',
         processor: remark(),
-        reporter: (results: ReadonlyArray<FileWithResults>) => {
-          const fileCodacyIssues = results.map((fileResults: FileWithResults) =>
-            convertVFileMessagesAsIssue(fileResults)
-          );
-          const codacyIssues = Array<CodacyIssue>().concat(...fileCodacyIssues);
-          return resolve(codacyIssues);
-        },
+        reporter: (results: ReadonlyArray<FileWithResults>) =>
+          resolve(getCodacyIssues(results)),
         silentlyIgnore: true
       },
       (error, code, context) => {
-        if (!error) {
-          return;
+        const analysisFailure = callback(error, code, context);
+        if (analysisFailure) {
+          return reject(analysisFailure);
         }
 
-        const message = `Error running processor
-        
-        ${error.toString()}
-        
-        code: ${code}
-        context: ${context}`;
-
-        return reject({ error, message });
+        return;
       }
     );
   });
 }
 
-function convertVFileMessagesAsIssue(
-  vfile: FileWithResults
-): ReadonlyArray<CodacyIssue> {
-  const { path, messages } = vfile;
+function callback(
+  error: Error | null,
+  code: number | undefined,
+  context: object | undefined
+): AnalysisFailure | undefined {
+  if (error) {
+    return onError(error, code, context);
+  }
 
-  return messages.map((msg: VFileMessage) => {
-    return {
-      file: path,
-      line: msg.location.start.line || msg.line || 1,
-      message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
-      patternId: `${msg.source}.${msg.ruleId}`
-    };
+  return;
+}
+
+function onError(
+  error: Error,
+  code: number | undefined,
+  context: object | undefined
+): AnalysisFailure {
+  const message = `Error running processor
+  
+  ${error.toString()}
+  
+  code: ${code}
+  context: ${context}`;
+
+  return { error, message };
+}
+
+function getCodacyIssues(
+  results: ReadonlyArray<FileWithResults>
+): ReadonlyArray<CodacyIssue> {
+  const fileCodacyIssues = results.map((fileResults: FileWithResults) => {
+    const { path, messages } = fileResults;
+    return messages.map((message: VFileMessage) =>
+      getCodacyIssue(path, message)
+    );
   });
+
+  return Array<CodacyIssue>().concat(...fileCodacyIssues);
+}
+
+function getCodacyIssue(path: string, msg: VFileMessage): CodacyIssue {
+  return {
+    file: path,
+    line: msg.location.start.line || msg.line || 1,
+    message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
+    patternId: `${msg.source}.${msg.ruleId}`
+  };
 }
