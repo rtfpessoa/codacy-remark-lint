@@ -14,7 +14,7 @@ declare module 'unified-engine' {
     processor: Processor;
     cwd?: string;
     files?: Array<string | VFile<any>>;
-    extensions?: string[];
+    extensions?: ReadonlyArray<string>;
     rcName?: string;
     ignoreName?: string;
     pluginPrefix?: string;

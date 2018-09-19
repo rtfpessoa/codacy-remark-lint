@@ -1,3 +1,4 @@
+import extensions from 'markdown-extensions';
 import remark from 'remark';
 import engine from 'unified-engine';
 import { VFile, VFileMessage } from 'vfile';
@@ -6,11 +7,11 @@ import configFromCodacy, {
   EmptyConfiguration
 } from './codacy-configuration';
 
-type FileWithResults = VFile<{
+interface Results {
   readonly path: string;
   readonly contents: string;
   readonly messages: ReadonlyArray<VFileMessage>;
-}>;
+}
 
 interface CodacyIssue {
   readonly file: string;
@@ -36,8 +37,6 @@ export default function run(
     codacyConfigPath = '/.codacyrc',
     getCodacyConfiguration = configFromCodacy
   } = options;
-
-  const extensions = require('markdown-extensions');
 
   const { files = [sourcePath], config } = codacyConfigPath
     ? getCodacyConfiguration(codacyConfigPath)
@@ -73,7 +72,7 @@ export default function run(
         ignoreName: '.remarkignore',
         pluginPrefix: 'remark',
         processor: remark(),
-        reporter: (results: ReadonlyArray<FileWithResults>) =>
+        reporter: (results: ReadonlyArray<VFile<Results>>) =>
           resolve(getCodacyIssues(results)),
         silentlyIgnore: true
       },
@@ -117,9 +116,9 @@ function onError(
 }
 
 function getCodacyIssues(
-  results: ReadonlyArray<FileWithResults>
+  results: ReadonlyArray<VFile<Results>>
 ): ReadonlyArray<CodacyIssue> {
-  const fileCodacyIssues = results.map((fileResults: FileWithResults) => {
+  const fileCodacyIssues = results.map((fileResults: VFile<Results>) => {
     const { path, messages } = fileResults;
     return messages.map((message: VFileMessage) =>
       getCodacyIssue(path, message)

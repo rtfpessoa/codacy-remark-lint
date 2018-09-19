@@ -5,6 +5,7 @@
     "tslint-immutable"
   ],
   "rules": {
+    "no-unsafe-any": true,
     "interface-name": [
       true,
       "never-prefix"
