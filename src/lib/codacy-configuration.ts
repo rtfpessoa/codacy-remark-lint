@@ -34,13 +34,13 @@ interface CodacyConfiguration {
 }
 
 export default function configFromCodacy(configPath?: string): Configuration {
-  const codacyConfig = readCodacyConfiguration(configPath);
+  const codacyConfig = parseCodacyConfiguration(configPath);
 
   if (!codacyConfig) {
     return EmptyConfiguration;
   }
 
-  const patternsConfig = configFromPatterns(codacyConfig);
+  const patternsConfig = getPluginsToExecute(codacyConfig);
   const possibleConfig = patternsConfig
     ? { config: { plugins: patternsConfig } }
     : {};
@@ -51,7 +51,7 @@ export default function configFromCodacy(configPath?: string): Configuration {
   };
 }
 
-function readCodacyConfiguration(
+function parseCodacyConfiguration(
   configPath?: string
 ): CodacyConfiguration | undefined {
   const path = configPath || '/.codacyrc';
@@ -67,12 +67,12 @@ function readCodacyConfiguration(
   } catch (err) {
     // tslint:disable-next-line:no-expression-statement
     process.stderr.write(`${err}\n`);
-    // TODO: Invalid configurations should fail the analysis
+    process.exit(50);
     return;
   }
 }
 
-function configFromPatterns(
+function getPluginsToExecute(
   codacyConfig: CodacyConfiguration
 ): ReadonlyArray<ReadonlyArray<ParameterValue>> | undefined {
   if (codacyConfig.tools) {
@@ -82,13 +82,12 @@ function configFromPatterns(
 
     if (toolPatterns && toolPatterns.patterns) {
       return toolPatterns.patterns
-        .map((pattern: CodacyPattern) => {
-          if (pattern.parameters && pattern.parameters.length === 1) {
-            return [pattern.patternId, pattern.parameters[0].value];
-          }
-
-          return [];
-        })
+        .map(
+          (pattern: CodacyPattern) =>
+            pattern.parameters && pattern.parameters.length === 1
+              ? [pattern.patternId, pattern.parameters[0].value]
+              : []
+        )
         .filter(e => e.length > 0);
     }
   }
