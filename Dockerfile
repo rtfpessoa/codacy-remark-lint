@@ -17,10 +17,12 @@ LABEL MAITAINER="Rodrigo Fernandes <rodrigo@codacy.com>"
 ENV NODE_PATH /app/node_modules
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY --from=build /workdir/build/main /app/build/main
-COPY --from=build /workdir/package.json /app/package.json
-COPY --from=build /workdir/yarn.lock /app/yarn.lock
-COPY --from=build /workdir/docs /docs
+RUN adduser -u 2004 -D docker
+
+COPY --from=build --chown=docker:docker /workdir/build/main /app/build/main
+COPY --from=build --chown=docker:docker /workdir/package.json /app/package.json
+COPY --from=build --chown=docker:docker /workdir/yarn.lock /app/yarn.lock
+COPY --from=build --chown=docker:docker /workdir/docs /docs
 
 WORKDIR /app
 
@@ -29,8 +31,6 @@ RUN \
     yarn link && \
     chmod +x /app/build/main/index.js && \
     rm -rf /tmp/yarn-cache /root/.yarn
-
-RUN adduser -u 2004 -D docker
 
 WORKDIR /src
 
