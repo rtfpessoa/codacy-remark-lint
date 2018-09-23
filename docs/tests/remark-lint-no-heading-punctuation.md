@@ -1,18 +1,18 @@
-<!---#Patterns: remark-lint-no-heading-punctuation -->
+<!--#Patterns: remark-lint-no-heading-punctuation -->
 
 # Hello
 
-<!---#Warn: remark-lint-no-heading-punctuation -->
+<!--#Warn: remark-lint-no-heading-punctuation -->
 # Hello:
 
-<!---#Warn: remark-lint-no-heading-punctuation -->
+<!--#Warn: remark-lint-no-heading-punctuation -->
 # Hello?
 
-<!---#Warn: remark-lint-no-heading-punctuation -->
+<!--#Warn: remark-lint-no-heading-punctuation -->
 # Hello!
 
-<!---#Warn: remark-lint-no-heading-punctuation -->
+<!--#Warn: remark-lint-no-heading-punctuation -->
 # Hello,
 
-<!---#Warn: remark-lint-no-heading-punctuation -->
+<!--#Warn: remark-lint-no-heading-punctuation -->
 # Hello;

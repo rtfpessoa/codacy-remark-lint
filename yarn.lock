@@ -1074,7 +1074,7 @@ character-reference-invalid@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.2.tgz#21e421ad3d84055952dab4a43a04e73cd425d3ed"
 
-check-links@^1.1.2:
+check-links@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/check-links/-/check-links-1.1.4.tgz#4003797d36b8002d96992b6d9f42a6026da3a39a"
   dependencies:
@@ -5360,11 +5360,11 @@ remark-lint-no-consecutive-blank-lines@^1.0.0, remark-lint-no-consecutive-blank-
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-dead-urls@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-dead-urls/-/remark-lint-no-dead-urls-0.4.0.tgz#df6327cbe09265dcdb6e5aa8dc31f9927323d814"
+remark-lint-no-dead-urls@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-dead-urls/-/remark-lint-no-dead-urls-0.4.1.tgz#aa6f28ef751ed3b4daa1198cb607c4f20f7aae5a"
   dependencies:
-    check-links "^1.1.2"
+    check-links "^1.1.4"
     is-online "^7.0.0"
     unified-lint-rule "^1.0.1"
     unist-util-visit "^1.1.3"

@@ -17,6 +17,7 @@ declare module 'unified-engine' {
     extensions?: ReadonlyArray<string>;
     rcName?: string;
     ignoreName?: string;
+    out?: boolean;
     pluginPrefix?: string;
     plugins?: Array<Plugin | [Plugin, { [key: string]: any }]>;
     presetPrefix?: string;

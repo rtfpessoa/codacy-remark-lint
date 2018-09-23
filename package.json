@@ -100,7 +100,7 @@
     "remark-lint-no-auto-link-without-protocol": "^1.0.2",
     "remark-lint-no-blockquote-without-marker": "^2.0.2",
     "remark-lint-no-consecutive-blank-lines": "^1.0.2",
-    "remark-lint-no-dead-urls": "^0.4.0",
+    "remark-lint-no-dead-urls": "^0.4.1",
     "remark-lint-no-duplicate-definitions": "^1.0.2",
     "remark-lint-no-duplicate-headings": "^1.0.2",
     "remark-lint-no-duplicate-headings-in-section": "^1.0.2",

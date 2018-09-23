@@ -70,8 +70,10 @@ export default function run(
         extensions,
         files: [...files],
         ignoreName: '.remarkignore',
+        out: false,
         pluginPrefix: 'remark',
         processor: remark(),
+        quiet: true,
         reporter: (results: ReadonlyArray<VFile<Results>>) =>
           resolve(getCodacyIssues(results)),
         silentlyIgnore: true
@@ -133,6 +135,6 @@ function getCodacyIssue(path: string, msg: VFileMessage): CodacyIssue {
     file: path,
     line: msg.location.start.line || msg.line || 1,
     message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
-    patternId: `${msg.source}.${msg.ruleId}`
+    patternId: `${msg.source}-${msg.ruleId}`
   };
 }
