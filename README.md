@@ -1,9 +1,9 @@
 # codacy-remark-lint
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b2b737cd8a4745b30112a91a1db4e0)](https://www.codacy.com/app/rtfpessoa/codacy-remark-lint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rtfpessoa/codacy-remark-lint&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/59b2b737cd8a4745b30112a91a1db4e0)](https://www.codacy.com/app/rtfpessoa/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=rtfpessoa/codacy-remark-lint&utm_campaign=Badge_Coverage)
-[![CircleCI](https://circleci.com/gh/rtfpessoa/codacy-remark-lint.svg?style=svg)](https://circleci.com/gh/rtfpessoa/codacy-remark-lint)
-[![Docker Version](https://images.microbadger.com/badges/version/rtfpessoa/codacy-remark-lint.svg)](https://microbadger.com/images/rtfpessoa/codacy-remark-lint "Get your own version badge on microbadger.com")
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/app/Codacy/codacy-remark-lint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-remark-lint&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/app/Codacy/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-remark-lint&utm_campaign=Badge_Coverage)
+[![CircleCI](https://circleci.com/gh/codacy/codacy-remark-lint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-remark-lint)
+[![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-remark-lint.svg)](https://microbadger.com/images/codacy/codacy-remark-lint "Get your own version badge on microbadger.com")
 
 Docker engine to allow Codacy to have [remark-lint](https://github.com/remarkjs/remark-lint) support.
 

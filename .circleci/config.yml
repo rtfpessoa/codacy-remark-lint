@@ -38,6 +38,13 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn run test
 
+  "docker-build":
+    machine: true
+    working_directory: ~/workdir
+    steps:
+      - checkout
+      - run: npm run docker:build
+
   "docker":
     machine: true
     working_directory: ~/workdir
@@ -53,4 +60,16 @@ workflows:
     jobs:
       - "node-8"
       - "node-latest"
-      - "docker"
+      - "docker-build":
+          filters:
+              branches:
+                ignore:
+                - master
+      - "docker":
+          requires:
+            - "node-8"
+            - "node-latest"
+          filters:
+              branches:
+                only:
+                - master

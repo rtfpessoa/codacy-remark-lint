@@ -1,5 +1,7 @@
 FROM node:8-alpine AS build
 
+LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
+
 ENV NODE_PATH /usr/lib/node_modules
 
 COPY . /workdir
@@ -12,7 +14,7 @@ RUN \
 
 FROM node:8-alpine
 
-LABEL MAITAINER="Rodrigo Fernandes <rodrigo@codacy.com>"
+LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
 
 ENV NODE_PATH /app/node_modules
 ENV PATH /app/node_modules/.bin:$PATH
