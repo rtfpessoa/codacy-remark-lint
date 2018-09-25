@@ -19,7 +19,7 @@
   "scripts": {
     "info": "npm-scripts-info",
     "docs:gen": "node build/main/codacy-docs.js",
-    "docker:login": "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD",
+    "docker:login": "docker login -u $DOCKER_USER -p $DOCKER_PASS",
     "docker:build": "docker build --no-cache --tag codacy/codacy-remark-lint:dev .",
     "build": "run-s clean && run-p build:*",
     "build:main": "tsc -p tsconfig.json",
