@@ -1,7 +1,7 @@
 # https://circleci.com/docs/2.0/language-javascript/
 version: 2
 jobs:
-  "node-8":
+  node_8:
     docker:
       - image: circleci/node:8
     working_directory: ~/workdir
@@ -21,7 +21,7 @@ jobs:
       - run: yarn run test
       - run: yarn run cov:send
 
-  "node-latest":
+  node_latest:
     docker:
       - image: circleci/node:latest
     working_directory: ~/workdir
@@ -38,37 +38,97 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn run test
 
-  "docker-build":
+  publish_docker_locally:
     machine: true
     working_directory: ~/workdir
     steps:
-      - checkout
-      - run: npm run docker:build
+    - checkout
+    - attach_workspace:
+        at: ~/workdir
+    - run:
+        name: Publish local docker
+        command: docker build --no-cache --tag codacy/codacy-remark-lint:dev .
+    - run:
+        name: Save docker to file
+        command: |
+          mkdir workspace
+          docker save --output workspace/codacy-remark-lint.tar codacy/$CIRCLE_PROJECT_REPONAME:dev
+    - persist_to_workspace:
+        root: workspace
+        paths:
+        - codacy-remark-lint.tar
 
-  "docker":
+  publish_dockerhub:
     machine: true
     working_directory: ~/workdir
     steps:
-      - checkout
-      - run: npm run docker:build
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load docker from file
+          command: docker load --input /tmp/workspace/codacy-remark-lint.tar
+      - run: docker tag -t codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:1.0.$CIRCLE_BUILD_NUM
+      - run: docker tag -t codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:latest
       - run: npm run docker:login
-      - run: npm run docker:push
+      - run: docker push codacy/$CIRCLE_PROJECT_REPONAME:1.0.$CIRCLE_BUILD_NUM
+      - run: docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
+
+  integration_tests:
+    machine: true
+    working_directory: ~/
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load docker from file
+          command: docker load --input /tmp/workspace/codacy-remark-lint.tar
+      - run: 
+          name: Clone test project
+          working_directory: ~/
+          command: |
+            (git -C ~/codacy-plugins-test fetch --all && 
+              git -C ~/codacy-plugins-test reset --hard origin/master) || 
+                git clone git://github.com/codacy/codacy-plugins-test.git ~/codacy-plugins-test
+      - restore_cache:
+          key: dependencies-{{ checksum "~/codacy-plugins-test/build.sbt" }}
+      - run: 
+          name: Compile test project
+          working_directory: ~/codacy-plugins-test
+          command: sbt compile
+      - save_cache:
+          key: dependencies-{{ checksum "~/codacy-plugins-test/build.sbt" }}
+          paths:
+            - "~/.ivy2"
+            - "~/.m2"
+            - "~/.sbt"
+            - "~/codacy-plugins-test/target"
+            - "~/codacy-plugins-test/project/target"
+            - "~/codacy-plugins-test/project/project"
+      - run: 
+          name: Test json
+          working_directory: ~/codacy-plugins-test
+          command: sbt "runMain codacy.plugins.DockerTest json codacy/$CIRCLE_PROJECT_REPONAME:dev"
+      - run:
+          name: Test patterns
+          working_directory: ~/codacy-plugins-test
+          command: sbt -Dcodacy.tests.threads=8 "runMain codacy.plugins.DockerTest pattern codacy/$CIRCLE_PROJECT_REPONAME:dev"
 
 workflows:
   version: 2
   build:
     jobs:
-      - "node-8"
-      - "node-latest"
-      - "docker-build":
-          filters:
-              branches:
-                ignore:
-                - master
-      - "docker":
+      - node_8
+      - node_latest
+      - publish_docker_locally
+      - integration_tests:
           requires:
-            - "node-8"
-            - "node-latest"
+            - publish_docker_locally
+      - publish_dockerhub:
+          requires:
+            - node_8
+            - node_latest
+            - publish_docker_locally
+            - integration_tests
           filters:
               branches:
                 only:
