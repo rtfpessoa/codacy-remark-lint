@@ -1,0 +1,11 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "tools": [
+    {
+      "name": "remark-lint",
+      "patterns": null
+    }
+  ]
+}

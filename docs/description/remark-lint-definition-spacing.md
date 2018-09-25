@@ -1,0 +1,1 @@
+Warn when consecutive white space is used in a definition.

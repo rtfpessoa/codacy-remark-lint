@@ -1,0 +1,1 @@
+Warn when URLs are also defined identifiers.

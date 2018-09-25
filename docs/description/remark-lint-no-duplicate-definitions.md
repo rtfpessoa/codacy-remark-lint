@@ -1,0 +1,1 @@
+Warn when duplicate definitions are found.

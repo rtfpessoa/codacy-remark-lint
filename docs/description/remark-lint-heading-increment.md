@@ -1,0 +1,1 @@
+Warn when headings increment with more than 1 level at a time.

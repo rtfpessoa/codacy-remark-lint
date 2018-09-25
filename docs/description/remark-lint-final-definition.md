@@ -1,0 +1,1 @@
+Warn when definitions are not placed at the end of the file.

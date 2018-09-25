@@ -1,0 +1,1 @@
+Warn for empty URLs in links and images.

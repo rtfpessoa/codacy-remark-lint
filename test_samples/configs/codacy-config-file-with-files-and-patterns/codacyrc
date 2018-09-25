@@ -1,0 +1,21 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "tools": [
+    {
+      "name": "remark-lint",
+      "patterns": [
+        {
+          "patternId": "remark-lint-ordered-list-marker-value",
+          "parameters": [
+            {
+              "name": "remark-lint-ordered-list-marker-value",
+              "value": "one"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
