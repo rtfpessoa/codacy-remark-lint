@@ -25,6 +25,7 @@ COPY --from=build --chown=docker:docker /workdir/build/main /app/build/main
 COPY --from=build --chown=docker:docker /workdir/package.json /app/package.json
 COPY --from=build --chown=docker:docker /workdir/yarn.lock /app/yarn.lock
 COPY --from=build --chown=docker:docker /workdir/docs /docs
+COPY --from=build --chown=docker:docker /workdir/docs-tests /docs/tests
 
 WORKDIR /app
 

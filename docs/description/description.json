@@ -1,1 +1,494 @@
-[{"parameters":[{"description":"remark-lint-blockquote-indentation","name":"remark-lint-blockquote-indentation"}],"description":"Warn when blockquotes are indented too much or too little.","patternId":"remark-lint-blockquote-indentation","timeToFix":5,"title":"Warn when blockquotes are indented too much or too little."},{"parameters":[{"description":"remark-lint-checkbox-character-style","name":"remark-lint-checkbox-character-style"}],"description":"Warn when list item checkboxes violate a given style.","patternId":"remark-lint-checkbox-character-style","timeToFix":5,"title":"Warn when list item checkboxes violate a given style."},{"description":"Warn when list item checkboxes are followed by too much white-space.","patternId":"remark-lint-checkbox-content-indent","timeToFix":5,"title":"Warn when list item checkboxes are followed by too much white-space."},{"parameters":[{"description":"remark-lint-code-block-style","name":"remark-lint-code-block-style"}],"description":"Warn when code-blocks do not adhere to a given style.","patternId":"remark-lint-code-block-style","timeToFix":5,"title":"Warn when code-blocks do not adhere to a given style."},{"description":"Warn when definition labels are not lower-case.","patternId":"remark-lint-definition-case","timeToFix":5,"title":"Warn when definition labels are not lower-case."},{"description":"Warn when consecutive white space is used in a definition.","patternId":"remark-lint-definition-spacing","timeToFix":5,"title":"Warn when consecutive white space is used in a definition."},{"parameters":[{"description":"remark-lint-emphasis-marker","name":"remark-lint-emphasis-marker"}],"description":"Warn for violating emphasis markers.","patternId":"remark-lint-emphasis-marker","timeToFix":5,"title":"Warn for violating emphasis markers."},{"description":"Check fenced code-block flags.","patternId":"remark-lint-fenced-code-flag","timeToFix":5,"title":"Check fenced code-block flags."},{"parameters":[{"description":"remark-lint-fenced-code-marker","name":"remark-lint-fenced-code-marker"}],"description":"Warn for violating fenced code markers.","patternId":"remark-lint-fenced-code-marker","timeToFix":5,"title":"Warn for violating fenced code markers."},{"parameters":[{"description":"remark-lint-file-extension","name":"remark-lint-file-extension"}],"description":"Warn when the file extension differ from the preferred extension.","patternId":"remark-lint-file-extension","timeToFix":5,"title":"Warn when the file extension differ from the preferred extension."},{"description":"Warn when definitions are not placed at the end of the file.","patternId":"remark-lint-final-definition","timeToFix":5,"title":"Warn when definitions are not placed at the end of the file."},{"description":"Warn when a newline at the end of a file is missing. Empty files are allowed.","patternId":"remark-lint-final-newline","timeToFix":5,"title":"Warn when a newline at the end of a file is missing. Empty files are allowed."},{"parameters":[{"description":"remark-lint-first-heading-level","name":"remark-lint-first-heading-level"}],"description":"Warn when the first heading has a level other than a specified value.","patternId":"remark-lint-first-heading-level","timeToFix":5,"title":"Warn when the first heading has a level other than a specified value."},{"description":"Warn when too many spaces are used to create a hard break.","patternId":"remark-lint-hard-break-spaces","timeToFix":5,"title":"Warn when too many spaces are used to create a hard break."},{"description":"Warn when headings increment with more than 1 level at a time.","patternId":"remark-lint-heading-increment","timeToFix":5,"title":"Warn when headings increment with more than 1 level at a time."},{"description":"Warn when a heading does not conform to a given style.","patternId":"remark-lint-heading-style","timeToFix":5,"title":"Warn when a heading does not conform to a given style."},{"description":"Warn when linebreaks violate a given or detected style.","patternId":"remark-lint-linebreak-style","timeToFix":5,"title":"Warn when linebreaks violate a given or detected style."},{"parameters":[{"description":"remark-lint-link-title-style","name":"remark-lint-link-title-style"}],"description":"Warn when link and definition titles occur with incorrect quotes.","patternId":"remark-lint-link-title-style","timeToFix":5,"title":"Warn when link and definition titles occur with incorrect quotes."},{"description":"Warn when list item bullets are indented.","patternId":"remark-lint-list-item-bullet-indent","timeToFix":5,"title":"Warn when list item bullets are indented."},{"description":"Warn when the content of a list item has mixed indentation.","patternId":"remark-lint-list-item-content-indent","timeToFix":5,"title":"Warn when the content of a list item has mixed indentation."},{"parameters":[{"description":"remark-lint-list-item-indent","name":"remark-lint-list-item-indent"}],"description":"Warn when the spacing between a list item’s bullet and its content","patternId":"remark-lint-list-item-indent","timeToFix":5,"title":"Warn when the spacing between a list item’s bullet and its content"},{"description":"Warn when list looseness is incorrect, such as being tight","patternId":"remark-lint-list-item-spacing","timeToFix":5,"title":"Warn when list looseness is incorrect, such as being tight"},{"parameters":[{"description":"remark-lint-maximum-heading-length","name":"remark-lint-maximum-heading-length"}],"description":"Warn when headings are too long.","patternId":"remark-lint-maximum-heading-length","timeToFix":5,"title":"Warn when headings are too long."},{"parameters":[{"description":"remark-lint-maximum-line-length","name":"remark-lint-maximum-line-length"}],"description":"Warn when lines are too long.","patternId":"remark-lint-maximum-line-length","timeToFix":5,"title":"Warn when lines are too long."},{"description":"Warn for angle-bracketed links without protocol.","patternId":"remark-lint-no-auto-link-without-protocol","timeToFix":5,"title":"Warn for angle-bracketed links without protocol."},{"description":"Warn when blank lines without markers (`>`) are found in a blockquote.","patternId":"remark-lint-no-blockquote-without-marker","timeToFix":5,"title":"Warn when blank lines without markers (`>`) are found in a blockquote."},{"description":"Warn for too many consecutive blank lines.  Knows about the extra line","patternId":"remark-lint-no-consecutive-blank-lines","timeToFix":5,"title":"Warn for too many consecutive blank lines.  Knows about the extra line"},{"description":"Warn when duplicate definitions are found.","patternId":"remark-lint-no-duplicate-definitions","timeToFix":5,"title":"Warn when duplicate definitions are found."},{"description":"Warn when duplicate headings are found.","patternId":"remark-lint-no-duplicate-headings","timeToFix":5,"title":"Warn when duplicate headings are found."},{"description":"Warn when duplicate headings are found, but only when on the same level,","patternId":"remark-lint-no-duplicate-headings-in-section","timeToFix":5,"title":"Warn when duplicate headings are found, but only when on the same level,"},{"description":"Warn when emphasis (including strong), instead of a heading, introduces","patternId":"remark-lint-no-emphasis-as-heading","timeToFix":5,"title":"Warn when emphasis (including strong), instead of a heading, introduces"},{"description":"Warn for empty URLs in links and images.","patternId":"remark-lint-no-empty-url","timeToFix":5,"title":"Warn for empty URLs in links and images."},{"description":"Warn when file name start with an article.","patternId":"remark-lint-no-file-name-articles","timeToFix":5,"title":"Warn when file name start with an article."},{"description":"Warn when file names contain consecutive dashes.","patternId":"remark-lint-no-file-name-consecutive-dashes","timeToFix":5,"title":"Warn when file names contain consecutive dashes."},{"parameters":[{"description":"remark-lint-no-file-name-irregular-characters","name":"remark-lint-no-file-name-irregular-characters"}],"description":"Warn when file names contain irregular characters: characters other than","patternId":"remark-lint-no-file-name-irregular-characters","timeToFix":5,"title":"Warn when file names contain irregular characters: characters other than"},{"description":"Warn when a file name uses mixed case: both upper- and lower case","patternId":"remark-lint-no-file-name-mixed-case","timeToFix":5,"title":"Warn when a file name uses mixed case: both upper- and lower case"},{"description":"Warn when file names contain initial or final dashes.","patternId":"remark-lint-no-file-name-outer-dashes","timeToFix":5,"title":"Warn when file names contain initial or final dashes."},{"description":"Warn when a heading’s content is indented.","patternId":"remark-lint-no-heading-content-indent","timeToFix":5,"title":"Warn when a heading’s content is indented."},{"description":"Warn when a heading is indented.","patternId":"remark-lint-no-heading-indent","timeToFix":5,"title":"Warn when a heading is indented."},{"description":"Warn for h7+ “headings”.","patternId":"remark-lint-no-heading-like-paragraph","timeToFix":5,"title":"Warn for h7+ “headings”."},{"parameters":[{"description":"remark-lint-no-heading-punctuation","name":"remark-lint-no-heading-punctuation"}],"description":"Warn when a heading ends with a a group of characters.","patternId":"remark-lint-no-heading-punctuation","timeToFix":5,"title":"Warn when a heading ends with a a group of characters."},{"description":"Warn when HTML nodes are used.","patternId":"remark-lint-no-html","timeToFix":5,"title":"Warn when HTML nodes are used."},{"description":"Warn when inline nodes are padded with spaces between their markers and","patternId":"remark-lint-no-inline-padding","timeToFix":5,"title":"Warn when inline nodes are padded with spaces between their markers and"},{"description":"Warn when URLs without angle-brackets are used.","patternId":"remark-lint-no-literal-urls","timeToFix":5,"title":"Warn when URLs without angle-brackets are used."},{"description":"Warn when missing blank lines before a block node.","patternId":"remark-lint-no-missing-blank-lines","timeToFix":5,"title":"Warn when missing blank lines before a block node."},{"parameters":[{"description":"remark-lint-no-multiple-toplevel-headings","name":"remark-lint-no-multiple-toplevel-headings"}],"description":"Warn when multiple top-level headings are used.","patternId":"remark-lint-no-multiple-toplevel-headings","timeToFix":5,"title":"Warn when multiple top-level headings are used."},{"description":"Warn when the content in paragraphs are indented.","patternId":"remark-lint-no-paragraph-content-indent","timeToFix":5,"title":"Warn when the content in paragraphs are indented."},{"description":"Warn when URLs are also defined identifiers.","patternId":"remark-lint-no-reference-like-url","timeToFix":5,"title":"Warn when URLs are also defined identifiers."},{"description":"Warn when shell code is prefixed by dollar-characters.","patternId":"remark-lint-no-shell-dollars","timeToFix":5,"title":"Warn when shell code is prefixed by dollar-characters."},{"description":"Warn when shortcut reference images are used.","patternId":"remark-lint-no-shortcut-reference-image","timeToFix":5,"title":"Warn when shortcut reference images are used."},{"description":"Warn when shortcut reference links are used.","patternId":"remark-lint-no-shortcut-reference-link","timeToFix":5,"title":"Warn when shortcut reference links are used."},{"description":"Warn when tables are indented.","patternId":"remark-lint-no-table-indentation","timeToFix":5,"title":"Warn when tables are indented."},{"description":"Warn when hard tabs are used instead of spaces.","patternId":"remark-lint-no-tabs","timeToFix":5,"title":"Warn when hard tabs are used instead of spaces."},{"description":"Warn when references to undefined definitions are found.","patternId":"remark-lint-no-undefined-references","timeToFix":5,"title":"Warn when references to undefined definitions are found."},{"description":"Warn when unused definitions are found.","patternId":"remark-lint-no-unused-definitions","timeToFix":5,"title":"Warn when unused definitions are found."},{"parameters":[{"description":"remark-lint-ordered-list-marker-style","name":"remark-lint-ordered-list-marker-style"}],"description":"Warn when the list-item marker style of ordered lists violate a given","patternId":"remark-lint-ordered-list-marker-style","timeToFix":5,"title":"Warn when the list-item marker style of ordered lists violate a given"},{"parameters":[{"description":"remark-lint-ordered-list-marker-value","name":"remark-lint-ordered-list-marker-value"}],"description":"Warn when the list-item marker values of ordered lists violate a","patternId":"remark-lint-ordered-list-marker-value","timeToFix":5,"title":"Warn when the list-item marker values of ordered lists violate a"},{"description":"Warn when the horizontal rules violate a given or detected style.","patternId":"remark-lint-rule-style","timeToFix":5,"title":"Warn when the horizontal rules violate a given or detected style."},{"parameters":[{"description":"remark-lint-strong-marker","name":"remark-lint-strong-marker"}],"description":"Warn for violating strong markers.","patternId":"remark-lint-strong-marker","timeToFix":5,"title":"Warn for violating strong markers."},{"parameters":[{"description":"remark-lint-table-cell-padding","name":"remark-lint-table-cell-padding"}],"description":"Warn when table cells are incorrectly padded.","patternId":"remark-lint-table-cell-padding","timeToFix":5,"title":"Warn when table cells are incorrectly padded."},{"description":"Warn when table pipes are not aligned.","patternId":"remark-lint-table-pipe-alignment","timeToFix":5,"title":"Warn when table pipes are not aligned."},{"description":"Warn when table rows are not fenced with pipes.","patternId":"remark-lint-table-pipes","timeToFix":5,"title":"Warn when table rows are not fenced with pipes."},{"parameters":[{"description":"remark-lint-unordered-list-marker-style","name":"remark-lint-unordered-list-marker-style"}],"description":"Warn when the list-item marker style of unordered lists violate a given","patternId":"remark-lint-unordered-list-marker-style","timeToFix":5,"title":"Warn when the list-item marker style of unordered lists violate a given"}]
+[
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-blockquote-indentation",
+        "name": "remark-lint-blockquote-indentation"
+      }
+    ],
+    "description": "Warn when blockquotes are indented too much or too little.",
+    "patternId": "remark-lint-blockquote-indentation",
+    "timeToFix": 5,
+    "title": "Warn when blockquotes are indented too much or too little."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-checkbox-character-style",
+        "name": "remark-lint-checkbox-character-style"
+      }
+    ],
+    "description": "Warn when list item checkboxes violate a given style.",
+    "patternId": "remark-lint-checkbox-character-style",
+    "timeToFix": 5,
+    "title": "Warn when list item checkboxes violate a given style."
+  },
+  {
+    "description": "Warn when list item checkboxes are followed by too much white-space.",
+    "patternId": "remark-lint-checkbox-content-indent",
+    "timeToFix": 5,
+    "title": "Warn when list item checkboxes are followed by too much white-space."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-code-block-style",
+        "name": "remark-lint-code-block-style"
+      }
+    ],
+    "description": "Warn when code-blocks do not adhere to a given style.",
+    "patternId": "remark-lint-code-block-style",
+    "timeToFix": 5,
+    "title": "Warn when code-blocks do not adhere to a given style."
+  },
+  {
+    "description": "Warn when definition labels are not lower-case.",
+    "patternId": "remark-lint-definition-case",
+    "timeToFix": 5,
+    "title": "Warn when definition labels are not lower-case."
+  },
+  {
+    "description": "Warn when consecutive white space is used in a definition.",
+    "patternId": "remark-lint-definition-spacing",
+    "timeToFix": 5,
+    "title": "Warn when consecutive white space is used in a definition."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-emphasis-marker",
+        "name": "remark-lint-emphasis-marker"
+      }
+    ],
+    "description": "Warn for violating emphasis markers.",
+    "patternId": "remark-lint-emphasis-marker",
+    "timeToFix": 5,
+    "title": "Warn for violating emphasis markers."
+  },
+  {
+    "description": "Check fenced code-block flags.",
+    "patternId": "remark-lint-fenced-code-flag",
+    "timeToFix": 5,
+    "title": "Check fenced code-block flags."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-fenced-code-marker",
+        "name": "remark-lint-fenced-code-marker"
+      }
+    ],
+    "description": "Warn for violating fenced code markers.",
+    "patternId": "remark-lint-fenced-code-marker",
+    "timeToFix": 5,
+    "title": "Warn for violating fenced code markers."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-file-extension",
+        "name": "remark-lint-file-extension"
+      }
+    ],
+    "description": "Warn when the file extension differ from the preferred extension.",
+    "patternId": "remark-lint-file-extension",
+    "timeToFix": 5,
+    "title": "Warn when the file extension differ from the preferred extension."
+  },
+  {
+    "description": "Warn when definitions are not placed at the end of the file.",
+    "patternId": "remark-lint-final-definition",
+    "timeToFix": 5,
+    "title": "Warn when definitions are not placed at the end of the file."
+  },
+  {
+    "description": "Warn when a newline at the end of a file is missing. Empty files are allowed.",
+    "patternId": "remark-lint-final-newline",
+    "timeToFix": 5,
+    "title": "Warn when a newline at the end of a file is missing. Empty files are allowed."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-first-heading-level",
+        "name": "remark-lint-first-heading-level"
+      }
+    ],
+    "description": "Warn when the first heading has a level other than a specified value.",
+    "patternId": "remark-lint-first-heading-level",
+    "timeToFix": 5,
+    "title": "Warn when the first heading has a level other than a specified value."
+  },
+  {
+    "description": "Warn when too many spaces are used to create a hard break.",
+    "patternId": "remark-lint-hard-break-spaces",
+    "timeToFix": 5,
+    "title": "Warn when too many spaces are used to create a hard break."
+  },
+  {
+    "description": "Warn when headings increment with more than 1 level at a time.",
+    "patternId": "remark-lint-heading-increment",
+    "timeToFix": 5,
+    "title": "Warn when headings increment with more than 1 level at a time."
+  },
+  {
+    "description": "Warn when a heading does not conform to a given style.",
+    "patternId": "remark-lint-heading-style",
+    "timeToFix": 5,
+    "title": "Warn when a heading does not conform to a given style."
+  },
+  {
+    "description": "Warn when linebreaks violate a given or detected style.",
+    "patternId": "remark-lint-linebreak-style",
+    "timeToFix": 5,
+    "title": "Warn when linebreaks violate a given or detected style."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-link-title-style",
+        "name": "remark-lint-link-title-style"
+      }
+    ],
+    "description": "Warn when link and definition titles occur with incorrect quotes.",
+    "patternId": "remark-lint-link-title-style",
+    "timeToFix": 5,
+    "title": "Warn when link and definition titles occur with incorrect quotes."
+  },
+  {
+    "description": "Warn when list item bullets are indented.",
+    "patternId": "remark-lint-list-item-bullet-indent",
+    "timeToFix": 5,
+    "title": "Warn when list item bullets are indented."
+  },
+  {
+    "description": "Warn when the content of a list item has mixed indentation.",
+    "patternId": "remark-lint-list-item-content-indent",
+    "timeToFix": 5,
+    "title": "Warn when the content of a list item has mixed indentation."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-list-item-indent",
+        "name": "remark-lint-list-item-indent"
+      }
+    ],
+    "description": "Warn when the spacing between a list item’s bullet and its content",
+    "patternId": "remark-lint-list-item-indent",
+    "timeToFix": 5,
+    "title": "Warn when the spacing between a list item’s bullet and its content"
+  },
+  {
+    "description": "Warn when list looseness is incorrect, such as being tight",
+    "patternId": "remark-lint-list-item-spacing",
+    "timeToFix": 5,
+    "title": "Warn when list looseness is incorrect, such as being tight"
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-maximum-heading-length",
+        "name": "remark-lint-maximum-heading-length"
+      }
+    ],
+    "description": "Warn when headings are too long.",
+    "patternId": "remark-lint-maximum-heading-length",
+    "timeToFix": 5,
+    "title": "Warn when headings are too long."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-maximum-line-length",
+        "name": "remark-lint-maximum-line-length"
+      }
+    ],
+    "description": "Warn when lines are too long.",
+    "patternId": "remark-lint-maximum-line-length",
+    "timeToFix": 5,
+    "title": "Warn when lines are too long."
+  },
+  {
+    "description": "Warn for angle-bracketed links without protocol.",
+    "patternId": "remark-lint-no-auto-link-without-protocol",
+    "timeToFix": 5,
+    "title": "Warn for angle-bracketed links without protocol."
+  },
+  {
+    "description": "Warn when blank lines without markers (`>`) are found in a blockquote.",
+    "patternId": "remark-lint-no-blockquote-without-marker",
+    "timeToFix": 5,
+    "title": "Warn when blank lines without markers (`>`) are found in a blockquote."
+  },
+  {
+    "description": "Warn for too many consecutive blank lines.  Knows about the extra line",
+    "patternId": "remark-lint-no-consecutive-blank-lines",
+    "timeToFix": 5,
+    "title": "Warn for too many consecutive blank lines.  Knows about the extra line"
+  },
+  {
+    "description": "Warn when duplicate definitions are found.",
+    "patternId": "remark-lint-no-duplicate-definitions",
+    "timeToFix": 5,
+    "title": "Warn when duplicate definitions are found."
+  },
+  {
+    "description": "Warn when duplicate headings are found.",
+    "patternId": "remark-lint-no-duplicate-headings",
+    "timeToFix": 5,
+    "title": "Warn when duplicate headings are found."
+  },
+  {
+    "description": "Warn when duplicate headings are found, but only when on the same level,",
+    "patternId": "remark-lint-no-duplicate-headings-in-section",
+    "timeToFix": 5,
+    "title": "Warn when duplicate headings are found, but only when on the same level,"
+  },
+  {
+    "description": "Warn when emphasis (including strong), instead of a heading, introduces",
+    "patternId": "remark-lint-no-emphasis-as-heading",
+    "timeToFix": 5,
+    "title": "Warn when emphasis (including strong), instead of a heading, introduces"
+  },
+  {
+    "description": "Warn for empty URLs in links and images.",
+    "patternId": "remark-lint-no-empty-url",
+    "timeToFix": 5,
+    "title": "Warn for empty URLs in links and images."
+  },
+  {
+    "description": "Warn when file name start with an article.",
+    "patternId": "remark-lint-no-file-name-articles",
+    "timeToFix": 5,
+    "title": "Warn when file name start with an article."
+  },
+  {
+    "description": "Warn when file names contain consecutive dashes.",
+    "patternId": "remark-lint-no-file-name-consecutive-dashes",
+    "timeToFix": 5,
+    "title": "Warn when file names contain consecutive dashes."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-no-file-name-irregular-characters",
+        "name": "remark-lint-no-file-name-irregular-characters"
+      }
+    ],
+    "description": "Warn when file names contain irregular characters: characters other than",
+    "patternId": "remark-lint-no-file-name-irregular-characters",
+    "timeToFix": 5,
+    "title": "Warn when file names contain irregular characters: characters other than"
+  },
+  {
+    "description": "Warn when a file name uses mixed case: both upper- and lower case",
+    "patternId": "remark-lint-no-file-name-mixed-case",
+    "timeToFix": 5,
+    "title": "Warn when a file name uses mixed case: both upper- and lower case"
+  },
+  {
+    "description": "Warn when file names contain initial or final dashes.",
+    "patternId": "remark-lint-no-file-name-outer-dashes",
+    "timeToFix": 5,
+    "title": "Warn when file names contain initial or final dashes."
+  },
+  {
+    "description": "Warn when a heading’s content is indented.",
+    "patternId": "remark-lint-no-heading-content-indent",
+    "timeToFix": 5,
+    "title": "Warn when a heading’s content is indented."
+  },
+  {
+    "description": "Warn when a heading is indented.",
+    "patternId": "remark-lint-no-heading-indent",
+    "timeToFix": 5,
+    "title": "Warn when a heading is indented."
+  },
+  {
+    "description": "Warn for h7+ “headings”.",
+    "patternId": "remark-lint-no-heading-like-paragraph",
+    "timeToFix": 5,
+    "title": "Warn for h7+ “headings”."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-no-heading-punctuation",
+        "name": "remark-lint-no-heading-punctuation"
+      }
+    ],
+    "description": "Warn when a heading ends with a a group of characters.",
+    "patternId": "remark-lint-no-heading-punctuation",
+    "timeToFix": 5,
+    "title": "Warn when a heading ends with a a group of characters."
+  },
+  {
+    "description": "Warn when HTML nodes are used.",
+    "patternId": "remark-lint-no-html",
+    "timeToFix": 5,
+    "title": "Warn when HTML nodes are used."
+  },
+  {
+    "description": "Warn when inline nodes are padded with spaces between their markers and",
+    "patternId": "remark-lint-no-inline-padding",
+    "timeToFix": 5,
+    "title": "Warn when inline nodes are padded with spaces between their markers and"
+  },
+  {
+    "description": "Warn when URLs without angle-brackets are used.",
+    "patternId": "remark-lint-no-literal-urls",
+    "timeToFix": 5,
+    "title": "Warn when URLs without angle-brackets are used."
+  },
+  {
+    "description": "Warn when missing blank lines before a block node.",
+    "patternId": "remark-lint-no-missing-blank-lines",
+    "timeToFix": 5,
+    "title": "Warn when missing blank lines before a block node."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-no-multiple-toplevel-headings",
+        "name": "remark-lint-no-multiple-toplevel-headings"
+      }
+    ],
+    "description": "Warn when multiple top-level headings are used.",
+    "patternId": "remark-lint-no-multiple-toplevel-headings",
+    "timeToFix": 5,
+    "title": "Warn when multiple top-level headings are used."
+  },
+  {
+    "description": "Warn when the content in paragraphs are indented.",
+    "patternId": "remark-lint-no-paragraph-content-indent",
+    "timeToFix": 5,
+    "title": "Warn when the content in paragraphs are indented."
+  },
+  {
+    "description": "Warn when URLs are also defined identifiers.",
+    "patternId": "remark-lint-no-reference-like-url",
+    "timeToFix": 5,
+    "title": "Warn when URLs are also defined identifiers."
+  },
+  {
+    "description": "Warn when shell code is prefixed by dollar-characters.",
+    "patternId": "remark-lint-no-shell-dollars",
+    "timeToFix": 5,
+    "title": "Warn when shell code is prefixed by dollar-characters."
+  },
+  {
+    "description": "Warn when shortcut reference images are used.",
+    "patternId": "remark-lint-no-shortcut-reference-image",
+    "timeToFix": 5,
+    "title": "Warn when shortcut reference images are used."
+  },
+  {
+    "description": "Warn when shortcut reference links are used.",
+    "patternId": "remark-lint-no-shortcut-reference-link",
+    "timeToFix": 5,
+    "title": "Warn when shortcut reference links are used."
+  },
+  {
+    "description": "Warn when tables are indented.",
+    "patternId": "remark-lint-no-table-indentation",
+    "timeToFix": 5,
+    "title": "Warn when tables are indented."
+  },
+  {
+    "description": "Warn when hard tabs are used instead of spaces.",
+    "patternId": "remark-lint-no-tabs",
+    "timeToFix": 5,
+    "title": "Warn when hard tabs are used instead of spaces."
+  },
+  {
+    "description": "Warn when references to undefined definitions are found.",
+    "patternId": "remark-lint-no-undefined-references",
+    "timeToFix": 5,
+    "title": "Warn when references to undefined definitions are found."
+  },
+  {
+    "description": "Warn when unused definitions are found.",
+    "patternId": "remark-lint-no-unused-definitions",
+    "timeToFix": 5,
+    "title": "Warn when unused definitions are found."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-ordered-list-marker-style",
+        "name": "remark-lint-ordered-list-marker-style"
+      }
+    ],
+    "description": "Warn when the list-item marker style of ordered lists violate a given",
+    "patternId": "remark-lint-ordered-list-marker-style",
+    "timeToFix": 5,
+    "title": "Warn when the list-item marker style of ordered lists violate a given"
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-ordered-list-marker-value",
+        "name": "remark-lint-ordered-list-marker-value"
+      }
+    ],
+    "description": "Warn when the list-item marker values of ordered lists violate a",
+    "patternId": "remark-lint-ordered-list-marker-value",
+    "timeToFix": 5,
+    "title": "Warn when the list-item marker values of ordered lists violate a"
+  },
+  {
+    "description": "Warn when the horizontal rules violate a given or detected style.",
+    "patternId": "remark-lint-rule-style",
+    "timeToFix": 5,
+    "title": "Warn when the horizontal rules violate a given or detected style."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-strong-marker",
+        "name": "remark-lint-strong-marker"
+      }
+    ],
+    "description": "Warn for violating strong markers.",
+    "patternId": "remark-lint-strong-marker",
+    "timeToFix": 5,
+    "title": "Warn for violating strong markers."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-table-cell-padding",
+        "name": "remark-lint-table-cell-padding"
+      }
+    ],
+    "description": "Warn when table cells are incorrectly padded.",
+    "patternId": "remark-lint-table-cell-padding",
+    "timeToFix": 5,
+    "title": "Warn when table cells are incorrectly padded."
+  },
+  {
+    "description": "Warn when table pipes are not aligned.",
+    "patternId": "remark-lint-table-pipe-alignment",
+    "timeToFix": 5,
+    "title": "Warn when table pipes are not aligned."
+  },
+  {
+    "description": "Warn when table rows are not fenced with pipes.",
+    "patternId": "remark-lint-table-pipes",
+    "timeToFix": 5,
+    "title": "Warn when table rows are not fenced with pipes."
+  },
+  {
+    "parameters": [
+      {
+        "description": "remark-lint-unordered-list-marker-style",
+        "name": "remark-lint-unordered-list-marker-style"
+      }
+    ],
+    "description": "Warn when the list-item marker style of unordered lists violate a given",
+    "patternId": "remark-lint-unordered-list-marker-style",
+    "timeToFix": 5,
+    "title": "Warn when the list-item marker style of unordered lists violate a given"
+  }
+]
