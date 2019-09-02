@@ -1,1 +1,1 @@
-Warn when file name start with an article.
+Warn when file names start with an article.

@@ -1,1 +1,1 @@
-Warn when consecutive white space is used in a definition.
+Warn when consecutive whitespace is used in a definition.
