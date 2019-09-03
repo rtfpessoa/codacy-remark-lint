@@ -1,50 +1,63 @@
-# https://circleci.com/docs/2.0/language-javascript/
-version: 2
+version: 2.1
+
+orbs:
+  codacy: codacy/base@0.3.3
+
 jobs:
-  node_8:
+  populate_cache:
+    parameters:
+      node_version:
+        type: string
+        default: latest
+        description: Specify the node version
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:<<parameters.node_version>>
     working_directory: ~/workdir
     steps:
-      - checkout
-      # Download and cache dependencies
+      - attach_workspace:
+          at: ~/
       - restore_cache:
+          name: Restore Yarn Package Cache
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-      - run: yarn
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
       - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn run test
-      - run: yarn run cov:send
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - workdir/
 
-  node_latest:
+  build_and_test:
+    parameters:
+      node_version:
+        type: string
+        default: latest
+        description: Specify the node version
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:<<parameters.node_version>>
     working_directory: ~/workdir
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      - run: yarn
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn run test
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Build
+          command: yarn run build
+      - run:
+          name: Test
+          command: yarn run test
 
-  publish_docker_locally:
+  publish_local:
     machine: true
     working_directory: ~/workdir
     steps:
-    - checkout
     - attach_workspace:
-        at: ~/workdir
+        at: ~/
     - run:
         name: Publish local docker
         command: docker build --no-cache --tag codacy/codacy-remark-lint:dev .
@@ -58,23 +71,7 @@ jobs:
         paths:
         - codacy-remark-lint.tar
 
-  publish_dockerhub:
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - checkout
-      - attach_workspace:
-          at: /tmp/workspace
-      - run:
-          name: Load docker from file
-          command: docker load --input /tmp/workspace/codacy-remark-lint.tar
-      - run: docker tag codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:1.0.$CIRCLE_BUILD_NUM
-      - run: docker tag codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:latest
-      - run: npm run docker:login
-      - run: docker push codacy/$CIRCLE_PROJECT_REPONAME:1.0.$CIRCLE_BUILD_NUM
-      - run: docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
-
-  integration_tests:
+  plugins_test:
     machine: true
     working_directory: ~/
     steps:
@@ -105,7 +102,7 @@ jobs:
             - "~/codacy-plugins-test/target"
             - "~/codacy-plugins-test/project/target"
             - "~/codacy-plugins-test/project/project"
-      - run: 
+      - run:
           name: Test json
           working_directory: ~/codacy-plugins-test
           command: sbt "runMain codacy.plugins.DockerTest json codacy/$CIRCLE_PROJECT_REPONAME:dev"
@@ -114,23 +111,76 @@ jobs:
           working_directory: ~/codacy-plugins-test
           command: sbt -Dcodacy.tests.threads=8 "runMain codacy.plugins.DockerTest pattern codacy/$CIRCLE_PROJECT_REPONAME:dev"
 
+  publish:
+    machine: true
+    working_directory: ~/workdir
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load docker from file
+          command: docker load --input /tmp/workspace/codacy-remark-lint.tar
+      - run:
+          name: Docker tag
+          command: |
+            docker tag codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
+            docker tag codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:latest
+      - run:
+          name: Docker login
+          command: npm run docker:login
+      - run:
+          name: Docker push
+          command: |
+            docker push codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
+            docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
+
+
 workflows:
   version: 2
   build:
     jobs:
-      - node_8
-      - node_latest
-      - publish_docker_locally
-      - integration_tests:
+      - codacy/checkout_and_version
+      - populate_cache:
+          name: populate_cache_8
+          node_version: "8"
           requires:
-            - publish_docker_locally
-      - publish_dockerhub:
+            - codacy/checkout_and_version
+      - populate_cache:
+          name: populate_cache_latest
+          node_version: latest
           requires:
-            - node_8
-            - node_latest
-            - publish_docker_locally
-            - integration_tests
+            - codacy/checkout_and_version
+      - build_and_test:
+          name: build_test_node_8
+          node_version: "8"
+          requires:
+            - populate_cache_8
+      - build_and_test:
+          name: build_test_node_latest
+          node_version: latest
+          requires:
+            - populate_cache_latest
+      - publish_local:
+          requires:
+            - codacy/checkout_and_version
+      - plugins_test:
+          requires:
+            - publish_local
+      - publish:
+          context: CodacyDocker
+          requires:
+            - build_test_node_8
+            - build_test_node_latest
+            - plugins_test
           filters:
-              branches:
-                only:
-                - master
+            branches:
+              only:
+              - master
+      - codacy/tag_version:
+          filters:
+            branches:
+              only:
+              - master
+          context: CodacyAWS
+          requires:
+            - publish
