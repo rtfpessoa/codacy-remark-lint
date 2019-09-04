@@ -59,10 +59,10 @@ jobs:
     working_directory: ~/
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: ~/
       - run:
           name: Load docker from file
-          command: docker load --input /tmp/workspace/codacy-remark-lint.tar
+          command: docker load --input ~/codacy-remark-lint.tar
       - run: 
           name: Clone test project
           working_directory: ~/
@@ -99,10 +99,10 @@ jobs:
     working_directory: ~/workdir
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: ~/
       - run:
           name: Load docker from file
-          command: docker load --input /tmp/workspace/codacy-remark-lint.tar
+          command: docker load --input ~/codacy-remark-lint.tar
       - run:
           name: Docker tag
           command: |
