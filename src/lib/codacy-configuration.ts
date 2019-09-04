@@ -81,11 +81,10 @@ function getPluginsToExecute(
     );
 
     if (toolPatterns && toolPatterns.patterns) {
-      return toolPatterns.patterns.map(
-        (pattern: CodacyPattern) =>
-          pattern.parameters && pattern.parameters.length === 1
-            ? [pattern.patternId, pattern.parameters[0].value]
-            : [pattern.patternId]
+      return toolPatterns.patterns.map((pattern: CodacyPattern) =>
+        pattern.parameters && pattern.parameters.length === 1
+          ? [pattern.patternId, pattern.parameters[0].value]
+          : [pattern.patternId]
       );
     }
   }

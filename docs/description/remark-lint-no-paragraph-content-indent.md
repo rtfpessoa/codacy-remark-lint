@@ -1,1 +1,1 @@
-Warn when the content in paragraphs are indented.
+Warn when the content in paragraphs is indented.

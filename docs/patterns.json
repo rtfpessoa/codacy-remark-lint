@@ -358,6 +358,16 @@
     {
       "category": "CodeStyle",
       "level": "Warning",
+      "patternId": "remark-lint-no-unneeded-full-reference-image"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "remark-lint-no-unneeded-full-reference-link"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
       "patternId": "remark-lint-no-unused-definitions"
     },
     {
@@ -431,5 +441,5 @@
       "patternId": "remark-lint-unordered-list-marker-style"
     }
   ],
-  "version": "6.0.2"
+  "version": "6.0.4"
 }
