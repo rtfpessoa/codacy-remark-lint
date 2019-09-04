@@ -4,7 +4,7 @@ orbs:
   codacy: codacy/base@0.3.3
 
 jobs:
-  populate_cache:
+  build_and_test:
     parameters:
       node_version:
         type: string
@@ -28,23 +28,6 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - workdir/
-
-  build_and_test:
-    parameters:
-      node_version:
-        type: string
-        default: latest
-        description: Specify the node version
-    docker:
-      - image: circleci/node:<<parameters.node_version>>
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/
       - run:
           name: Build
           command: yarn run build
@@ -140,26 +123,16 @@ workflows:
   build:
     jobs:
       - codacy/checkout_and_version
-      - populate_cache:
-          name: populate_cache_8
+      - build_and_test:
+          name: build_and_test_8
           node_version: "8"
           requires:
             - codacy/checkout_and_version
-      - populate_cache:
-          name: populate_cache_latest
+      - build_and_test:
+          name: build_and_test_latest
           node_version: latest
           requires:
             - codacy/checkout_and_version
-      - build_and_test:
-          name: build_test_node_8
-          node_version: "8"
-          requires:
-            - populate_cache_8
-      - build_and_test:
-          name: build_test_node_latest
-          node_version: latest
-          requires:
-            - populate_cache_latest
       - publish_local:
           requires:
             - codacy/checkout_and_version
@@ -169,8 +142,8 @@ workflows:
       - publish:
           context: CodacyDocker
           requires:
-            - build_test_node_8
-            - build_test_node_latest
+            - build_and_test_8
+            - build_and_test_latest
             - plugins_test
           filters:
             branches:
