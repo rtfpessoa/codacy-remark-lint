@@ -1,7 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@0.3.3
+  codacy: codacy/base@1.2.1
+  codacy_plugins_test: codacy/plugins-test@0.6.6
 
 jobs:
   build_and_test:
@@ -34,93 +35,25 @@ jobs:
       - run:
           name: Test
           command: yarn run test
-
-  publish_local:
+  
+  publish_docker_local:
     machine: true
     working_directory: ~/workdir
-    steps:
-    - attach_workspace:
-        at: ~/
-    - run:
-        name: Publish local docker
-        command: docker build --no-cache --tag codacy/codacy-remark-lint:dev .
-    - run:
-        name: Save docker to file
-        command: |
-          mkdir workspace
-          docker save --output workspace/codacy-remark-lint.tar codacy/$CIRCLE_PROJECT_REPONAME:dev
-    - persist_to_workspace:
-        root: workspace
-        paths:
-        - codacy-remark-lint.tar
-
-  plugins_test:
-    machine: true
-    working_directory: ~/
     steps:
       - attach_workspace:
           at: ~/
       - run:
-          name: Load docker from file
-          command: docker load --input ~/codacy-remark-lint.tar
-      - run: 
-          name: Clone test project
-          working_directory: ~/
           command: |
-            (git -C ~/codacy-plugins-test fetch --all && 
-              git -C ~/codacy-plugins-test reset --hard origin/master) || 
-                git clone git://github.com/codacy/codacy-plugins-test.git ~/codacy-plugins-test
-      - restore_cache:
-          key: dependencies-{{ checksum "~/codacy-plugins-test/build.sbt" }}
-      - run: 
-          name: Compile test project
-          working_directory: ~/codacy-plugins-test
-          command: sbt compile
-      - save_cache:
-          key: dependencies-{{ checksum "~/codacy-plugins-test/build.sbt" }}
+            docker build -t $CIRCLE_PROJECT_REPONAME:latest .
+            docker save --output ~/workdir/docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+      - persist_to_workspace:
           paths:
-            - "~/.ivy2"
-            - "~/.m2"
-            - "~/.sbt"
-            - "~/codacy-plugins-test/target"
-            - "~/codacy-plugins-test/project/target"
-            - "~/codacy-plugins-test/project/project"
-      - run:
-          name: Test json
-          working_directory: ~/codacy-plugins-test
-          command: sbt "runMain codacy.plugins.DockerTest json codacy/$CIRCLE_PROJECT_REPONAME:dev"
-      - run:
-          name: Test patterns
-          working_directory: ~/codacy-plugins-test
-          command: sbt -Dcodacy.tests.threads=8 "runMain codacy.plugins.DockerTest pattern codacy/$CIRCLE_PROJECT_REPONAME:dev"
-
-  publish:
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: Load docker from file
-          command: docker load --input ~/codacy-remark-lint.tar
-      - run:
-          name: Docker tag
-          command: |
-            docker tag codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
-            docker tag codacy/$CIRCLE_PROJECT_REPONAME:dev codacy/$CIRCLE_PROJECT_REPONAME:latest
-      - run:
-          name: Docker login
-          command: npm run docker:login
-      - run:
-          name: Docker push
-          command: |
-            docker push codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
-            docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
-
+            - workdir/*
+          root: ~/
 
 workflows:
   version: 2
-  build:
+  compile_test_deploy:
     jobs:
       - codacy/checkout_and_version
       - build_and_test:
@@ -133,27 +66,31 @@ workflows:
           node_version: latest
           requires:
             - codacy/checkout_and_version
-      - publish_local:
+      - publish_docker_local:
           requires:
             - codacy/checkout_and_version
-      - plugins_test:
+      - codacy_plugins_test/run:
+          name: plugins_test
           requires:
-            - publish_local
-      - publish:
+            - publish_docker_local
+      - codacy/shell:
+          name: publish_dockerhub
           context: CodacyDocker
+          cmd: |
+            docker load --input ~/workdir/docker-image.tar
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
+            docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:latest
+            docker push codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
+            docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
           requires:
-            - build_and_test_8
-            - build_and_test_latest
             - plugins_test
           filters:
             branches:
               only:
-              - master
+                - master
       - codacy/tag_version:
-          filters:
-            branches:
-              only:
-              - master
+          name: tag_version
           context: CodacyAWS
           requires:
-            - publish
+            - publish_dockerhub
