@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@1.2.1
-  codacy_plugins_test: codacy/plugins-test@0.6.6
+  codacy: codacy/base@2.0.1
+  codacy_plugins_test: codacy/plugins-test@0.7.1
 
 jobs:
   build_and_test:
@@ -35,21 +35,6 @@ jobs:
       - run:
           name: Test
           command: yarn run test
-  
-  publish_docker_local:
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/
-      - run:
-          command: |
-            docker build -t $CIRCLE_PROJECT_REPONAME:latest .
-            docker save --output ~/workdir/docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
-      - persist_to_workspace:
-          paths:
-            - workdir/*
-          root: ~/
 
 workflows:
   version: 2
@@ -66,7 +51,12 @@ workflows:
           node_version: latest
           requires:
             - codacy/checkout_and_version
-      - publish_docker_local:
+      - codacy/shell:
+          name: publish_docker_local
+          cmd: |
+            docker build --no-cache -t $CIRCLE_PROJECT_REPONAME:latest .
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+          persist_to_workspace: true
           requires:
             - codacy/checkout_and_version
       - codacy_plugins_test/run:
