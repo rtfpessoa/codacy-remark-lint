@@ -1,7 +1,7 @@
 # codacy-remark-lint
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/app/Codacy/codacy-remark-lint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-remark-lint&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/app/Codacy/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-remark-lint&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/gh/codacy/codacy-remark-lint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-remark-lint&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/gh/codacy/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-remark-lint&utm_campaign=Badge_Coverage)
 [![CircleCI](https://circleci.com/gh/codacy/codacy-remark-lint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-remark-lint)
 [![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-remark-lint.svg)](https://microbadger.com/images/codacy/codacy-remark-lint "Get your own version badge on microbadger.com")
 
