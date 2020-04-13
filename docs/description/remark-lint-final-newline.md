@@ -13,7 +13,7 @@ on how to automatically fix warnings for this rule.
 
 ## Example
 
-##### `valid.md`
+##### `ok.md`
 
 ###### In
 
@@ -27,7 +27,7 @@ Alpha␊
 
 No messages.
 
-##### `invalid.md`
+##### `not-ok.md`
 
 ###### In
 

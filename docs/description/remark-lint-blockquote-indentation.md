@@ -1,6 +1,6 @@
-Warn when blockquotes are indented too much or too little.
+Warn when block quotes are indented too much or too little.
 
 Options: `number` or `'consistent'`, default: `'consistent'`.
 
 `'consistent'` detects the first used indentation and will warn when
-other blockquotes use a different indentation.
+other block quotes use a different indentation.

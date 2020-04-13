@@ -6,10 +6,10 @@
         "name": "remark-lint-blockquote-indentation"
       }
     ],
-    "description": "Warn when blockquotes are indented too much or too little.",
+    "description": "Warn when block quotes are indented too much or too little.",
     "patternId": "remark-lint-blockquote-indentation",
     "timeToFix": 5,
-    "title": "Warn when blockquotes are indented too much or too little."
+    "title": "Warn when block quotes are indented too much or too little."
   },
   {
     "parameters": [
@@ -216,16 +216,22 @@
     "title": "Warn for autolinks without protocol."
   },
   {
-    "description": "Warn when blank lines without `>` (greater-than) markers are found in a",
+    "description": "Warn when blank lines without `>` (greater than) markers are found in a",
     "patternId": "remark-lint-no-blockquote-without-marker",
     "timeToFix": 5,
-    "title": "Warn when blank lines without `>` (greater-than) markers are found in a"
+    "title": "Warn when blank lines without `>` (greater than) markers are found in a"
   },
   {
     "description": "Warn for too many consecutive blank lines.",
     "patternId": "remark-lint-no-consecutive-blank-lines",
     "timeToFix": 5,
     "title": "Warn for too many consecutive blank lines."
+  },
+  {
+    "description": "Warn when definitions define the same URL.",
+    "patternId": "remark-lint-no-duplicate-defined-urls",
+    "timeToFix": 5,
+    "title": "Warn when definitions define the same URL."
   },
   {
     "description": "Warn when duplicate definitions are found.",

@@ -1,8 +1,8 @@
 Warn when the thematic breaks (horizontal rules) violate a given or
 detected style.
 
-Options: `string`, either a valid thematic breaks, or `'consistent'`,
-default: `'consistent'`.
+Options: `string`, either a corect thematic breaks such as `***`, or
+`'consistent'`, default: `'consistent'`.
 
 `'consistent'` detects the first used thematic break style and warns when
 subsequent rules use different styles.
