@@ -6555,7 +6555,7 @@ remark-lint-no-shell-dollars@^1.0.0, remark-lint-no-shell-dollars@^1.0.2:
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-shortcut-reference-image@^1.0.0, remark-lint-no-shortcut-reference-image@^1.0.2:
+remark-lint-no-shortcut-reference-image@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/remark-lint-no-shortcut-reference-image/-/remark-lint-no-shortcut-reference-image-1.0.3.tgz#ab4fa15fd8aff251cb8db1f3aed4853e293aff41"
   integrity sha512-CGm27X54kXp/5ehXejDTsZjqzK4uIhLGcrFzN3k/KjdwunQouEY92AARGrLSEuJ1hQx0bJsmnvr/hvQyWAfNJg==
@@ -6563,6 +6563,15 @@ remark-lint-no-shortcut-reference-image@^1.0.0, remark-lint-no-shortcut-referenc
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.1.1"
+
+remark-lint-no-shortcut-reference-image@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-shortcut-reference-image/-/remark-lint-no-shortcut-reference-image-2.0.0.tgz#098071db5187b8980b222258a6a6ef0017b3599d"
+  integrity sha512-kgGCQBHibJ0IFVhWjnfjbqkKC0VeL5+cvyjjwfMJlgZrHEXNOYb2FJE2nvF/l6PSXQ17goRZpznTBfP4mQieUA==
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-shortcut-reference-link@^1.0.0, remark-lint-no-shortcut-reference-link@^1.0.3:
   version "1.0.4"
