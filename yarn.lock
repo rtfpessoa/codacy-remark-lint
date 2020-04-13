@@ -6391,14 +6391,14 @@ remark-lint-no-empty-sections@^3.0.0:
     unified-lint-rule "^1.0.0"
     unist-util-visit "^1.0.0"
 
-remark-lint-no-empty-url@^1.0.3:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-empty-url/-/remark-lint-no-empty-url-1.0.5.tgz#d7cf0a05dd1acfbdb9ed566e33af37b25989ed7f"
-  integrity sha512-oaOMvWkyOTdvjZzQ6FVTnw4ufrEYjNBWFzWY0hxSg1AjCvIBegxxwQmcJHe97pr8vwPWs9IEm9JlmFLkrpfhTw==
+remark-lint-no-empty-url@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-empty-url/-/remark-lint-no-empty-url-2.0.0.tgz#86ee33f420fed566c8ed3aefc70caa5cfa559723"
+  integrity sha512-RPmAv7bpgMKjGU6ecGaQ0zRHOt1qi+KF4uls3D//1X1RzGLCYuUEPBllKSWuxcm/z+YkHBDIM6WwTxJtf3MkQA==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
-    unist-util-visit "^1.4.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-file-name-articles@^1.0.0, remark-lint-no-file-name-articles@^1.0.2:
   version "1.0.3"
