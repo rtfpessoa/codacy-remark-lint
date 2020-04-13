@@ -6361,7 +6361,7 @@ remark-lint-no-duplicate-headings-in-section@^1.0.2:
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-duplicate-headings@^1.0.0, remark-lint-no-duplicate-headings@^1.0.2:
+remark-lint-no-duplicate-headings@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-1.0.4.tgz#52ac1479b6de83d5607b8d07e8ef3401d5078424"
   integrity sha512-QuPw+VG502Ctpd/jBjnBYuRXTg0ToP3D+dd3TYds4TRcdgaEFYTZfQ5zjK6XrxLMg0Hn9/WpXr4UqTlV4YZupA==
@@ -6372,6 +6372,18 @@ remark-lint-no-duplicate-headings@^1.0.0, remark-lint-no-duplicate-headings@^1.0
     unist-util-position "^3.0.0"
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^1.1.1"
+
+remark-lint-no-duplicate-headings@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-2.0.0.tgz#ac0efd190b9b522b62030da71c1d31c1a7cfd6d9"
+  integrity sha512-xiPZ0mGAzZXGivU0VaXmKbhxIRmRUeCzOGVSzyVKX36GJ7UKZJPgTonT9eGYTe1HogSk8C+Dof3RaahC6yOPoA==
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-stringify-position "^2.0.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-emphasis-as-heading@^1.0.0, remark-lint-no-emphasis-as-heading@^1.0.2:
   version "1.0.3"
