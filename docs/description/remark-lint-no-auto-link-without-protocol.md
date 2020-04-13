@@ -1,5 +1,5 @@
 Warn for autolinks without protocol.
-Autolinks are URLs enclosed in `<` (less-than) and `>` (greater-than)
+Autolinks are URLs enclosed in `<` (less than) and `>` (greater than)
 characters.
 
 ## Fix

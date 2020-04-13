@@ -3,7 +3,7 @@ Warn when code blocks do not adhere to a given style.
 Options: `'consistent'`, `'fenced'`, or `'indented'`, default: `'consistent'`.
 
 `'consistent'` detects the first used code block style and warns when
-subsequent code-blocks uses different styles.
+subsequent code blocks uses different styles.
 
 ## Fix
 

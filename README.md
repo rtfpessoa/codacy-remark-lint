@@ -12,7 +12,7 @@ Docker engine to allow Codacy to have [remark-lint](https://github.com/remarkjs/
 You can create the docker by doing:
 
 ```sh
-yarn run docker
+yarn run docker:build
 ```
 
 The docker is ran with the following command:

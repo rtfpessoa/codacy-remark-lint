@@ -205,6 +205,11 @@
     {
       "category": "CodeStyle",
       "level": "Warning",
+      "patternId": "remark-lint-no-duplicate-defined-urls"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
       "patternId": "remark-lint-no-duplicate-definitions"
     },
     {
