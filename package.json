@@ -153,7 +153,7 @@
     "remark-retext": "^3.1.1",
     "remark-stringify": "^5.0.0",
     "remark-validate-links": "^7.1.0",
-    "retext": "^5.0.0",
+    "retext": "^7.0.1",
     "retext-contractions": "^2.1.2",
     "retext-diacritics": "^1.2.1",
     "retext-english": "^3.0.0",
