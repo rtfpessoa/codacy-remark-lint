@@ -92,7 +92,7 @@
     "remark-lint-final-definition": "^1.0.2",
     "remark-lint-final-newline": "^1.0.2",
     "remark-lint-first-heading-level": "^1.1.2",
-    "remark-lint-hard-break-spaces": "^1.0.3",
+    "remark-lint-hard-break-spaces": "^2.0.0",
     "remark-lint-heading-increment": "^1.0.2",
     "remark-lint-heading-style": "^1.0.2",
     "remark-lint-heading-whitespace": "^1.0.0",
