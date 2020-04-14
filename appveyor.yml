@@ -3,7 +3,7 @@ environment:
     - nodejs_version: 8
     - nodejs_version: 9
 
-version: "{build}"
+version: '{build}'
 
 cache:
   - node_modules -> package.json

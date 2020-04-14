@@ -1,25 +1,12 @@
 {
-  "extends": [
-    "tslint:latest",
-    "tslint-config-prettier",
-    "tslint-immutable"
-  ],
+  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable"],
   "rules": {
     "no-unsafe-any": true,
-    "interface-name": [
-      true,
-      "never-prefix"
-    ],
-    "no-implicit-dependencies": [
-      true,
-      "dev"
-    ],
+    "interface-name": [true, "never-prefix"],
+    "no-implicit-dependencies": [true, "dev"],
     "no-var-keyword": true,
     "no-parameter-reassignment": true,
-    "typedef": [
-      true,
-      "call-signature"
-    ],
+    "typedef": [true, "call-signature"],
     "readonly-keyword": true,
     "readonly-array": true,
     "no-let": true,
@@ -32,10 +19,7 @@
     "no-expression-statement": [
       true,
       {
-        "ignore-prefix": [
-          "console.",
-          "process.exit"
-        ]
+        "ignore-prefix": ["console.", "process.exit"]
       }
     ],
     "no-if-statement": false
