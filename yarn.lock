@@ -6690,7 +6690,7 @@ remark-lint-table-pipe-alignment@^1.0.0, remark-lint-table-pipe-alignment@^1.0.2
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-table-pipes@^1.0.0, remark-lint-table-pipes@^1.0.2:
+remark-lint-table-pipes@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/remark-lint-table-pipes/-/remark-lint-table-pipes-1.0.3.tgz#e34f91de4371f98c5e16701bd2302928468cbd8a"
   integrity sha512-K9NnGZp6i0m/CaOH7ZT4Ymt2seyiRPcBIlNMMGXBm6gpy34KJDDxYqsNUrh+j7dR+Zg4rYAQLnr3BiSHvj+rbQ==
@@ -6699,6 +6699,16 @@ remark-lint-table-pipes@^1.0.0, remark-lint-table-pipes@^1.0.2:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
+
+remark-lint-table-pipes@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-table-pipes/-/remark-lint-table-pipes-2.0.0.tgz#5fe4b2ad38a00a29c9d792a3aab9212cc65207e7"
+  integrity sha512-qGIttPFNT+19BEDz2JJWQtJIClFNIpg+XVw6ruX9LSR7xdo5QG9uARG4XS2EGUQQ7fiLIxQYb8g2dHwuXGbfmA==
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-unordered-list-marker-style@^1.0.0, remark-lint-unordered-list-marker-style@^1.0.2:
   version "1.0.3"
