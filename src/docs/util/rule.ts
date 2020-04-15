@@ -30,7 +30,9 @@ function ruleSync(filePath: string): Rule | undefined {
 
   const description = strip(possibleDescription);
   const descriptionLines = description.split('\n');
-  const optionsLine = descriptionLines.find(line => line.startsWith('Options'));
+  const optionsLine = descriptionLines.find((line) =>
+    line.startsWith('Options')
+  );
 
   return {
     defaultValue: findDefault(optionsLine),
