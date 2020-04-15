@@ -42,8 +42,7 @@ workflows:
     jobs:
       - codacy/checkout_and_version
       - build_and_test:
-          name: build_and_test_8
-          node_version: "8"
+          node_version: "13"
           requires:
             - codacy/checkout_and_version
       - build_and_test:
