@@ -7243,14 +7243,14 @@ retext-redundant-acronyms@^1.2.1:
     quotation "^1.0.0"
     unist-util-position "^3.0.0"
 
-retext-repeated-words@^1.2.1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/retext-repeated-words/-/retext-repeated-words-1.2.3.tgz#dd9f3d32464407b492cfa0f85c0bd92e62b7a79d"
-  integrity sha512-s51ybhXsHvpHpM44y9hayqcIDMo9g5QBZoOpPUosX3CfobZbgH7CZHbME8TOEcduR7OqGtNZ8JLKVFwi9QAKqA==
+retext-repeated-words@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/retext-repeated-words/-/retext-repeated-words-3.0.0.tgz#741fa9ff82a8c900d52e2697649813740aaa11f7"
+  integrity sha512-c9awbCxn3h+SVVYwEeJA+rcWWFiOvxrcD8MVFpyVpWu0q1cXG7NIyWclEzXDV12SkqKgR/vmBJh3tIJCfxmDAA==
   dependencies:
     nlcst-to-string "^2.0.0"
-    unist-util-is "^3.0.0"
-    unist-util-visit "^1.1.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit "^2.0.0"
 
 retext-sentence-spacing@^2.0.1:
   version "2.1.1"

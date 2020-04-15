@@ -165,7 +165,7 @@
     "retext-quotes": "^2.0.1",
     "retext-readability": "^4.2.0",
     "retext-redundant-acronyms": "^1.2.1",
-    "retext-repeated-words": "^1.2.1",
+    "retext-repeated-words": "^3.0.0",
     "retext-sentence-spacing": "^2.0.1",
     "retext-spell": "^2.3.1",
     "retext-syntax-urls": "^2.0.0",
