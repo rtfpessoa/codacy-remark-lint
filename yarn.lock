@@ -6062,7 +6062,7 @@ remark-lint-blank-lines-1-0-2@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.0.0"
 
-remark-lint-blockquote-indentation@^1.0.0, remark-lint-blockquote-indentation@^1.0.2:
+remark-lint-blockquote-indentation@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/remark-lint-blockquote-indentation/-/remark-lint-blockquote-indentation-1.0.3.tgz#9c35235dd0e904ad6c085e9f66d94b3f13968d1f"
   integrity sha512-qK4C1l2VmeOVWEAkDYP0CaDtSFoaEBEo5l4oyz1kTkY7YB0Jh7llW2KjuhJz5IzMLmloKJzIyGwlu/odcwaHpg==
@@ -6073,6 +6073,18 @@ remark-lint-blockquote-indentation@^1.0.0, remark-lint-blockquote-indentation@^1
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
+
+remark-lint-blockquote-indentation@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-blockquote-indentation/-/remark-lint-blockquote-indentation-2.0.0.tgz#bbeef77eee9fdfa74975cd5491446ec9f3a96500"
+  integrity sha512-Ma/lk+egYzvzV9+RLxR7iaNcFqwsF02guxY2nFF7gaVFXWDhbRy+hbiRZiTQe3y8AK+smc2yE79I+JRUVL15LQ==
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    pluralize "^8.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-checkbox-character-style@^1.0.0, remark-lint-checkbox-character-style@^1.0.2:
   version "1.0.3"
