@@ -3,7 +3,7 @@ import test from 'ava';
 import * as path from 'path';
 import run from './remark-runner';
 
-test('run integration test for remark-lint-no-empty-url', async t => {
+test('run integration test for remark-lint-no-empty-url', async (t) => {
   const testsPath = path.join(
     process.cwd(),
     'test_samples/repositories/empty-urls'

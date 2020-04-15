@@ -4,7 +4,7 @@ import * as path from 'path';
 import { Configuration, EmptyConfiguration } from './codacy-configuration';
 import run from './remark-runner';
 
-test('run analysis when codacy config file is not found but has .remarkrc', async t => {
+test('run analysis when codacy config file is not found but has .remarkrc', async (t) => {
   const testsPath = path.join(
     process.cwd(),
     'test_samples/repositories/remark-config-file-simple'
@@ -37,7 +37,7 @@ test('run analysis when codacy config file is not found but has .remarkrc', asyn
   ]);
 });
 
-test('run analysis when codacy config file is found with only files', async t => {
+test('run analysis when codacy config file is found with only files', async (t) => {
   const testsPath = path.join(
     process.cwd(),
     'test_samples/repositories/remark-config-file'
@@ -73,7 +73,7 @@ test('run analysis when codacy config file is found with only files', async t =>
   ]);
 });
 
-test('run analysis when codacy config file is found with files and patterns', async t => {
+test('run analysis when codacy config file is found with files and patterns', async (t) => {
   const testsPath = path.join(
     process.cwd(),
     'test_samples/repositories/remark-config-file'

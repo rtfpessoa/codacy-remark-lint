@@ -4,7 +4,7 @@ export function find(
   tags: ReadonlyArray<Tag>,
   key: string
 ): string | undefined {
-  const tagOpt = tags.find(tag => {
+  const tagOpt = tags.find((tag) => {
     return tag && tag.type === key;
   });
 
@@ -16,8 +16,8 @@ export function findAll(
   key: string
 ): ReadonlyArray<string> {
   return tags
-    .filter(tag => tag && tag.string && tag.type === key)
-    .map(tag => tag.string || '');
+    .filter((tag) => tag && tag.string && tag.type === key)
+    .map((tag) => tag.string || '');
 }
 
 export default find;

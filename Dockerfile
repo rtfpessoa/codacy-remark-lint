@@ -1,4 +1,4 @@
-FROM node:8-alpine AS build
+FROM node:13-alpine AS build
 
 LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
 
@@ -12,7 +12,7 @@ RUN \
     yarn && \
     yarn run build
 
-FROM node:8-alpine
+FROM node:13-alpine
 
 LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
 

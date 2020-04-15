@@ -2,7 +2,7 @@
 import test from 'ava';
 import configFromCodacy from './codacy-configuration';
 
-test('read inexistant codacy configuration file', async t => {
+test('read inexistant codacy configuration file', async (t) => {
   t.deepEqual(
     await configFromCodacy(
       './test_samples/configs/remark-config-file/codacyrc'
@@ -11,7 +11,7 @@ test('read inexistant codacy configuration file', async t => {
   );
 });
 
-test('read valid codacy configuration file', async t => {
+test('read valid codacy configuration file', async (t) => {
   t.deepEqual(
     await configFromCodacy(
       './test_samples/configs/codacy-config-file-with-files-and-patterns/codacyrc'
@@ -23,7 +23,7 @@ test('read valid codacy configuration file', async t => {
   );
 });
 
-test('read valid codacy configuration file with only files', async t => {
+test('read valid codacy configuration file with only files', async (t) => {
   t.deepEqual(
     await configFromCodacy(
       './test_samples/configs/codacy-config-file-only-files/codacyrc'

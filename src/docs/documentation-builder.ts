@@ -14,7 +14,7 @@ export default function allRules(): ReadonlyArray<Rule> {
       const base = path.resolve(remarkLintPackagesPath, basename);
       return rule(base);
     })
-    .filter(r => r !== undefined) as ReadonlyArray<Rule>;
+    .filter((r) => r !== undefined) as ReadonlyArray<Rule>;
 
   // tslint:disable-next-line:no-expression-statement
   fs.removeSync(remarkLintPath);
