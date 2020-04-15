@@ -1,22 +1,17 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@2.0.1
-  codacy_plugins_test: codacy/plugins-test@0.7.1
+  codacy: codacy/base@2.14.8
+  codacy_plugins_test: codacy/plugins-test@0.10.6
 
 jobs:
   build_and_test:
-    parameters:
-      node_version:
-        type: string
-        default: latest
-        description: Specify the node version
     docker:
-      - image: circleci/node:<<parameters.node_version>>
+      - image: circleci/node:latest
     working_directory: ~/workdir
     steps:
       - attach_workspace:
-          at: ~/
+          at: ~/workdir
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
@@ -42,12 +37,7 @@ workflows:
     jobs:
       - codacy/checkout_and_version
       - build_and_test:
-          node_version: "13"
-          requires:
-            - codacy/checkout_and_version
-      - build_and_test:
           name: build_and_test_latest
-          node_version: latest
           requires:
             - codacy/checkout_and_version
       - codacy/shell:
@@ -63,16 +53,8 @@ workflows:
           run_multiple_tests: true
           requires:
             - publish_docker_local
-      - codacy/shell:
-          name: publish_dockerhub
+      - codacy/publish_docker:
           context: CodacyDocker
-          cmd: |
-            docker load --input ~/workdir/docker-image.tar
-            docker login -u $DOCKER_USER -p $DOCKER_PASS
-            docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
-            docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:latest
-            docker push codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
-            docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
           requires:
             - plugins_test
           filters:
@@ -83,4 +65,4 @@ workflows:
           name: tag_version
           context: CodacyAWS
           requires:
-            - publish_dockerhub
+            - codacy/publish_docker
