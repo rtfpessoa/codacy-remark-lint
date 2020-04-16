@@ -6210,10 +6210,10 @@ remark-lint-final-definition@^1.0.0, remark-lint-final-definition@^1.0.2:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-final-newline@^1.0.0, remark-lint-final-newline@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-final-newline/-/remark-lint-final-newline-1.0.3.tgz#06c3d71ec7b97c16cde31543cd41a16b36c30f79"
-  integrity sha512-ETAadktv75EwUS3XDhyZUVstXKxfPAEn7SmfN9kZ4+Jb4qo4hHE9gtTOzhE6HxLUxxl9BBhpC5mMO3JcL8UZ5A==
+remark-lint-final-newline@^1.0.0, remark-lint-final-newline@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/remark-lint-final-newline/-/remark-lint-final-newline-1.0.4.tgz#b2e6219d64becc9f909bbfb902da6ec79dfa5988"
+  integrity sha512-pUwqX8TVTTfqX5arMnu9Dr2ufg6wZ6Pk1VeqlnWfK92PBXLG8Zc3yrLpYXOJy1fHdWpqUECRRowG0H/OkZIEbw==
   dependencies:
     unified-lint-rule "^1.0.0"
 
