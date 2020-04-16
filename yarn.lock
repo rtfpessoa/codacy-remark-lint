@@ -6755,7 +6755,7 @@ remark-lint-no-shortcut-reference-image@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-shortcut-reference-link@^1.0.0, remark-lint-no-shortcut-reference-link@^1.0.3:
+remark-lint-no-shortcut-reference-link@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/remark-lint-no-shortcut-reference-link/-/remark-lint-no-shortcut-reference-link-1.0.4.tgz#92af34b939c0341eacdb2fc2ede855f742dc1779"
   integrity sha512-FXdMJYqspZBhPlxYqfVgVluVXjxStg0RHJzqrk8G9wS8fCS62AE3reoaoiCahwoH1tfKcA+poktbKqDAmZo7Jg==
