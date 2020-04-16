@@ -6358,7 +6358,7 @@ remark-lint-list-item-spacing@^1.0.0, remark-lint-list-item-spacing@^1.1.2:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-maximum-heading-length@^1.0.0, remark-lint-maximum-heading-length@^1.0.2:
+remark-lint-maximum-heading-length@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/remark-lint-maximum-heading-length/-/remark-lint-maximum-heading-length-1.0.3.tgz#e235190e9991567254f9ce1104e15dad8e332b13"
   integrity sha512-ybcDpR5VHBjtjzdry7AdSjLFwslPo6rdhIJK2+WfHgfeEjIYnlz1uMvp1Z98QMmjpB5JSN83Kzg5fH8/B7poUw==
@@ -6367,6 +6367,16 @@ remark-lint-maximum-heading-length@^1.0.0, remark-lint-maximum-heading-length@^1
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.1.1"
+
+remark-lint-maximum-heading-length@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-maximum-heading-length/-/remark-lint-maximum-heading-length-2.0.0.tgz#0db5aedb5b3c5e0e3b3acca17ebe126fccf900d4"
+  integrity sha512-EuRam7uUQdWI3DXPKk7Kbu//l+IiYcTcZqBbswdpsHBzMQWF/R2e5SJVObdszKdEySJx/zktaYCKJDxqZjPnxQ==
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-maximum-line-length@^1.0.0, remark-lint-maximum-line-length@^1.1.0:
   version "1.2.1"
