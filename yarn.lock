@@ -6811,15 +6811,6 @@ remark-lint-no-undefined-references@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-unused-definitions@^1.0.2:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-unused-definitions/-/remark-lint-no-unused-definitions-1.0.5.tgz#183a0de2e55295f52ff888f99f9830eae35eaddf"
-  integrity sha512-Bo22e0RNzc1QMW317KTuStGFDG7uTDUQhm/TrW6Qzud0WXnNnqUyvts+e7wTYoj8VnwhhjyjyoA9lKA3uXMdAQ==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-visit "^1.4.0"
-
 remark-lint-no-unused-definitions@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-no-unused-definitions/-/remark-lint-no-unused-definitions-2.0.0.tgz#f622b6f129b8c073a4d75234a869211c213d66a7"
