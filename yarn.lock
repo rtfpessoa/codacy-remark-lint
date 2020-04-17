@@ -7038,16 +7038,6 @@ remark-lint-table-pipes@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-unordered-list-marker-style@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-unordered-list-marker-style/-/remark-lint-unordered-list-marker-style-1.0.3.tgz#72f9ec8cd54950753593b3b727fd28e48fa197d5"
-  integrity sha512-0nn/Yscy5ImO4fqByrk/Ua02UwGx8LRu+0kdCbkVz4IxPO5qxTEfyccUQZR71zTdMJp1d2OeqyD9XtMaO4X7Ww==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^1.1.1"
-
 remark-lint-unordered-list-marker-style@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-unordered-list-marker-style/-/remark-lint-unordered-list-marker-style-2.0.0.tgz#ec510bdf1b7e3d245cd232e59b84ceebf0324bd0"
