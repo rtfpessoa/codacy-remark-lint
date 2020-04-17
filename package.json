@@ -144,7 +144,7 @@
     "remark-lint-table-cell-padding": "^2.0.0",
     "remark-lint-table-pipe-alignment": "^1.0.2",
     "remark-lint-table-pipes": "^2.0.0",
-    "remark-lint-unordered-list-marker-style": "^1.0.2",
+    "remark-lint-unordered-list-marker-style": "^2.0.0",
     "remark-lint-write-good": "^1.0.3",
     "remark-parse": "^8.0.0",
     "remark-preset-lint-consistent": "^2.0.2",
