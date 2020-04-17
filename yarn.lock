@@ -6998,7 +6998,7 @@ remark-lint-strong-marker@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-table-cell-padding@^1.0.0, remark-lint-table-cell-padding@^1.0.2:
+remark-lint-table-cell-padding@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/remark-lint-table-cell-padding/-/remark-lint-table-cell-padding-1.0.4.tgz#be2b020a3985c414abb59cc5d88fda1993f8f2e8"
   integrity sha512-AQWWtV1yca1PN27QaFRJbBK6Ro/bopv1XnVKxj/iMebhOU2D2FBJ8rXmMZXVMC3G9OB2WSzGgqH3nP6QY12LoA==
