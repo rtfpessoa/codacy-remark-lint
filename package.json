@@ -67,7 +67,7 @@
     "node": ">=13"
   },
   "dependencies": {
-    "@types/tmp": "^0.0.33",
+    "@types/tmp": "^0.1.0",
     "dictionary-en-us": "^2.0.0",
     "fs-extra": "^7.0.0",
     "markdown-extensions": "^1.1.1",
