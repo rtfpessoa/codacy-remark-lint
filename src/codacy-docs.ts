@@ -14,7 +14,7 @@ const descripionPath = path.resolve(`${docsPath}/description`);
 const allRules = getAllRules();
 
 if (fs.existsSync(docsPath)) {
-  fs.removeSync(docsPath);
+  fs.removeSync(descripionPath);
 }
 
 fs.mkdirSync(docsPath);
