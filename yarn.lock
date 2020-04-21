@@ -6562,7 +6562,7 @@ remark-lint-linebreak-style@^1.0.2:
     unified-lint-rule "^1.0.0"
     vfile-location "^2.0.1"
 
-remark-lint-link-title-style@^1.0.0, remark-lint-link-title-style@^1.0.2:
+remark-lint-link-title-style@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/remark-lint-link-title-style/-/remark-lint-link-title-style-1.0.4.tgz#eaca24b6eb1ee62b66a237ea54e532ed2aaaafec"
   integrity sha512-61/uH3zDTiozLJqgxp6rHGnVKTChC3UjL3Q0KQDBpprEOL4qLYjTn4fFKscVz776d0uUX6jczrW+GT4AFVOUgg==
