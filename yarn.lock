@@ -7018,14 +7018,14 @@ remark-lint-no-multiple-toplevel-headings@^2.0.0:
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-paragraph-content-indent@^1.0.4:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-paragraph-content-indent/-/remark-lint-no-paragraph-content-indent-1.0.6.tgz#685a4231e2eedfb37c4bacdcd8849a5a8420ea01"
-  integrity sha512-PqI4QpGgj9EcfNQFNhwyyp2jgm+aK8NS3A0XbS1F1YUvgDwD2kuyMRenEXCCipM7+xlyOyzmic37xfZA2nBikA==
+remark-lint-no-paragraph-content-indent@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-paragraph-content-indent/-/remark-lint-no-paragraph-content-indent-2.0.0.tgz#0b569cb27121cfd838d0e3c94cde78471dcaf195"
+  integrity sha512-HxsYFEtN35B2vwXUD8PZH9NeOdBJENp5c6k5ToBDvICAmbNUAwSQgBKb/dO+RbBX33MWclewCkwEzhXI5qOaag==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-position "^3.0.0"
-    unist-util-visit "^1.4.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-reference-like-url@^1.0.2:
   version "1.0.4"
