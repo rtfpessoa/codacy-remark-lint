@@ -6875,10 +6875,10 @@ remark-lint-no-file-name-mixed-case@^1.0.0, remark-lint-no-file-name-mixed-case@
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-no-file-name-outer-dashes@^1.0.0, remark-lint-no-file-name-outer-dashes@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-file-name-outer-dashes/-/remark-lint-no-file-name-outer-dashes-1.0.4.tgz#c6e22a5cc64df4e12fc31712a927e8039854a666"
-  integrity sha512-+bZvvme2Bm3Vp5L2iKuvGHYVmHKrTkkRt8JqJPGepuhvBvT4Q7+CgfKyMtC/hIjyl+IcuJQ2H0qPRzdicjy1wQ==
+remark-lint-no-file-name-outer-dashes@^1.0.0, remark-lint-no-file-name-outer-dashes@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-file-name-outer-dashes/-/remark-lint-no-file-name-outer-dashes-1.0.5.tgz#7f8306fe02ffcc29225becd928801ff25d92680f"
+  integrity sha512-5CMrCqyJj4ydM2QMhMAc60o08fJDxBgmO62r+RqVs+aIdIK6TtsF+T8oX+aTEtc3y/euKJ681tqEsSeJZh/h0A==
   dependencies:
     unified-lint-rule "^1.0.0"
 
