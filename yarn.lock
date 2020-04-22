@@ -6554,13 +6554,13 @@ remark-lint-heading-whitespace@^1.0.0:
     unified-lint-rule "^1.0.2"
     unist-util-visit "^1.3.0"
 
-remark-lint-linebreak-style@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-linebreak-style/-/remark-lint-linebreak-style-1.0.3.tgz#793c23a1875622d5c1e88221cc83ed8c38c6d787"
-  integrity sha512-r4JTQ8M5Jnu3qJk6OFBPaYThGtc+wkIB9eHoJFkM77kirMnobr9o9BNl2OkX4QY1xoqAJYaBEXWNTUIt0MA8pQ==
+remark-lint-linebreak-style@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-linebreak-style/-/remark-lint-linebreak-style-2.0.0.tgz#86234e8a40171f80e6daf9edcc30a7b23b72b79d"
+  integrity sha512-NyKMaI+w0GBeCLzt0hpZ33hadAuZ0ny9mCM673ZRqVV3TbN99OYbQpJBtO7ZLr8wIVxapXFzwiwes2fl2ch5CA==
   dependencies:
     unified-lint-rule "^1.0.0"
-    vfile-location "^2.0.1"
+    vfile-location "^3.0.0"
 
 remark-lint-link-title-style@^1.0.0:
   version "1.0.4"
