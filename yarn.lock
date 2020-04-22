@@ -7169,7 +7169,7 @@ remark-lint-ordered-list-marker-value@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-rule-style@^1.0.0, remark-lint-rule-style@^1.0.2:
+remark-lint-rule-style@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/remark-lint-rule-style/-/remark-lint-rule-style-1.0.3.tgz#859aef4d2e2180ecf9db56360497372b90a04aab"
   integrity sha512-SJe7IFORYRdo8JUhMSdcTktVAUVNVp36YYl1ZD9CfHqQHWlFD+3vWYzJXOZfog/i+CyWf7Yi0WVYmQes+167dA==
