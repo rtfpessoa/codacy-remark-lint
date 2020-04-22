@@ -139,7 +139,7 @@
     "remark-lint-no-unused-definitions": "^2.0.0",
     "remark-lint-ordered-list-marker-style": "^1.0.2",
     "remark-lint-ordered-list-marker-value": "^1.0.2",
-    "remark-lint-rule-style": "^1.0.2",
+    "remark-lint-rule-style": "^2.0.0",
     "remark-lint-strong-marker": "^2.0.0",
     "remark-lint-table-cell-padding": "^2.0.0",
     "remark-lint-table-pipe-alignment": "^1.0.2",
