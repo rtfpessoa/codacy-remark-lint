@@ -6398,7 +6398,7 @@ remark-lint-definition-spacing@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-emphasis-marker@^1.0.0, remark-lint-emphasis-marker@^1.0.2:
+remark-lint-emphasis-marker@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/remark-lint-emphasis-marker/-/remark-lint-emphasis-marker-1.0.3.tgz#6dc4e7df13e5092c1222110f826f68b4b3920550"
   integrity sha512-ea2tEVyhZvYxwj6AHsW2qzgEDLljcnzq5taZ3FJFL0KMZYZHfWaIU90H43jrW4seGEtmaP1bmoqJaTavJ2x5Jw==
