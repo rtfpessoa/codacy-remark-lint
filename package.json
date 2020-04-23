@@ -176,7 +176,7 @@
     "vfile": "^3.0.0"
   },
   "devDependencies": {
-    "@types/node": "^13.11.1",
+    "@types/node": "^13.13.2",
     "@types/trim": "^0.1.0",
     "@types/vfile": "^2.2.2",
     "ava": "1.0.0-beta.7",
