@@ -189,7 +189,7 @@
     "nyc": "^15.0.1",
     "opn-cli": "^5.0.0",
     "prettier": "^2.0.4",
-    "standard-version": "^4.4.0",
+    "standard-version": "^7.1.0",
     "strip-indent": "^2.0.0",
     "trash-cli": "^3.0.0",
     "trim": "^0.0.1",
