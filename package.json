@@ -179,7 +179,7 @@
     "@types/node": "^13.13.4",
     "@types/trim": "^0.1.0",
     "@types/vfile": "^4.0.0",
-    "ava": "1.0.0-beta.7",
+    "ava": "3.8.1",
     "codacy-coverage": "^3.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "dox": "^0.9.0",
@@ -208,8 +208,8 @@
     "files": [
       "build/main/**/*.spec.js"
     ],
-    "sources": [
-      "build/main/**/*.js"
+    "ignoredByWatcher": [
+      "!build/main/**/*.js"
     ]
   },
   "config": {
