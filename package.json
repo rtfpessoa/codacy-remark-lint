@@ -208,8 +208,8 @@
     "files": [
       "build/main/**/*.spec.js"
     ],
-    "sources": [
-      "build/main/**/*.js"
+    "ignoredByWatcher": [
+      "!build/main/**/*.js"
     ]
   },
   "config": {
