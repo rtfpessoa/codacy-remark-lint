@@ -7007,16 +7007,6 @@ remark-lint-no-shortcut-reference-link@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-table-indentation@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-table-indentation/-/remark-lint-no-table-indentation-1.0.4.tgz#6681a26198ee86c4fbbba382a42254125bc5807b"
-  integrity sha512-H4VGHcg1k8sTIbwazFYLNbDqpPR+M0aHHKDf+93b/xyd27Dp0ODQrMnQbls1Cls5qOAQnwAQbx+75wcpFxP3OQ==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^1.4.0"
-
 remark-lint-no-table-indentation@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-no-table-indentation/-/remark-lint-no-table-indentation-2.0.0.tgz#218c27d952c780df5577c2b461e63499a641a793"
