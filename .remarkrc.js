@@ -69,7 +69,7 @@ exports.plugins = [
           require("retext-spell"),
           {
             ignoreLiteral: true,
-            dictionary: require("dictionary-en-us"),
+            dictionary: require("dictionary-en"),
             ...personalDictionary
           }
         ],

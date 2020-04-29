@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@types/tmp": "^0.1.0",
-    "dictionary-en-us": "^2.0.0",
+    "dictionary-en": "^3.0.0",
     "fs-extra": "^9.0.0",
     "markdown-extensions": "^1.1.1",
     "remark": "^9.0.0",
