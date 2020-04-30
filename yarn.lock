@@ -6529,14 +6529,14 @@ remark-lint-no-heading-indent@^1.0.2:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-heading-like-paragraph@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-like-paragraph/-/remark-lint-no-heading-like-paragraph-1.0.3.tgz#3c4b29d68db22d8c00dad94816570790ff990ac2"
-  integrity sha512-IVT8NaN63i6u1aA33mFQxmHrANYc/QlI5T/B2XqFTXAX5fsKUeawI0xmlJgGzCfKekoryjhUAYrNga5pQzAW+g==
+remark-lint-no-heading-like-paragraph@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-like-paragraph/-/remark-lint-no-heading-like-paragraph-2.0.0.tgz#648caae2ab49a898231cfde0cc966d80e1c09bdc"
+  integrity sha512-jpt3Ts3o64T5cwc0nQfvi9K4x4pmooIvBlAwjxySO4qmQlL4MeGa4+9oR7cSL2IJ4WM9HVcdi0avfWEundaPdg==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
-    unist-util-visit "^1.1.1"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-heading-punctuation@^1.0.2:
   version "1.0.3"
