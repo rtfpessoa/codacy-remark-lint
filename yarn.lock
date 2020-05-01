@@ -7012,16 +7012,16 @@ retext-equality@^5.0.0:
     unist-util-is "^4.0.0"
     unist-util-visit "^2.0.0"
 
-retext-indefinite-article@^1.1.4:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/retext-indefinite-article/-/retext-indefinite-article-1.1.7.tgz#a9de7cca8c24a11cb8fcd5c68e54d8e38e5ab525"
-  integrity sha512-pqvEfEHL8uoeonbEjk8+d/hmyA3ozIeNTl4t3uurMcBpoIqN3+nbuMCFQrfDy2wjaKZ40KsLmEi+Zjv7m1ejLQ==
+retext-indefinite-article@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/retext-indefinite-article/-/retext-indefinite-article-2.0.0.tgz#b7906be58e4d4133fd408db0ff110e192101540d"
+  integrity sha512-K2xB6YYDRJ+OdMhUb1oHn+JH+svCY8J3CDcypcUjKmvXITBNBvgNy3CZan/Qgh9uJELPE4SpC/zugYqAw0534w==
   dependencies:
     format "^0.2.2"
     nlcst-to-string "^2.0.0"
     number-to-words "^1.2.3"
-    unist-util-is "^3.0.0"
-    unist-util-visit "^1.1.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit "^2.0.0"
 
 retext-latin@^2.0.0:
   version "2.0.3"
