@@ -5950,16 +5950,6 @@ remark-lint-file-extension@^1.0.0, remark-lint-file-extension@^1.0.4:
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-final-definition@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-final-definition/-/remark-lint-final-definition-1.0.3.tgz#4fd7bbf5a028f6e32645460965099689485508ae"
-  integrity sha512-QhbBYy99enfQDeUTElioCHrhgg+SgjMNRlru7/JlOguOufP6wn7AXgn2EVTrLZRoByY0VsNS2jCayXxUTzQ8KA==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^1.1.1"
-
 remark-lint-final-definition@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-final-definition/-/remark-lint-final-definition-2.0.0.tgz#b4e2ce6bdd5bf3ef1b5ecfb2cff33b458901a161"
