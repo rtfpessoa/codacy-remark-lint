@@ -7030,14 +7030,14 @@ retext-profanities@^6.0.0:
     pluralize "^8.0.0"
     quotation "^1.0.0"
 
-retext-quotes@^2.0.1:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/retext-quotes/-/retext-quotes-2.0.4.tgz#48c634d49cf3b5a37001fa2b767b020450184b6c"
-  integrity sha512-GiJmwnlY4yEaRsqRo4veFIAX/qRdMkm//YhiwFX+t4NhXoLYqWUdgzmsj623IwOdcMpxOmQdtzTmPbGSVx3yfA==
+retext-quotes@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/retext-quotes/-/retext-quotes-4.0.0.tgz#c2adb2e2582825ab65a25b8b8f81ae2f950b82c8"
+  integrity sha512-YtHJ3Yw0yk8sGp0FMAVWe2a/q0DaHjSKfrAYkO5rZXLofGYYG+LCoqzqlX0tbfae1ImlsqhsLVCuZ0fkUO087g==
   dependencies:
     nlcst-to-string "^2.0.0"
-    unist-util-is "^3.0.0"
-    unist-util-visit "^1.1.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit "^2.0.0"
 
 retext-readability@^4.2.0:
   version "4.2.2"
