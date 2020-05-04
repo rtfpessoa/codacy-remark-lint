@@ -6065,16 +6065,6 @@ remark-lint-maximum-heading-length@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-maximum-line-length@^1.1.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-maximum-line-length/-/remark-lint-maximum-line-length-1.2.1.tgz#1030991d9af3c935731168a0a12ecb1db2d2b2b6"
-  integrity sha512-CSxX1qc+rAqixk8eBrI+yBsUmD8YGfOezFeJWjJRuUaoOvs67oqCIU+I2HbwcUYY8/KnDxF1MCp+uCM0RkjKKw==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^1.4.0"
-
 remark-lint-maximum-line-length@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-maximum-line-length/-/remark-lint-maximum-line-length-2.0.0.tgz#e3e036fa1b611af6157cac9ca16eb15ce240832b"
