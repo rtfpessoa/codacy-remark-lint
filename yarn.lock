@@ -6242,16 +6242,16 @@ remark-lint-no-heading-content-indent@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-heading-indent@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-indent/-/remark-lint-no-heading-indent-1.0.3.tgz#bc6feffd1cc6228d2a3938025c3eab7cb74fdbc5"
-  integrity sha512-RTvsFfiXjHZOxU+t7DtNPk9M9EqGe82MZbo+VOJEUBkQKf17qp4EZkJEvl4h9pn+hJmoKHLb7Vfge8Bxe42gcQ==
+remark-lint-no-heading-indent@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-indent/-/remark-lint-no-heading-indent-2.0.0.tgz#a1b7980cf05fad7f75a708dd4bb8064ca80d3b7e"
+  integrity sha512-dBjSP2QdQVypFpwQdjZ6h/VsyY3CBY+IXY2edSWiITOofZrt7knmwrLFUoxPtvc9k4PIBA7XXpiwPPYBQzuLFg==
   dependencies:
-    plur "^3.0.0"
+    pluralize "^8.0.0"
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
-    unist-util-visit "^1.1.1"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-heading-like-paragraph@^2.0.0:
   version "2.0.0"
