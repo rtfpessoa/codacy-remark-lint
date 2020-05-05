@@ -182,7 +182,7 @@
     "@types/fs-extra": "^8.1.0",
     "ava": "3.8.1",
     "codacy-coverage": "^3.0.0",
-    "cz-conventional-changelog": "^2.1.0",
+    "cz-conventional-changelog": "^3.2.0",
     "dox": "^0.9.0",
     "gh-pages": "^2.2.0",
     "npm-run-all": "^4.1.3",
