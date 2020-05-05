@@ -156,7 +156,7 @@
     "retext": "^7.0.1",
     "retext-contractions": "^2.1.2",
     "retext-diacritics": "^3.0.0",
-    "retext-english": "^3.0.0",
+    "retext-english": "^3.0.4",
     "retext-equality": "^5.0.0",
     "retext-indefinite-article": "^2.0.0",
     "retext-overuse": "^1.1.1",
