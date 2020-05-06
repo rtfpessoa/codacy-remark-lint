@@ -6699,16 +6699,6 @@ remark-lint-no-tabs@^1.0.2:
     unified-lint-rule "^1.0.0"
     vfile-location "^2.0.1"
 
-remark-lint-no-undefined-references@^1.0.2:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-undefined-references/-/remark-lint-no-undefined-references-1.1.1.tgz#b9fa2caec896df41a3c47169d9c6dd0cee3a2075"
-  integrity sha512-b1eIjWFaCu6m16Ax2uG33o1v+eRYqDTQRUqU6UeQ76JXmDmVtVO75ZuyRpqqE7VTZRW8YLVurXfJPDXfIa5Wng==
-  dependencies:
-    collapse-white-space "^1.0.4"
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-visit "^1.4.0"
-
 remark-lint-no-undefined-references@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-no-undefined-references/-/remark-lint-no-undefined-references-2.0.0.tgz#ec2a45cd19d36a5d9ce16df0a044496881143119"
