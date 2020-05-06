@@ -5711,11 +5711,6 @@ pluralize@^1.2.1:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
   integrity sha1-0aIUg/0iu0HlihL6NCGCMUCJfEU=
 
-pluralize@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
-  integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
-
 pluralize@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
@@ -7358,10 +7353,10 @@ retext-quotes@^4.0.0:
     unist-util-is "^4.0.0"
     unist-util-visit "^2.0.0"
 
-retext-readability@^4.2.0:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/retext-readability/-/retext-readability-4.2.2.tgz#95eec704ff3e7739aaf9ba1665fa17a329d52e64"
-  integrity sha512-D+zBUr1nxZmwaZXvgHE6a/JJH/JpjLlje3q7lnSqgfwm5bIMzqAiPbsNUFlY4E7Sd4Tt76jhkfNLTz2aWprZUA==
+retext-readability@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/retext-readability/-/retext-readability-6.0.0.tgz#a333adf6bd31c50aab53de30ff098bfa6b4f33ad"
+  integrity sha512-fDPT42PhpsoKX5NECtZix0/MiaUVpYYaB1FFexacEvMWAQZvdZz2nZupRvNgKXpqxO2VdrVHbX0QtwKf2jYYbQ==
   dependencies:
     automated-readability "^1.0.0"
     coleman-liau "^1.0.0"
@@ -7373,8 +7368,8 @@ retext-readability@^4.2.0:
     smog-formula "^1.0.0"
     spache "^1.1.0"
     spache-formula "^1.0.0"
-    syllable "^3.2.0"
-    unist-util-visit "^1.0.0"
+    syllable "^4.0.0"
+    unist-util-visit "^2.0.0"
 
 retext-redundant-acronyms@^1.2.1:
   version "1.2.3"
@@ -8117,14 +8112,13 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-syllable@^3.2.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/syllable/-/syllable-3.6.1.tgz#1b08a0522c14ebc4db871f5697f68f49616e87d8"
-  integrity sha512-L2yAT4DRi9rwHpHMResxA/VKSM9T7X+eRAOEKoAFvHJxaxjtxT2Rt8qfB6pbrxeOZWsHu+ON0kTc9Oo0lU2PHA==
+syllable@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/syllable/-/syllable-4.1.0.tgz#aff65382a99c9b125c3f7e3c4dafd86f4b0cd13e"
+  integrity sha512-KUiIxtFxV17EEKqLYCHDcwaYxudDTRhX34mfTVYWkWFDsmiNRz1ZumpP3v0lTqsVQs78y3dqlSxkEMRk/SCVYQ==
   dependencies:
     normalize-strings "^1.1.0"
-    pluralize "^7.0.0"
-    trim "0.0.1"
+    pluralize "^8.0.0"
 
 table@^3.7.8:
   version "3.8.3"
