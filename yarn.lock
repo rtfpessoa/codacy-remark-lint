@@ -6053,15 +6053,15 @@ remark-lint-alphabetize-lists@^2.0.1:
     unified-lint-rule "^1.0.0"
     unist-util-visit "^1.0.0"
 
-remark-lint-blank-lines-1-0-2@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-blank-lines-1-0-2/-/remark-lint-blank-lines-1-0-2-2.0.0.tgz#04a84ef3d192adcb8732a27c721b70f36b6688e8"
-  integrity sha1-BKhO89GSrcuHMqJ8chtw82tmiOg=
+remark-lint-blank-lines-1-0-2@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-blank-lines-1-0-2/-/remark-lint-blank-lines-1-0-2-3.0.0.tgz#53bce8490e41d09d3e139cf09af85603adb39654"
+  integrity sha512-YSTKwmqxtr6jNW6boQv4EWtziYizXhx2+xAwzXtIZK4La+Mnz+3+DSJjPRPkW5nlYu7lCKI4L6BFv5BxbPPKxQ==
   dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^1.0.0"
+    unified-lint-rule "^1.0.4"
+    unist-util-generated "^1.1.4"
+    unist-util-position "^3.0.3"
+    unist-util-visit "^2.0.0"
 
 remark-lint-blockquote-indentation@^2.0.0:
   version "2.0.0"
@@ -8662,10 +8662,10 @@ unist-util-find-before@^2.0.0:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-generated@^1.1.0:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/unist-util-generated/-/unist-util-generated-1.1.4.tgz#2261c033d9fc23fae41872cdb7663746e972c1a7"
-  integrity sha512-SA7Sys3h3X4AlVnxHdvN/qYdr4R38HzihoEVY2Q2BZu8NHWDnw5OGcC/tXWjQfd4iG+M6qRFNIRGqJmp2ez4Ww==
+unist-util-generated@^1.1.0, unist-util-generated@^1.1.4:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/unist-util-generated/-/unist-util-generated-1.1.5.tgz#1e903e68467931ebfaea386dae9ea253628acd42"
+  integrity sha512-1TC+NxQa4N9pNdayCYA1EGUOCAO0Le3fVp7Jzns6lnua/mYgwHo0tz5WUAfrdpNch1RZLHc61VZ1SDgrtNXLSw==
 
 unist-util-inspect@^4.1.2:
   version "4.1.4"
@@ -8691,10 +8691,10 @@ unist-util-modify-children@^1.0.0, unist-util-modify-children@^1.1.1:
   dependencies:
     array-iterate "^1.0.0"
 
-unist-util-position@^3.0.0:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-3.0.3.tgz#fff942b879538b242096c148153826664b1ca373"
-  integrity sha512-28EpCBYFvnMeq9y/4w6pbnFmCUfzlsc41NJui5c51hOFjBA1fejcwc+5W4z2+0ECVbScG3dURS3JTVqwenzqZw==
+unist-util-position@^3.0.0, unist-util-position@^3.0.3:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-3.1.0.tgz#1c42ee6301f8d52f47d14f62bbdb796571fa2d47"
+  integrity sha512-w+PkwCbYSFw8vpgWD0v7zRCl1FpY3fjDSQ3/N/wNd9Ffa4gPi8+4keqt99N3XW6F99t/mUzp2xAhNmfKWp95QA==
 
 unist-util-remove-position@^1.0.0:
   version "1.1.3"
