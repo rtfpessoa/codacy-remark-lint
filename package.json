@@ -104,7 +104,7 @@
     "remark-lint-list-item-spacing": "^2.0.0",
     "remark-lint-maximum-heading-length": "^2.0.0",
     "remark-lint-maximum-line-length": "^2.0.0",
-    "remark-lint-no-auto-link-without-protocol": "^1.0.2",
+    "remark-lint-no-auto-link-without-protocol": "^2.0.0",
     "remark-lint-no-blockquote-without-marker": "^3.0.0",
     "remark-lint-no-consecutive-blank-lines": "^2.0.0",
     "remark-lint-no-dead-urls": "^1.0.2",
