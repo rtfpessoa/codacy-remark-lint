@@ -7185,14 +7185,14 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-retext-contractions@^2.1.2:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/retext-contractions/-/retext-contractions-2.1.4.tgz#6f94dcdd26fe07f67d10f804c32e4826512f8853"
-  integrity sha512-HwYrxEnhnEGmo921PKAMYUvyDq65iCd+kjliv22rF0xIQOP6gPzWWDhrLyNo2L+Tek7sI3GoxrK0QPvt8FNjRg==
+retext-contractions@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/retext-contractions/-/retext-contractions-4.0.0.tgz#cef6b7f7949a87e17e073fa7e0f8f9a29db61f74"
+  integrity sha512-0T+QE+mFBfYiZHqD+86yM19PjEN3w6Z2boTWpYZb4L6JyzMN4luHUzNHwaL8HtkbxHEe0j8yqLrYnTD+qoOEyw==
   dependencies:
     nlcst-is-literal "^1.0.0"
     nlcst-to-string "^2.0.0"
-    unist-util-visit "^1.1.0"
+    unist-util-visit "^2.0.0"
 
 retext-diacritics@^3.0.0:
   version "3.0.0"
