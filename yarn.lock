@@ -6110,16 +6110,6 @@ remark-lint-code@^2.0.0:
     unified-lint-rule "^1.0.0"
     unist-util-visit "^1.0.0"
 
-remark-lint-definition-case@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/remark-lint-definition-case/-/remark-lint-definition-case-1.0.4.tgz#54d2a112794f1a070a5e8aa7c8090e8ae9aa3e11"
-  integrity sha512-ebl8vYOab9iy1Mr29Wo/9CmqcYGRjCfBievIZts08efrxIElWz+jB8/n7C17fh8k0djiiS/Of6W+bfRD+kMXLA==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^1.4.0"
-
 remark-lint-definition-case@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-definition-case/-/remark-lint-definition-case-2.0.0.tgz#971daa6e510dcb8adbe1d8e8a98815e0113192a5"
