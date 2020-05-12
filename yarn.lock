@@ -7256,15 +7256,17 @@ retext-readability@^6.0.0:
     syllable "^4.0.0"
     unist-util-visit "^2.0.0"
 
-retext-redundant-acronyms@^1.2.1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/retext-redundant-acronyms/-/retext-redundant-acronyms-1.2.3.tgz#656a2057da2b1acc3ad75a300986bff02a214efa"
-  integrity sha512-AtC+AOTB+c4VgTmK9xFnm/0rBE/hYd3HmGOp4XZxLOY/A3KAVnoHO1athvp8G13UwGg+eu3RusUbeufSW5L9qA==
+retext-redundant-acronyms@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/retext-redundant-acronyms/-/retext-redundant-acronyms-3.0.0.tgz#778271064fb55ce6aac06ffe77ac2f12f3682efe"
+  integrity sha512-pu5um9ObH+j/AguHPVm+u23DK43zey2Jim0dmzccczvilbIRiYh7ZQMSOIuLNpE+7jNP0quX3oe/ommrLlwECQ==
   dependencies:
-    match-casing "^1.0.0"
-    nlcst-search "^1.0.0"
+    nlcst-normalize "^2.0.0"
+    nlcst-search "^2.0.0"
     nlcst-to-string "^2.0.0"
+    pluralize "^8.0.0"
     quotation "^1.0.0"
+    unist-util-find-after "^3.0.0"
     unist-util-position "^3.0.0"
 
 retext-repeated-words@^3.0.0:
@@ -8606,6 +8608,13 @@ unique-string@^2.0.0:
   integrity sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==
   dependencies:
     crypto-random-string "^2.0.0"
+
+unist-util-find-after@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-find-after/-/unist-util-find-after-3.0.0.tgz#5c65fcebf64d4f8f496db46fa8fd0fbf354b43e6"
+  integrity sha512-ojlBqfsBftYXExNu3+hHLfJQ/X1jYY/9vdm4yZWjIbf0VuWF6CRufci1ZyoD/wV2TYMKxXUoNuoqwy+CkgzAiQ==
+  dependencies:
+    unist-util-is "^4.0.0"
 
 unist-util-find-before@^2.0.0:
   version "2.0.4"
