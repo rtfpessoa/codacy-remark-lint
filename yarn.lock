@@ -6063,16 +6063,16 @@ remark-lint-checkbox-character-style@^2.0.0:
     unist-util-visit "^2.0.0"
     vfile-location "^3.0.0"
 
-remark-lint-checkbox-content-indent@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint-checkbox-content-indent/-/remark-lint-checkbox-content-indent-1.0.3.tgz#55771f9e57224fa119f53a57ab331c30c16d0e05"
-  integrity sha512-YaM1yy8RdnM0DUaP0r2X8kF+inUTmjkCpj5Xjn7QTOV1T5jqJMJnRRilirAWgOGa1QBZBUew7uj0L1Je9SJIZw==
+remark-lint-checkbox-content-indent@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-checkbox-content-indent/-/remark-lint-checkbox-content-indent-2.0.0.tgz#f45860d05db99b73af2a6899cae69dff647eaa01"
+  integrity sha512-02Xytexe8nso1ofPC6wN3FE48302nmteSIwydeIDFhJq7mG14SxF4xgay+Kjbhs/O5NoRIF2ju9qcPNJ5gFsXA==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
-    unist-util-visit "^1.1.1"
-    vfile-location "^2.0.1"
+    unist-util-visit "^2.0.0"
+    vfile-location "^3.0.0"
 
 remark-lint-code-block-style@^2.0.0:
   version "2.0.0"
@@ -8829,7 +8829,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vfile-location@^2.0.0, vfile-location@^2.0.1:
+vfile-location@^2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-2.0.5.tgz#c83eb02f8040228a8d2b3f10e485be3e3433e0a2"
   integrity sha512-Pa1ey0OzYBkLPxPZI3d9E+S4BmvfVwNAAXrrqGbwTVXWaX2p9kM1zZ+n35UtVM06shmWKH4RPRN8KI80qE3wNQ==
