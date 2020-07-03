@@ -6173,10 +6173,10 @@ remark-lint-file-extension@^1.0.0, remark-lint-file-extension@^1.0.5:
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-final-definition@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-final-definition/-/remark-lint-final-definition-2.0.0.tgz#b4e2ce6bdd5bf3ef1b5ecfb2cff33b458901a161"
-  integrity sha512-oGObGXt/CdQfvnoQHWrFPtpTQK7oHiw5kBGzG5GbPSj3rrv30ohD5K+11ljEle9e3wO048EiWDROO5eKzIeeGw==
+remark-lint-final-definition@^2.0.0, remark-lint-final-definition@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-final-definition/-/remark-lint-final-definition-2.0.1.tgz#ec37fb2a61452960ddff15055ac7c2f180ca5377"
+  integrity sha512-LG7nM0Xk6J9npYuJOf6xXdMWCLsb6M4LMc3SDcUa4KoBCoF646RrtT5MyMAq8OXlKROwugObyyW3aXUjG3blyA==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
