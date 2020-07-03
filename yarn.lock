@@ -6171,10 +6171,10 @@ remark-lint-fenced-code-marker@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-file-extension@^1.0.0, remark-lint-file-extension@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/remark-lint-file-extension/-/remark-lint-file-extension-1.0.4.tgz#2b8c88a371a79729505108dc22e7ad3df35e4817"
-  integrity sha512-Zfp1mXNwpg7STjTWynZjL+/JtvIOCrmOAZzL3uK+tYpT0ZDPdQ1EQEl5D92+Eiu5OcYlenzG42jiLcyJjv+Q2g==
+remark-lint-file-extension@^1.0.0, remark-lint-file-extension@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/remark-lint-file-extension/-/remark-lint-file-extension-1.0.5.tgz#7e2feec02919aa3db5c71fda19d726a9e24a4c6c"
+  integrity sha512-oVQdf5vEomwHkfQ7R/mgmsWW2H/t9kSvnrxtVoNOHr+qnOEafKKDn+AFhioN2kqtjCZBAjSSrePs6xGKmXKDTw==
   dependencies:
     unified-lint-rule "^1.0.0"
 
