@@ -6636,10 +6636,10 @@ remark-lint-no-undefined-references@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-unneeded-full-reference-image@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-unneeded-full-reference-image/-/remark-lint-no-unneeded-full-reference-image-2.0.0.tgz#ffd84adefe038844bae62e08b0418c569d32c8b7"
-  integrity sha512-mGocJ71Pp5/Jf97RMt4dUcEPnbPJgn/9fvm6FXXMCG9INGNhM5UX252Zr2Al+4L9TQQmZhCt5osBrK34TGBTjw==
+remark-lint-no-unneeded-full-reference-image@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-unneeded-full-reference-image/-/remark-lint-no-unneeded-full-reference-image-2.0.1.tgz#55bb158c2743f08fe03ad194f24fa729cf1736cf"
+  integrity sha512-ZqkrW6l/n1EmcGdtzBFoDygG2ehd/Wx46Id9Dagg15oLzwvbhp5mJIXArXU2qGrF82w1hfainCaZzyH/OBJtEg==
   dependencies:
     collapse-white-space "^1.0.0"
     unified-lint-rule "^1.0.0"
