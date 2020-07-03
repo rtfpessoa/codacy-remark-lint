@@ -1260,15 +1260,10 @@ coleman-liau@^1.0.0:
   resolved "https://registry.yarnpkg.com/coleman-liau/-/coleman-liau-1.0.4.tgz#8ed2b2fc0fa2634deb32de1944ba58d9f9fc78bb"
   integrity sha512-TKPhY4dE9YyC5n35jBrt1kYDFCunwZ0f9rH41OlPeYd9wWgcr6UKvXJlo+OqC6E/b7BBg4FRJdLeFnW1KUfftw==
 
-collapse-white-space@^1.0.0:
+collapse-white-space@^1.0.0, collapse-white-space@^1.0.2, collapse-white-space@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/collapse-white-space/-/collapse-white-space-1.0.6.tgz#e63629c0016665792060dbbeb79c42239d2c5287"
   integrity sha512-jEovNnrhMuqyCcjfEJA56v0Xq8SkIoPKDyaHahwo3POf4qcSXqMYuwNcOTzp74vTsR9Tn08z4MxWqAhcekogkQ==
-
-collapse-white-space@^1.0.2, collapse-white-space@^1.0.4:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/collapse-white-space/-/collapse-white-space-1.0.5.tgz#c2495b699ab1ed380d29a1091e01063e75dbbe3a"
-  integrity sha512-703bOOmytCYAX9cXYqoikYIx6twmFCXsnzRQheBcTG3nzKYBR4P/+wkYeH+Mvj7qUz8zZDtdyzbxfnEi/kYzRQ==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -6651,10 +6646,10 @@ remark-lint-no-unneeded-full-reference-image@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-unneeded-full-reference-link@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-unneeded-full-reference-link/-/remark-lint-no-unneeded-full-reference-link-2.0.0.tgz#90118a0a04fc80cd38c9cad769d3050abbfb8f10"
-  integrity sha512-SrFhgShjxUwJmWHVuUvV41ekKEtszzhG+uiy/fKedH+53Ummie8naRYmlfVGVEAgz/wXrFBg4pdr8c3I11H+LA==
+remark-lint-no-unneeded-full-reference-link@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-unneeded-full-reference-link/-/remark-lint-no-unneeded-full-reference-link-2.0.1.tgz#71623247908e848417793ea849d428414b238154"
+  integrity sha512-OcPQiG6meVpvfydzxkxPdVc8jcXdklQW4gMjY2BevLtVoaIJ+dgNBPazyYHP/0EzpVY2RftD3CZ+5hiLW2rgpA==
   dependencies:
     collapse-white-space "^1.0.0"
     unified-lint-rule "^1.0.0"
