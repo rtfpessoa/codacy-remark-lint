@@ -6498,10 +6498,10 @@ remark-lint-no-heading-indent@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-heading-like-paragraph@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-like-paragraph/-/remark-lint-no-heading-like-paragraph-2.0.0.tgz#648caae2ab49a898231cfde0cc966d80e1c09bdc"
-  integrity sha512-jpt3Ts3o64T5cwc0nQfvi9K4x4pmooIvBlAwjxySO4qmQlL4MeGa4+9oR7cSL2IJ4WM9HVcdi0avfWEundaPdg==
+remark-lint-no-heading-like-paragraph@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-like-paragraph/-/remark-lint-no-heading-like-paragraph-2.0.1.tgz#f16fa95a928aa580a46052913921d455f54d1fcf"
+  integrity sha512-9JDhpIvs4996PnHF5KUnx8/YN39MvZR0uf+EeVILdJbJ2IUL8BOlGNhMFc0CSmxajtIxobjiS+yzAvLG57pUFw==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
