@@ -6401,10 +6401,10 @@ remark-lint-no-duplicate-headings-in-section@^2.0.0:
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-duplicate-headings@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-2.0.0.tgz#ac0efd190b9b522b62030da71c1d31c1a7cfd6d9"
-  integrity sha512-xiPZ0mGAzZXGivU0VaXmKbhxIRmRUeCzOGVSzyVKX36GJ7UKZJPgTonT9eGYTe1HogSk8C+Dof3RaahC6yOPoA==
+remark-lint-no-duplicate-headings@^2.0.0, remark-lint-no-duplicate-headings@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-2.0.1.tgz#4a4b70e029155ebcfc03d8b2358c427b69a87576"
+  integrity sha512-F6AP0FJcHIlkmq0pHX0J5EGvLA9LfhuYTvnNO8y3kvflHeRjFkDyt2foz/taXR8OcLQR51n/jIJiwrrSMbiauw==
   dependencies:
     mdast-util-to-string "^1.0.2"
     unified-lint-rule "^1.0.0"
