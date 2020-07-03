@@ -6517,10 +6517,10 @@ remark-lint-no-heading-punctuation@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-html@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-html/-/remark-lint-no-html-2.0.0.tgz#8db0f2eb5c069b1d0f5702a4e19f336352d4b4f9"
-  integrity sha512-TW/kNzb15Q0KsmNhT9y3GpuJxQh9OnZjhWfif/ncnmO/82DLZNSy5Wyzb0ZuXR6wNioG1utEkXBE8LxcDH11tg==
+remark-lint-no-html@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-html/-/remark-lint-no-html-2.0.1.tgz#730389c11dc4c092642c2d265b269407506c1cfe"
+  integrity sha512-fDISacCkZCRgl1MeCx5Fx+eWL0iS2GK1EOETR1yAA0av7LYiF8tUwsP4/iRqcxIT30YoDlYoiNRyprD2eyWsUg==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
