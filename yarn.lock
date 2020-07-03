@@ -6362,10 +6362,10 @@ remark-lint-no-dead-urls@^1.0.2:
     unified-lint-rule "^1.0.4"
     unist-util-visit "^2.0.1"
 
-remark-lint-no-duplicate-defined-urls@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-defined-urls/-/remark-lint-no-duplicate-defined-urls-1.0.0.tgz#b01860cccb1c9f0eb9577be445579718b1017b2a"
-  integrity sha512-/k1ljeMrDUCxcs0XFxYA+5gaRzDeBFhImJduSMtU18plUeCNaLMUHB9YpZcPoePY5EWrFgAHH2JnhKyc0nYJEg==
+remark-lint-no-duplicate-defined-urls@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-defined-urls/-/remark-lint-no-duplicate-defined-urls-1.0.1.tgz#c1c8da32979f6e109f9254f407ea6d25a9d28504"
+  integrity sha512-fUx4grm0oboxl+uwsHsRQGp3A929ujORrFoB/5eIyMDslxrgMTHKYf9ylxcC5yBRypkZi9AhFWBJ/wtVrxYEAg==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.0.0"
