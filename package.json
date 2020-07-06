@@ -127,7 +127,7 @@
     "remark-lint-no-inline-padding": "^2.0.0",
     "remark-lint-no-literal-urls": "^2.0.1",
     "remark-lint-no-missing-blank-lines": "^2.0.0",
-    "remark-lint-no-multiple-toplevel-headings": "^2.0.0",
+    "remark-lint-no-multiple-toplevel-headings": "^2.0.1",
     "remark-lint-no-paragraph-content-indent": "^2.0.0",
     "remark-lint-no-reference-like-url": "^2.0.0",
     "remark-lint-no-shell-dollars": "^2.0.1",
