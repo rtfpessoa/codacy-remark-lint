@@ -6289,10 +6289,10 @@ remark-lint-list-item-indent@^2.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-list-item-spacing@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-list-item-spacing/-/remark-lint-list-item-spacing-2.0.0.tgz#92d6a9f2cf7026fd797b752a1a2767686f90a814"
-  integrity sha512-IxIAFIJA0BqciY28OZEJXe6oeMsonVA8hcw/JEx4pTJidEBKz/LLZ8t5ZLNFPh8Tdt/XnzvcmNPqPCoa05XDhg==
+remark-lint-list-item-spacing@^2.0.0, remark-lint-list-item-spacing@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-list-item-spacing/-/remark-lint-list-item-spacing-2.0.1.tgz#864ddda464d5cd11f725c83f00bb240538661d50"
+  integrity sha512-T/aRHRNxiLC0v8gsb5ljFpjm/j/nHvlbCcmE5q7+LCiKLWsv7JoERrmMyx89KaBudLRPhaFHqt6u+dfWYmj6LA==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
