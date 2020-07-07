@@ -6218,10 +6218,10 @@ remark-lint-heading-increment@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-heading-style@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-heading-style/-/remark-lint-heading-style-2.0.0.tgz#7d54cf91a4929db125ae088f3afc7bb021a0212e"
-  integrity sha512-LZvnAq5zWh9i/oRAEocth8yajEEH4kRgCrL4dE547Nkv6zaR2SKcym+uXMZ+GF6WEWcjXMiwSxIL7MHaT6XexA==
+remark-lint-heading-style@^2.0.0, remark-lint-heading-style@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-heading-style/-/remark-lint-heading-style-2.0.1.tgz#8216fca67d97bbbeec8a19b6c71bfefc16549f72"
+  integrity sha512-IrFLNs0M5Vbn9qg51AYhGUfzgLAcDOjh2hFGMz3mx664dV6zLcNZOPSdJBBJq3JQR4gKpoXcNwN1+FFaIATj+A==
   dependencies:
     mdast-util-heading-style "^1.0.2"
     unified-lint-rule "^1.0.0"
