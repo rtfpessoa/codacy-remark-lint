@@ -100,7 +100,7 @@
     "remark-lint-link-title-style": "^2.0.1",
     "remark-lint-list-item-bullet-indent": "^2.0.1",
     "remark-lint-list-item-content-indent": "^2.0.1",
-    "remark-lint-list-item-indent": "^2.0.0",
+    "remark-lint-list-item-indent": "^2.0.1",
     "remark-lint-list-item-spacing": "^2.0.1",
     "remark-lint-maximum-heading-length": "^2.0.1",
     "remark-lint-maximum-line-length": "^2.0.3",
