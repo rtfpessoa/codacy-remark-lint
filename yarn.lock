@@ -6209,10 +6209,10 @@ remark-lint-hard-break-spaces@^2.0.0, remark-lint-hard-break-spaces@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-heading-increment@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint-heading-increment/-/remark-lint-heading-increment-2.0.0.tgz#33990c5bdb83d0fbf17072800402b7e8b9f0804c"
-  integrity sha512-rMBYkn4Vb8ZUmuzVged5UlyDS1L1xrGeEVE+uRgjsoFiToZvN4jSWNEWgLcCfXB8//+ntbRjLGAJ64M8YOkifA==
+remark-lint-heading-increment@^2.0.0, remark-lint-heading-increment@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-heading-increment/-/remark-lint-heading-increment-2.0.1.tgz#b578f251508a05d79bc2d1ae941e0620e23bf1d3"
+  integrity sha512-bYDRmv/lk3nuWXs2VSD1B4FneGT6v7a74FuVmb305hyEMmFSnneJvVgnOJxyKlbNlz12pq1IQ6MhlJBda/SFtQ==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
