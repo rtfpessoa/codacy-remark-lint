@@ -143,7 +143,7 @@
     "remark-lint-strong-marker": "^2.0.1",
     "remark-lint-table-cell-padding": "^2.0.1",
     "remark-lint-table-pipe-alignment": "^2.0.1",
-    "remark-lint-table-pipes": "^2.0.0",
+    "remark-lint-table-pipes": "^2.0.1",
     "remark-lint-unordered-list-marker-style": "^2.0.1",
     "remark-lint-write-good": "^1.2.0",
     "remark-lint-no-unneeded-full-reference-image": "^2.0.1",
