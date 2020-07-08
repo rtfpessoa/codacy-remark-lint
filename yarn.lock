@@ -6442,10 +6442,10 @@ remark-lint-no-file-name-articles@^1.0.0, remark-lint-no-file-name-articles@^1.0
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-no-file-name-consecutive-dashes@^1.0.0, remark-lint-no-file-name-consecutive-dashes@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-file-name-consecutive-dashes/-/remark-lint-no-file-name-consecutive-dashes-1.0.4.tgz#b11f1608a13f5dbff656ce74362b7c54ef78a87d"
-  integrity sha512-Fyc8mL+Fyt2b/BVkCc2Y+GjJ4SwafDKQEUaizeuZQDBTiqRK3S4L9YpvLHTAPgTNntZkXLUsHzFDlGyKzW2gBQ==
+remark-lint-no-file-name-consecutive-dashes@^1.0.0, remark-lint-no-file-name-consecutive-dashes@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-file-name-consecutive-dashes/-/remark-lint-no-file-name-consecutive-dashes-1.0.5.tgz#e9a6f2aeab948aa249c8a8356359e3d8843a4c5c"
+  integrity sha512-Mg2IDsi790/dSdAzwnBnsMYdZm3qC2QgGwqOWcr0TPABJhhjC3p8r5fX4MNMTXI5It7B7bW9+ImmCeLOZiXkLg==
   dependencies:
     unified-lint-rule "^1.0.0"
 
