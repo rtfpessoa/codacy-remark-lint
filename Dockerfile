@@ -1,4 +1,6 @@
-FROM node:13-alpine AS build
+ARG NODE_IMAGE_VERSION=14-alpine
+
+FROM node:$NODE_IMAGE_VERSION as build
 
 LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
 
@@ -12,7 +14,7 @@ RUN \
     yarn && \
     yarn run build
 
-FROM node:13-alpine
+FROM node:$NODE_IMAGE_VERSION
 
 LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
 
@@ -40,4 +42,4 @@ WORKDIR /src
 USER docker
 
 ENTRYPOINT ["codacy-remark-lint"]
-CMD []  
+CMD []
