@@ -177,7 +177,7 @@
     "tmp": "^0.2.1",
     "unified": "^9.1.0",
     "unified-engine": "^8.0.0",
-    "vfile": "^4.1.1"
+    "vfile": "^4.2.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
