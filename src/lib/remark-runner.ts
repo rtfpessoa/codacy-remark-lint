@@ -53,7 +53,7 @@ export default function run(
           plugins: [
             'remark-preset-lint-recommended',
             ['remark-lint-list-item-indent', false],
-            ['remark-lint-ordered-list-marker-value', 'one']
+            ['remark-lint-ordered-list-marker-value', 'ordered']
           ]
         }
       };
