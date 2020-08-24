@@ -7129,15 +7129,15 @@ retext-english@^3.0.4:
     parse-english "^4.0.0"
     unherit "^1.0.4"
 
-retext-equality@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/retext-equality/-/retext-equality-5.1.0.tgz#c40d544dc6dabff40bb418a923a8484becd679ba"
-  integrity sha512-KQzhN7rOQC+mkHLd2EXZaee6cuTb73wMUHUAghB006BQn22ZZpqOe+f+ebKvwy5MFkNK+pXFvxL5UAI806laDw==
+retext-equality@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/retext-equality/-/retext-equality-5.2.0.tgz#d3bd7c3d96444533a3a800f16d269ab9fd59c884"
+  integrity sha512-qfyDsVvwI6RsbyBi5GDRnutDbRMQj5zzK5oVg6ddKhONle2ZmQ/DBg9mz9QLKdnGhp8aW5xoVskXgwHufSQa3g==
   dependencies:
     nlcst-normalize "^2.0.0"
     nlcst-search "^2.0.0"
     nlcst-to-string "^2.0.0"
-    quotation "^1.0.1"
+    quotation "^1.0.0"
     unist-util-is "^4.0.0"
     unist-util-visit "^2.0.0"
 
