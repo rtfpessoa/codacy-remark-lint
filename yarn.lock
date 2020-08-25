@@ -669,10 +669,10 @@ automated-readability@^1.0.0:
   resolved "https://registry.yarnpkg.com/automated-readability/-/automated-readability-1.0.4.tgz#301ad74793c1a735cd09963ccf9a7a113f708df7"
   integrity sha512-jv3Ukp/aAFJpVqw6r67Y7rMvj9b6wnxycylbHck3T2hxazBHHCZBBGAsInYH5d3/JREuAPGmPW34pLuE55COrQ==
 
-ava@3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/ava/-/ava-3.12.0.tgz#82c837cfcd3bec980f491cabb7ca1e2b071a16c7"
-  integrity sha512-NRzhU/w4lIzZqJ2sLYZ6C91ZNl5v6JOWC6gb89/9NaN05vXMQylJPbVFMF3aIah5e6Lo4Ub86aey0wZ+uL+FiQ==
+ava@3.12.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/ava/-/ava-3.12.1.tgz#0181b5ca10d178539a0d503e0fc9244146303717"
+  integrity sha512-cS41+X+UfrcPed+CIgne/YV/6eWxaUjHEPH+W8WvNSqWTWku5YitjZGE5cMHFuJxwHELdR541xTBRn8Uwi4PSw==
   dependencies:
     "@concordance/react" "^2.0.0"
     acorn "^8.0.1"
