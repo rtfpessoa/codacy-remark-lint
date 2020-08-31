@@ -6,7 +6,11 @@ export default function allRules(): ReadonlyArray<Rule> {
   const remarkLintPath = './node_modules';
   const ignoredRules: ReadonlyArray<string> = [
     'remark-lint-code',
-    'remark-lint-code-eslint'
+    'remark-lint-code-eslint',
+    'remark-lint-no-long-code',
+    'remark-lint-no-repeat-punctuation',
+    'remark-lint-no-url-trailing-slash',
+    'remark-lint-books-links'
   ];
   const parsedRules = fs
     .readdirSync(remarkLintPath)
