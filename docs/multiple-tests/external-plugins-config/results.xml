@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="1.5">
+    <file name="remark-lint-books-links.md">
+        <error source="remark-lint-books-links" line="2" message="[books-links] Missing a space before author" severity="info" />
+    </file>
+    <file name="remark-lint-no-long-code.md">
+        <error source="remark-lint-no-long-code" line="2" message="[no-long-code] Maximum length of each code line is 100, but received 101" severity="info" />
+    </file>
+    <file name="remark-lint-no-repeat-punctuation.md">
+        <error source="remark-lint-no-repeat-punctuation" line="1" message="[no-repeat-punctuation] Should not repeat &quot;!&quot;" severity="info" />
+    </file>
+    <file name="remark-lint-no-url-trailing-slash.md">
+        <error source="remark-lint-no-url-trailing-slash" line="1" message="[no-url-trailing-slash] Remove trailing slash (http://example.com)" severity="info" />
+    </file>
+</checkstyle>

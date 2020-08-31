@@ -1,0 +1,8 @@
+{
+  "plugins":  [
+    "remark-lint-books-links",
+    ["remark-lint-no-long-code", { "length": 100 }],
+    "remark-lint-no-repeat-punctuation",
+    "remark-lint-no-url-trailing-slash"
+  ]
+}
