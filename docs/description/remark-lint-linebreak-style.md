@@ -6,7 +6,7 @@ a file).  Default: `'consistent'`.
 
 ## Fix
 
-[`remark-stringify`](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify)
+[`remark-stringify`](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-stringify)
 always uses unix linebreaks.
 
 See [Using remark to fix your Markdown](https://github.com/remarkjs/remark-lint#using-remark-to-fix-your-markdown)
