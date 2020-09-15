@@ -2,10 +2,14 @@
 
 import fs from 'fs-extra';
 import path from 'path';
-import getAllRules from './docs/documentation-builder';
+import {
+  getAllRules,
+  remarkPresetLintRecommended
+} from './docs/documentation-builder';
 import { Rule } from './docs/util/rule';
 
 /* tslint:disable:no-expression-statement*/
+const defaults = remarkPresetLintRecommended();
 
 const root = path.resolve(__dirname);
 const docsPath = path.resolve(`${root}/../../docs`);
@@ -21,7 +25,7 @@ fs.mkdirSync(descripionPath);
 
 fs.writeFileSync(
   `${docsPath}/patterns.json`,
-  JSON.stringify(getPatterns(allRules), null, 2)
+  JSON.stringify(getPatterns(allRules, defaults), null, 2)
 );
 
 fs.writeFileSync(
@@ -44,7 +48,10 @@ fs.writeFileSync(
 
 /* tslint:enable:no-expression-statement*/
 
-function getPatterns(rules: ReadonlyArray<Rule>): object {
+function getPatterns(
+  rules: ReadonlyArray<Rule>,
+  enabledByDefaultPatterns: ReadonlyArray<string>
+): object {
   const patterns = rules.map((rule: Rule) => {
     const parameters = rule.defaultValue
       ? {
@@ -60,6 +67,7 @@ function getPatterns(rules: ReadonlyArray<Rule>): object {
     return {
       ...parameters,
       category: 'CodeStyle',
+      enabled: enabledByDefaultPatterns.includes(rule.ruleId),
       level: 'Warning',
       patternId: rule.ruleId
     };

@@ -7,7 +7,7 @@ titles use different styles.
 
 ## Fix
 
-[`remark-stringify`](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify)
+[`remark-stringify`](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-stringify)
 uses `'` (single quote) for titles if they contain a double quote, and `"`
 (double quotes) otherwise.
 

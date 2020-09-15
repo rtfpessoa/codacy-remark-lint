@@ -7,10 +7,10 @@ subsequent emphasis use different styles.
 
 ## Fix
 
-[`remark-stringify`](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify)
+[`remark-stringify`](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-stringify)
 formats emphasis using `_` (underscore) by default.
 Pass
-[`emphasis: '*'`](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify#optionsemphasis)
+[`emphasis: '*'`](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-stringify#optionsemphasis)
 to use `*` (asterisk) instead.
 
 See [Using remark to fix your Markdown](https://github.com/remarkjs/remark-lint#using-remark-to-fix-your-markdown)

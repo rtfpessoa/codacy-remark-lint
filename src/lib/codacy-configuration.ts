@@ -20,7 +20,7 @@ interface CodacyParameter {
 
 interface CodacyPattern {
   readonly patternId: string;
-  readonly parameters?: ReadonlyArray<CodacyParameter>;
+  readonly parameters: ReadonlyArray<CodacyParameter>;
 }
 
 interface CodacyTool {
@@ -68,7 +68,6 @@ function parseCodacyConfiguration(
     // tslint:disable-next-line:no-expression-statement
     process.stderr.write(`${err}\n`);
     process.exit(50);
-    return;
   }
 }
 

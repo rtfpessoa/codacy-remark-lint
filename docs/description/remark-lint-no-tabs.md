@@ -2,7 +2,7 @@ Warn when hard tabs (`\t`) are used instead of spaces.
 
 ## Fix
 
-[`remark-stringify`](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify)
+[`remark-stringify`](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-stringify)
 uses spaces where tabs are used for indentation, but retains tabs used in
 content.
 

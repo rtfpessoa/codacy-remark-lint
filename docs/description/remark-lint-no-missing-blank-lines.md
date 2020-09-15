@@ -7,7 +7,7 @@ between their contents by passing `{exceptTightLists: true}` (default:
 
 ## Fix
 
-[`remark-stringify`](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify)
+[`remark-stringify`](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-stringify)
 always uses one blank line between blocks if possible, or two lines when
 needed.
 The style of the list items persists.
