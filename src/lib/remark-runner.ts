@@ -16,9 +16,20 @@ interface CodacyIssue {
   readonly line: number;
 }
 
+interface FileError {
+  readonly file: string;
+  readonly message: string;
+}
+
 interface AnalysisFailure {
   readonly error: Error;
   readonly message: string;
+}
+
+export function isCodacyIssue(
+  result: CodacyIssue | FileError
+): result is CodacyIssue {
+  return (result as CodacyIssue).patternId !== undefined;
 }
 
 export default function run(
@@ -27,7 +38,7 @@ export default function run(
     readonly codacyConfigPath?: string;
     readonly getCodacyConfiguration?: (path: string) => Configuration;
   } = {}
-): Promise<ReadonlyArray<CodacyIssue>> {
+): Promise<ReadonlyArray<CodacyIssue | FileError>> {
   const {
     sourcePath = '/src',
     codacyConfigPath = '/.codacyrc',
@@ -119,7 +130,7 @@ function onError(
 
 function getCodacyIssues(
   results: ReadonlyArray<VFile>
-): ReadonlyArray<CodacyIssue> {
+): ReadonlyArray<CodacyIssue | FileError> {
   const fileCodacyIssues = results.map((fileResults: VFile) => {
     const { path, messages } = fileResults;
     if (path === undefined) {
@@ -130,14 +141,21 @@ function getCodacyIssues(
     );
   });
 
-  return Array<CodacyIssue>().concat(...fileCodacyIssues);
+  return Array<CodacyIssue | FileError>().concat(...fileCodacyIssues);
 }
 
-function getCodacyIssue(path: string, msg: VFileMessage): CodacyIssue {
-  return {
-    file: path,
-    line: msg.location.start.line || msg.line || 1,
-    message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
-    patternId: `${msg.source}-${msg.ruleId}`
-  };
+function getCodacyIssue(
+  path: string,
+  msg: VFileMessage
+): CodacyIssue | FileError {
+  if (msg.fatal) {
+    return { file: path, message: msg.reason };
+  } else {
+    return {
+      file: path,
+      line: msg.location.start.line || msg.line || 1,
+      message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
+      patternId: `${msg.source}-${msg.ruleId}`
+    };
+  }
 }
