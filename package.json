@@ -185,7 +185,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
-    "@types/node": "^14.11.1",
+    "@types/node": "^14.11.2",
     "@types/trim": "^0.1.1",
     "@types/vfile": "^4.0.0",
     "ava": "3.12.1",
