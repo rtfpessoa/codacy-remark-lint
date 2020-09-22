@@ -6,13 +6,16 @@ LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
 
 ENV NODE_PATH /usr/lib/node_modules
 
-COPY . /workdir
-
 WORKDIR /workdir
 
-RUN \
-    yarn && \
-    yarn run build
+COPY package.json .
+COPY yarn.lock .
+
+RUN yarn
+
+COPY . .
+
+RUN yarn run build
 
 FROM node:$NODE_IMAGE_VERSION
 
