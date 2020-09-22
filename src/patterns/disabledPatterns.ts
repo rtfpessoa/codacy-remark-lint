@@ -1,4 +1,4 @@
-const disabledPatterns: ReadonlyArray<string> = ['remark-validate-links'];
+const disabledPatterns: ReadonlyArray<string> = [];
 
 export function isPatternDisabled(patternId: string): boolean {
   return (

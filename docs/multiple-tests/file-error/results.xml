@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="1.5">
+    <file name="file-error.md">
+        <error message="Command failed: git rev-parse --show-cdup&#10;/bin/sh: git: not found&#10;" />
+    </file>
+</checkstyle>

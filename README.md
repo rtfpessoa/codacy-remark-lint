@@ -36,6 +36,24 @@ You can follow the instructions there to make sure your tool is working as expec
 yarn run docs:gen
 ```
 
+## Limitations
+
+- `remark-validate-links` is only supported with `repository: false`, details
+on the [official documentation](https://github.com/remarkjs/remark-validate-links/tree/main#configuration):
+
+```json
+{
+  "plugins": [
+    [
+      "remark-validate-links",
+      {
+        "repository": false
+      }
+    ]
+  ]
+}
+```
+
 ## What is Codacy
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool

@@ -1,0 +1,1 @@
+{% include alert.html type="warning" icon="warning" body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quidem distinctio in eaque suscipit illo aliquid dolorum soluta itaque dicta!" %}
