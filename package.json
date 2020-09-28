@@ -188,7 +188,7 @@
     "@types/node": "^14.11.2",
     "@types/trim": "^0.1.1",
     "@types/vfile": "^4.0.0",
-    "ava": "3.12.1",
+    "ava": "3.13.0",
     "codacy-coverage": "^3.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "dox": "^0.9.0",
