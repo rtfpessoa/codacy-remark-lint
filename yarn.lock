@@ -7153,10 +7153,10 @@ retext-english@^3.0.4:
     parse-english "^4.0.0"
     unherit "^1.0.4"
 
-retext-equality@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/retext-equality/-/retext-equality-5.2.0.tgz#d3bd7c3d96444533a3a800f16d269ab9fd59c884"
-  integrity sha512-qfyDsVvwI6RsbyBi5GDRnutDbRMQj5zzK5oVg6ddKhONle2ZmQ/DBg9mz9QLKdnGhp8aW5xoVskXgwHufSQa3g==
+retext-equality@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/retext-equality/-/retext-equality-5.3.0.tgz#39e46081466e3827fb07d2bb6847add48a17848b"
+  integrity sha512-I1u8YiQZS72gVBdb05eq7Sy98KjAG7SqcnTqvGeJ8KZNjCeNIjq4EAWg2hEd6LNwDtMkS8PpvF9Z0g/C7a232g==
   dependencies:
     nlcst-normalize "^2.0.0"
     nlcst-search "^2.0.0"
