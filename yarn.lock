@@ -6515,14 +6515,15 @@ remark-lint-no-multiple-toplevel-headings@^2.0.0, remark-lint-no-multiple-toplev
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-paragraph-content-indent@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-paragraph-content-indent/-/remark-lint-no-paragraph-content-indent-2.0.1.tgz#6d21edfd826b12b95104cb7a2835915aac813a5a"
-  integrity sha512-38F6BhL19qrYhOM8CU6PwajpuoBXfFq750QcK9btuXMhLi6zkpmDcFWWm/7C7gmoi7M7qUawh/bFdA/1dOENxA==
+remark-lint-no-paragraph-content-indent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-paragraph-content-indent/-/remark-lint-no-paragraph-content-indent-3.0.0.tgz#405ffd75b16c00e816c11178569ae692f84143e1"
+  integrity sha512-breI0QSFAxvs2osc8yAzPqWoi4VfY9ccyV+/WQKOIIU8yTj8swN/kFFqnP7wdeY4O9BSmUJ7bPdWCsmrVworXA==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
+    vfile-location "^3.0.0"
 
 remark-lint-no-reference-like-url@^2.0.1:
   version "2.0.1"
@@ -8523,14 +8524,7 @@ unified-engine@^8.0.0:
     vfile-reporter "^6.0.0"
     vfile-statistics "^1.1.0"
 
-unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.5.tgz#41dcac68a283bfc4b4ff6014e370cc8931eb4b5d"
-  integrity sha512-jOPr/fx8lTzqszEfh46p99jUMqgPlIZ8rNKllEepumISvgfj9lUq1c7BSpVihr0L1df3lkjVHAThRPS7dIyjYg==
-  dependencies:
-    wrapped "^1.0.1"
-
-unified-lint-rule@^1.0.3:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.3, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.6.tgz#b4ab801ff93c251faa917a8d1c10241af030de84"
   integrity sha512-YPK15YBFwnsVorDFG/u0cVVQN5G2a3V8zv5/N6KN3TCG+ajKtaALcy7u14DCSrJI+gZeyYquFL9cioJXOGXSvg==
