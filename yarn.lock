@@ -6200,7 +6200,7 @@ remark-lint-link-title-style@^2.0.0, remark-lint-link-title-style@^2.0.1:
     unist-util-visit "^2.0.0"
     vfile-location "^3.0.0"
 
-remark-lint-list-item-bullet-indent@^2.0.0, remark-lint-list-item-bullet-indent@^2.0.1:
+remark-lint-list-item-bullet-indent@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/remark-lint-list-item-bullet-indent/-/remark-lint-list-item-bullet-indent-2.0.1.tgz#cc8b07ab32c7a6911952933cf0243fecaf8a1986"
   integrity sha512-tozDt9LChG1CvYJnBQH/oh45vNcHYBvg79ogvV0f8MtE/K0CXsM8EpfQ6pImFUdHpBV1op6aF6zPMrB0AkRhcQ==
@@ -6209,6 +6209,16 @@ remark-lint-list-item-bullet-indent@^2.0.0, remark-lint-list-item-bullet-indent@
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
+    unist-util-visit "^2.0.0"
+
+remark-lint-list-item-bullet-indent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-list-item-bullet-indent/-/remark-lint-list-item-bullet-indent-3.0.0.tgz#3c902e75e841850da8b37126da45fc1fe850d7d6"
+  integrity sha512-X2rleWP8XReC4LXKF7Qi5vYiPJkA4Grx5zxsjHofFrVRz6j0PYOCuz7vsO+ZzMunFMfom6FODnscSWz4zouDVw==
+  dependencies:
+    pluralize "^8.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
 remark-lint-list-item-content-indent@^2.0.0, remark-lint-list-item-content-indent@^2.0.1:
