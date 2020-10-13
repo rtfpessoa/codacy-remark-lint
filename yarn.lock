@@ -6569,7 +6569,7 @@ remark-lint-no-shortcut-reference-link@^2.0.0, remark-lint-no-shortcut-reference
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-table-indentation@^2.0.0, remark-lint-no-table-indentation@^2.0.1:
+remark-lint-no-table-indentation@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/remark-lint-no-table-indentation/-/remark-lint-no-table-indentation-2.0.1.tgz#67ef344389fa40be9c6017835cf58ca417c417d0"
   integrity sha512-PnqIyg5qf+QbaIfolxXpakk/MR1RxZ0EdhKgVqsaEwv8+fka1LZYu7QO+ZFmrT82gVzvjRqHJkmxTskC/VP30w==
@@ -6578,6 +6578,16 @@ remark-lint-no-table-indentation@^2.0.0, remark-lint-no-table-indentation@^2.0.1
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
+
+remark-lint-no-table-indentation@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-table-indentation/-/remark-lint-no-table-indentation-3.0.0.tgz#f3c3fc24375069ec8e510f43050600fb22436731"
+  integrity sha512-+l7GovI6T+3LhnTtz/SmSRyOb6Fxy6tmaObKHrwb/GAebI/4MhFS1LVo3vbiP/RpPYtyQoFbbuXI55hqBG4ibQ==
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^2.0.0"
+    vfile-location "^3.0.0"
 
 remark-lint-no-tabs@^2.0.1:
   version "2.0.1"
@@ -8523,14 +8533,7 @@ unified-engine@^8.0.0:
     vfile-reporter "^6.0.0"
     vfile-statistics "^1.1.0"
 
-unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.5.tgz#41dcac68a283bfc4b4ff6014e370cc8931eb4b5d"
-  integrity sha512-jOPr/fx8lTzqszEfh46p99jUMqgPlIZ8rNKllEepumISvgfj9lUq1c7BSpVihr0L1df3lkjVHAThRPS7dIyjYg==
-  dependencies:
-    wrapped "^1.0.1"
-
-unified-lint-rule@^1.0.3:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.3, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.6.tgz#b4ab801ff93c251faa917a8d1c10241af030de84"
   integrity sha512-YPK15YBFwnsVorDFG/u0cVVQN5G2a3V8zv5/N6KN3TCG+ajKtaALcy7u14DCSrJI+gZeyYquFL9cioJXOGXSvg==
