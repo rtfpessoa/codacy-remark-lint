@@ -6426,10 +6426,10 @@ remark-lint-no-heading-content-indent@^2.0.0, remark-lint-no-heading-content-ind
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-heading-indent@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-indent/-/remark-lint-no-heading-indent-2.0.1.tgz#0dcf741e120bf5c59e34554d6a5ac030b931777d"
-  integrity sha512-eU4t3t8icfRzQlna74gQqNQ1Y9TuXZjNKriMBEmhLzyniHqcY4TO3pBmrkm2TJN/ji6gVBWjaT0uYO2Vm6KxLA==
+remark-lint-no-heading-indent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-heading-indent/-/remark-lint-no-heading-indent-3.0.0.tgz#2304b8525929c7eb189d34aaaa59871ae480d1b3"
+  integrity sha512-b8ImhLv2AnRDxtYUODplzsl/7IwQ+lqRmD1bwbZgSerEP9MLaULW3SjH37EyA6z+8rCDjvEyppKKU6zec0TCjg==
   dependencies:
     pluralize "^8.0.0"
     unified-lint-rule "^1.0.0"
@@ -8523,14 +8523,7 @@ unified-engine@^8.0.0:
     vfile-reporter "^6.0.0"
     vfile-statistics "^1.1.0"
 
-unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.5.tgz#41dcac68a283bfc4b4ff6014e370cc8931eb4b5d"
-  integrity sha512-jOPr/fx8lTzqszEfh46p99jUMqgPlIZ8rNKllEepumISvgfj9lUq1c7BSpVihr0L1df3lkjVHAThRPS7dIyjYg==
-  dependencies:
-    wrapped "^1.0.1"
-
-unified-lint-rule@^1.0.3:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.3, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.6.tgz#b4ab801ff93c251faa917a8d1c10241af030de84"
   integrity sha512-YPK15YBFwnsVorDFG/u0cVVQN5G2a3V8zv5/N6KN3TCG+ajKtaALcy7u14DCSrJI+gZeyYquFL9cioJXOGXSvg==
