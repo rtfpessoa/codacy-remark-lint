@@ -6024,10 +6024,10 @@ remark-lint-checkbox-character-style@^2.0.0, remark-lint-checkbox-character-styl
     unist-util-visit "^2.0.0"
     vfile-location "^3.0.0"
 
-remark-lint-checkbox-content-indent@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-checkbox-content-indent/-/remark-lint-checkbox-content-indent-2.0.1.tgz#6730ff34aad5d8f389c02e6371b03cb9885aeb09"
-  integrity sha512-NYOLJK8G/8BMQmhnstBjlZYmiH+xj1ECVWAGndRG5cRYmFZL87FVEm44Jd57VKczIAHPkOp8rn8fPpVgvghjAw==
+remark-lint-checkbox-content-indent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-checkbox-content-indent/-/remark-lint-checkbox-content-indent-3.0.0.tgz#fa2b74b81cbac9db23e2d3e5954421cabc78072e"
+  integrity sha512-+T4+hoY85qZE2drD2rCe14vF7fAgD3Kv2fkFd1HRvv3M5Riy148w/4YeoBI5U5BpybGTVUeEUYLCeJ8zbJLjkw==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
@@ -8523,14 +8523,7 @@ unified-engine@^8.0.0:
     vfile-reporter "^6.0.0"
     vfile-statistics "^1.1.0"
 
-unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.5.tgz#41dcac68a283bfc4b4ff6014e370cc8931eb4b5d"
-  integrity sha512-jOPr/fx8lTzqszEfh46p99jUMqgPlIZ8rNKllEepumISvgfj9lUq1c7BSpVihr0L1df3lkjVHAThRPS7dIyjYg==
-  dependencies:
-    wrapped "^1.0.1"
-
-unified-lint-rule@^1.0.3:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.1, unified-lint-rule@^1.0.2, unified-lint-rule@^1.0.3, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.6.tgz#b4ab801ff93c251faa917a8d1c10241af030de84"
   integrity sha512-YPK15YBFwnsVorDFG/u0cVVQN5G2a3V8zv5/N6KN3TCG+ajKtaALcy7u14DCSrJI+gZeyYquFL9cioJXOGXSvg==
