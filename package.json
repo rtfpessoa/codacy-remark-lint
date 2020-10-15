@@ -105,7 +105,7 @@
     "remark-lint-maximum-heading-length": "^2.0.1",
     "remark-lint-maximum-line-length": "^2.0.3",
     "remark-lint-no-auto-link-without-protocol": "^2.0.1",
-    "remark-lint-no-blockquote-without-marker": "^3.0.1",
+    "remark-lint-no-blockquote-without-marker": "^4.0.0",
     "remark-lint-no-consecutive-blank-lines": "^3.0.0",
     "remark-lint-no-dead-urls": "^1.1.0",
     "remark-lint-no-duplicate-defined-urls": "^1.0.1",
