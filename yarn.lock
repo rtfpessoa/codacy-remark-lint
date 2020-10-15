@@ -6331,7 +6331,7 @@ remark-lint-no-auto-link-without-protocol@^2.0.0, remark-lint-no-auto-link-witho
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-blockquote-without-marker@^3.0.0, remark-lint-no-blockquote-without-marker@^3.0.1:
+remark-lint-no-blockquote-without-marker@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-lint-no-blockquote-without-marker/-/remark-lint-no-blockquote-without-marker-3.0.1.tgz#fb1d5a87ee6f21b731bb2ee52df55632c519a5eb"
   integrity sha512-sM953+u0zN90SGd2V5hWcFbacbpaROUslS5Q5F7/aa66/2rAwh6zVnrXc4pf7fFOpj7I9Xa8Aw+uB+3RJWwdrQ==
