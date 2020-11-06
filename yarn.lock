@@ -6037,17 +6037,6 @@ remark-lint-books-links@2.1.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.0.0"
 
-remark-lint-checkbox-character-style@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-checkbox-character-style/-/remark-lint-checkbox-character-style-2.0.1.tgz#2ff2df31cb0ec99744f5122086610578c2d13754"
-  integrity sha512-ANs1HaNOEYmc+O9Xyew7HRA48VXPnk7VLM76fLEf6bifXZU+VAJe+a6cmS+ohTSVSTjkMDl9dnbqiWQRE1U4zg==
-  dependencies:
-    unified-lint-rule "^1.0.0"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
-    unist-util-visit "^2.0.0"
-    vfile-location "^3.0.0"
-
 remark-lint-checkbox-character-style@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/remark-lint-checkbox-character-style/-/remark-lint-checkbox-character-style-3.0.0.tgz#3a982c7318ea86f80fe5ee5d6d8711b5b3cad0a2"
