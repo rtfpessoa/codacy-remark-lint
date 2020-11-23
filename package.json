@@ -200,7 +200,7 @@
     "prettier": "^2.2.0",
     "standard-version": "^9.0.0",
     "strip-indent": "^3.0.0",
-    "trash-cli": "^3.1.0",
+    "trash-cli": "^4.0.0",
     "trim": "^1.0.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.13.0",
