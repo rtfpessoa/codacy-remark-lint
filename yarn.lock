@@ -6604,10 +6604,10 @@ remark-lint-no-literal-urls@^2.0.0, remark-lint-no-literal-urls@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-long-code@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-long-code/-/remark-lint-no-long-code-0.1.2.tgz#7eb14148e0542f9486dedf964738149e8c7f33b4"
-  integrity sha512-wrflkAWhGiPLaZz5eo3NovEvg2kj1yIIFou/cOGD0UTEumZI4TEL0m9Tsu3wq41hBjzXtWlovp4KqH/uw6IIhQ==
+remark-lint-no-long-code@0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-long-code/-/remark-lint-no-long-code-0.1.3.tgz#9acc690257d8445dce541a163ac211794378b647"
+  integrity sha512-GJrOC6tYaRwkfJcfIuErQHcnn/TYZev0VNIMu1+qNBpBmesIeHDEGWhLApXuSG+FSJl+0/Pp0UMUTEYVG/xy8Q==
   dependencies:
     unified-lint-rule "^1.0.3"
     unist-util-visit "^1.4.0"
