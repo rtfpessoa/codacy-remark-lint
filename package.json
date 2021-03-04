@@ -156,7 +156,7 @@
     "remark-retext": "^4.0.0",
     "remark-slug": "^6.0.0",
     "remark-stringify": "^9.0.1",
-    "remark-validate-links": "^10.0.2",
+    "remark-validate-links": "^10.0.3",
     "retext": "^7.0.1",
     "retext-contractions": "^4.0.0",
     "retext-diacritics": "^3.0.0",
