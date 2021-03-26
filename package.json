@@ -184,7 +184,7 @@
     "remark-lint-no-url-trailing-slash": "3.0.1"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.8",
+    "@types/fs-extra": "^9.0.9",
     "@types/node": "^14.14.35",
     "@types/trim": "^0.1.1",
     "@types/vfile": "^4.0.0",
