@@ -201,7 +201,7 @@
     "standard-version": "^9.1.0",
     "strip-indent": "^3.0.0",
     "trash-cli": "^4.0.0",
-    "trim": "^1.0.0",
+    "trim": "^1.0.1",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.13.0",
     "tslint-config-semistandard": "^8.0.1",
