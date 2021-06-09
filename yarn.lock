@@ -8931,10 +8931,17 @@ vfile-location@^2.0.0:
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-2.0.5.tgz#c83eb02f8040228a8d2b3f10e485be3e3433e0a2"
   integrity sha512-Pa1ey0OzYBkLPxPZI3d9E+S4BmvfVwNAAXrrqGbwTVXWaX2p9kM1zZ+n35UtVM06shmWKH4RPRN8KI80qE3wNQ==
 
-vfile-location@^3.0.0, vfile-location@^3.1.0, vfile-location@^3.2.0:
+vfile-location@^3.0.0, vfile-location@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-3.2.0.tgz#d8e41fbcbd406063669ebf6c33d56ae8721d0f3c"
   integrity sha512-aLEIZKv/oxuCDZ8lkJGhuhztf/BW4M+iHdCwglA/eWc+vtuRFJj8EtgceYFX4LRjOhCAAiNHsKGssC6onJ+jbA==
+
+vfile-location@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-4.0.0.tgz#73bd77c70f3b25e9b8887f94733ff86a941b2fb9"
+  integrity sha512-iFTsR44kaYlD9Bh47vqvxcYzd+jsZz4cjf//WIilEldheWAfO6UtmLb6dJtDaU91uiQQJa5YAFtZ0cJRXgXLow==
+  dependencies:
+    "@types/unist" "^2.0.0"
 
 vfile-message@^1.0.0:
   version "1.1.1"
