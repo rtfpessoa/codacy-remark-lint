@@ -12,24 +12,12 @@
     "title": "Checks that all titles are followed by 1 blank line, then no blank lines, then two blank lines before the next title"
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-blockquote-indentation",
-        "name": "remark-lint-blockquote-indentation"
-      }
-    ],
     "description": "Warn when block quotes are indented too much or too little.",
     "patternId": "remark-lint-blockquote-indentation",
     "timeToFix": 5,
     "title": "Warn when block quotes are indented too much or too little."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-checkbox-character-style",
-        "name": "remark-lint-checkbox-character-style"
-      }
-    ],
     "description": "Warn when list item checkboxes violate a given style.",
     "patternId": "remark-lint-checkbox-character-style",
     "timeToFix": 5,
@@ -42,12 +30,6 @@
     "title": "Warn when list item checkboxes are followed by too much whitespace."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-code-block-style",
-        "name": "remark-lint-code-block-style"
-      }
-    ],
     "description": "Warn when code blocks do not adhere to a given style.",
     "patternId": "remark-lint-code-block-style",
     "timeToFix": 5,
@@ -66,12 +48,6 @@
     "title": "Warn when consecutive whitespace is used in a definition."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-emphasis-marker",
-        "name": "remark-lint-emphasis-marker"
-      }
-    ],
     "description": "Warn for violating emphasis markers.",
     "patternId": "remark-lint-emphasis-marker",
     "timeToFix": 5,
@@ -84,24 +60,12 @@
     "title": "Check fenced code block flags."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-fenced-code-marker",
-        "name": "remark-lint-fenced-code-marker"
-      }
-    ],
     "description": "Warn for violating fenced code markers.",
     "patternId": "remark-lint-fenced-code-marker",
     "timeToFix": 5,
     "title": "Warn for violating fenced code markers."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-file-extension",
-        "name": "remark-lint-file-extension"
-      }
-    ],
     "description": "Warn when the file extension differ from the preferred extension.",
     "patternId": "remark-lint-file-extension",
     "timeToFix": 5,
@@ -120,12 +84,6 @@
     "title": "Warn when a line feed at the end of a file is missing."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-first-heading-level",
-        "name": "remark-lint-first-heading-level"
-      }
-    ],
     "description": "Warn when the first heading has a level other than a specified value.",
     "patternId": "remark-lint-first-heading-level",
     "timeToFix": 5,
@@ -162,12 +120,6 @@
     "title": "Warn when linebreaks violate a given or detected style."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-link-title-style",
-        "name": "remark-lint-link-title-style"
-      }
-    ],
     "description": "Warn when link and definition titles occur with incorrect quotes.",
     "patternId": "remark-lint-link-title-style",
     "timeToFix": 5,
@@ -186,12 +138,6 @@
     "title": "Warn when the content of a list item has mixed indentation."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-list-item-indent",
-        "name": "remark-lint-list-item-indent"
-      }
-    ],
     "description": "Warn when the spacing between a list item’s bullet and its content violates",
     "patternId": "remark-lint-list-item-indent",
     "timeToFix": 5,
@@ -204,24 +150,12 @@
     "title": "Warn when list looseness is incorrect, such as being tight when it should"
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-maximum-heading-length",
-        "name": "remark-lint-maximum-heading-length"
-      }
-    ],
     "description": "Warn when headings are too long.",
     "patternId": "remark-lint-maximum-heading-length",
     "timeToFix": 5,
     "title": "Warn when headings are too long."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-maximum-line-length",
-        "name": "remark-lint-maximum-line-length"
-      }
-    ],
     "description": "Warn when lines are too long.",
     "patternId": "remark-lint-maximum-line-length",
     "timeToFix": 5,
@@ -306,12 +240,6 @@
     "title": "Warn when file names contain consecutive dashes."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-no-file-name-irregular-characters",
-        "name": "remark-lint-no-file-name-irregular-characters"
-      }
-    ],
     "description": "Warn when file names contain irregular characters: characters other than",
     "patternId": "remark-lint-no-file-name-irregular-characters",
     "timeToFix": 5,
@@ -348,12 +276,6 @@
     "title": "Warn for h7+ “headings”."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-no-heading-punctuation",
-        "name": "remark-lint-no-heading-punctuation"
-      }
-    ],
     "description": "Warn when a heading ends with a group of characters.",
     "patternId": "remark-lint-no-heading-punctuation",
     "timeToFix": 5,
@@ -384,12 +306,6 @@
     "title": "Warn when missing blank lines before block content (and frontmatter"
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-no-multiple-toplevel-headings",
-        "name": "remark-lint-no-multiple-toplevel-headings"
-      }
-    ],
     "description": "Warn when multiple top level headings are used.",
     "patternId": "remark-lint-no-multiple-toplevel-headings",
     "timeToFix": 5,
@@ -462,24 +378,12 @@
     "title": "Warn when unused definitions are found."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-ordered-list-marker-style",
-        "name": "remark-lint-ordered-list-marker-style"
-      }
-    ],
     "description": "Warn when the list item marker style of ordered lists violate a given style.",
     "patternId": "remark-lint-ordered-list-marker-style",
     "timeToFix": 5,
     "title": "Warn when the list item marker style of ordered lists violate a given style."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-ordered-list-marker-value",
-        "name": "remark-lint-ordered-list-marker-value"
-      }
-    ],
     "description": "Warn when the list item marker values of ordered lists violate a given",
     "patternId": "remark-lint-ordered-list-marker-value",
     "timeToFix": 5,
@@ -492,24 +396,12 @@
     "title": "Warn when the thematic breaks (horizontal rules) violate a given or"
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-strong-marker",
-        "name": "remark-lint-strong-marker"
-      }
-    ],
     "description": "Warn for violating importance (strong) markers.",
     "patternId": "remark-lint-strong-marker",
     "timeToFix": 5,
     "title": "Warn for violating importance (strong) markers."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-table-cell-padding",
-        "name": "remark-lint-table-cell-padding"
-      }
-    ],
     "description": "Warn when table cells are incorrectly padded.",
     "patternId": "remark-lint-table-cell-padding",
     "timeToFix": 5,
@@ -528,12 +420,6 @@
     "title": "Warn when table rows are not fenced with pipes."
   },
   {
-    "parameters": [
-      {
-        "description": "remark-lint-unordered-list-marker-style",
-        "name": "remark-lint-unordered-list-marker-style"
-      }
-    ],
     "description": "Warn when the list item marker style of unordered lists violate a given",
     "patternId": "remark-lint-unordered-list-marker-style",
     "timeToFix": 5,
