@@ -11,17 +11,41 @@
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
-      "patternId": "remark-lint-blank-lines-1-0-2"
+      "patternId": "remark-lint-appropriate-heading"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-are-links-valid"
+    },
+    {
+      "category": "CodeStyle",
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-blank-lines-1-0-2"
+    },
+    {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-blockquote-indentation"
+        }
+      ],
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-blockquote-indentation"
     },
     {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-checkbox-character-style"
+        }
+      ],
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-checkbox-character-style"
     },
@@ -32,8 +56,14 @@
       "patternId": "remark-lint-checkbox-content-indent"
     },
     {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-code-block-style"
+        }
+      ],
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-code-block-style"
     },
@@ -51,7 +81,19 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-emoji-limit"
+    },
+    {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-emphasis-marker"
+        }
+      ],
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-emphasis-marker"
     },
@@ -63,11 +105,29 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-fenced-code-flag-case"
+    },
+    {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-fenced-code-marker"
+        }
+      ],
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-fenced-code-marker"
     },
     {
+      "parameters": [
+        {
+          "default": "md",
+          "name": "remark-lint-file-extension"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
@@ -81,11 +141,17 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-final-newline"
     },
     {
+      "parameters": [
+        {
+          "default": "1",
+          "name": "remark-lint-first-heading-level"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
@@ -93,7 +159,13 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-frontmatter-schema"
+    },
+    {
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-hard-break-spaces"
     },
@@ -105,7 +177,13 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-heading-length"
+    },
+    {
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-heading-style"
     },
@@ -119,29 +197,47 @@
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
-      "patternId": "remark-lint-linebreak-style"
+      "patternId": "remark-lint-heading-word-length"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-linebreak-style"
+    },
+    {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-link-title-style"
+        }
+      ],
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-link-title-style"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-list-item-bullet-indent"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-list-item-content-indent"
     },
     {
+      "parameters": [
+        {
+          "default": "tab-size",
+          "name": "remark-lint-list-item-indent"
+        }
+      ],
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-list-item-indent"
     },
@@ -155,25 +251,61 @@
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
+      "patternId": "remark-lint-list-item-style"
+    },
+    {
+      "category": "CodeStyle",
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-match-punctuation"
+    },
+    {
+      "parameters": [
+        {
+          "default": "60",
+          "name": "remark-lint-maximum-heading-length"
+        }
+      ],
+      "category": "CodeStyle",
+      "enabled": false,
+      "level": "Warning",
       "patternId": "remark-lint-maximum-heading-length"
     },
     {
+      "parameters": [
+        {
+          "default": "80",
+          "name": "remark-lint-maximum-line-length"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-maximum-line-length"
     },
     {
+      "parameters": [
+        {
+          "default": "―",
+          "name": "remark-lint-mdash-style"
+        }
+      ],
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
-      "patternId": "remark-lint-no-auto-link-without-protocol"
+      "patternId": "remark-lint-mdash-style"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-blockquote-without-marker"
+    },
+    {
+      "category": "CodeStyle",
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-no-chinese-punctuation-in-number"
     },
     {
       "category": "CodeStyle",
@@ -195,7 +327,7 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-duplicate-definitions"
     },
@@ -242,6 +374,12 @@
       "patternId": "remark-lint-no-file-name-consecutive-dashes"
     },
     {
+      "parameters": [
+        {
+          "default": "\\\\.a-zA-Z0-9-",
+          "name": "remark-lint-no-file-name-irregular-characters"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
@@ -261,7 +399,7 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-heading-content-indent"
     },
@@ -278,6 +416,12 @@
       "patternId": "remark-lint-no-heading-like-paragraph"
     },
     {
+      "parameters": [
+        {
+          "default": ".,;:!?",
+          "name": "remark-lint-no-heading-punctuation"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
@@ -291,13 +435,13 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-inline-padding"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-literal-urls"
     },
@@ -308,6 +452,12 @@
       "patternId": "remark-lint-no-missing-blank-lines"
     },
     {
+      "parameters": [
+        {
+          "default": "1",
+          "name": "remark-lint-no-multiple-toplevel-headings"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
@@ -333,13 +483,13 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-shortcut-reference-image"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-shortcut-reference-link"
     },
@@ -357,7 +507,7 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-undefined-references"
     },
@@ -375,17 +525,29 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-no-unused-definitions"
     },
     {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-ordered-list-marker-style"
+        }
+      ],
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-ordered-list-marker-style"
     },
     {
+      "parameters": [
+        {
+          "default": "ordered",
+          "name": "remark-lint-ordered-list-marker-value"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
@@ -393,19 +555,43 @@
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-rule-style"
     },
     {
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-spaces-around-number"
+    },
+    {
+      "category": "CodeStyle",
+      "enabled": false,
+      "level": "Warning",
+      "patternId": "remark-lint-spaces-around-word"
+    },
+    {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-strong-marker"
+        }
+      ],
+      "category": "CodeStyle",
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-strong-marker"
     },
     {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-table-cell-padding"
+        }
+      ],
       "category": "CodeStyle",
-      "enabled": true,
+      "enabled": false,
       "level": "Warning",
       "patternId": "remark-lint-table-cell-padding"
     },
@@ -422,6 +608,12 @@
       "patternId": "remark-lint-table-pipes"
     },
     {
+      "parameters": [
+        {
+          "default": "consistent",
+          "name": "remark-lint-unordered-list-marker-style"
+        }
+      ],
       "category": "CodeStyle",
       "enabled": false,
       "level": "Warning",
