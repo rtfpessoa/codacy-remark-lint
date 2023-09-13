@@ -294,6 +294,12 @@
     "title": "Warn when the mdash style violate a given style."
   },
   {
+    "description": "Warn for autolinks without protocol.",
+    "patternId": "remark-lint-no-auto-link-without-protocol",
+    "timeToFix": 5,
+    "title": "Warn for autolinks without protocol."
+  },
+  {
     "description": "Warn when blank lines without `>` (greater than) markers are found in a",
     "patternId": "remark-lint-no-blockquote-without-marker",
     "timeToFix": 5,
