@@ -1,1 +1,1 @@
-Warn when definition labels are not lower-case.
+Warn when definition labels are not lowercase.

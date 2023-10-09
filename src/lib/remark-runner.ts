@@ -1,17 +1,13 @@
 import extensions from 'markdown-extensions';
 import remark from 'remark';
-import engine from 'unified-engine';
-import { VFile, VFileMessage } from 'vfile';
+import { Settings } from 'unified';
+import unifiedEngine from 'unified-engine';
+import { VFile } from 'vfile';
+import { VFileMessage } from 'vfile-message';
 import configFromCodacy, {
   Configuration,
   EmptyConfiguration
 } from './codacy-configuration';
-
-interface Results {
-  readonly path: string;
-  readonly contents: string;
-  readonly messages: ReadonlyArray<VFileMessage>;
-}
 
 interface CodacyIssue {
   readonly file: string;
@@ -20,9 +16,20 @@ interface CodacyIssue {
   readonly line: number;
 }
 
+interface FileError {
+  readonly file: string;
+  readonly message: string;
+}
+
 interface AnalysisFailure {
   readonly error: Error;
   readonly message: string;
+}
+
+export function isCodacyIssue(
+  result: CodacyIssue | FileError
+): result is CodacyIssue {
+  return (result as CodacyIssue).patternId !== undefined;
 }
 
 export default function run(
@@ -31,7 +38,7 @@ export default function run(
     readonly codacyConfigPath?: string;
     readonly getCodacyConfiguration?: (path: string) => Configuration;
   } = {}
-): Promise<ReadonlyArray<CodacyIssue>> {
+): Promise<ReadonlyArray<CodacyIssue | FileError>> {
   const {
     sourcePath = '/src',
     codacyConfigPath = '/.codacyrc',
@@ -57,13 +64,12 @@ export default function run(
           plugins: [
             'remark-preset-lint-recommended',
             ['remark-lint-list-item-indent', false],
-            ['remark-lint-ordered-list-marker-value', 'one']
+            ['remark-lint-ordered-list-marker-value', 'ordered']
           ]
         }
       };
-
   return new Promise((resolve, reject) => {
-    return engine(
+    return unifiedEngine(
       {
         ...configurationSource,
         cwd: sourcePath,
@@ -71,14 +77,19 @@ export default function run(
         files: [...files],
         ignoreName: '.remarkignore',
         out: false,
-        pluginPrefix: 'remark',
         processor: remark(),
         quiet: true,
-        reporter: (results: ReadonlyArray<VFile<Results>>) =>
-          resolve(getCodacyIssues(results)),
+        reporter: (vFiles: ReadonlyArray<VFile>, _: Settings) => {
+          resolve(getCodacyIssues(vFiles));
+          return '';
+        },
         silentlyIgnore: true
       },
-      (error, code, context) => {
+      (
+        error: Error | null,
+        code: 0 | 1,
+        context: unifiedEngine.CallbackContext
+      ) => {
         const analysisFailure = callback(error, code, context);
         if (analysisFailure) {
           return reject(analysisFailure);
@@ -108,9 +119,9 @@ function onError(
   context: object | undefined
 ): AnalysisFailure {
   const message = `Error running processor
-  
+
   ${error.toString()}
-  
+
   code: ${code}
   context: ${context}`;
 
@@ -118,23 +129,33 @@ function onError(
 }
 
 function getCodacyIssues(
-  results: ReadonlyArray<VFile<Results>>
-): ReadonlyArray<CodacyIssue> {
-  const fileCodacyIssues = results.map((fileResults: VFile<Results>) => {
+  results: ReadonlyArray<VFile>
+): ReadonlyArray<CodacyIssue | FileError> {
+  const fileCodacyIssues = results.map((fileResults: VFile) => {
     const { path, messages } = fileResults;
+    if (path === undefined) {
+      throw Error('path must be defined');
+    }
     return messages.map((message: VFileMessage) =>
       getCodacyIssue(path, message)
     );
   });
 
-  return Array<CodacyIssue>().concat(...fileCodacyIssues);
+  return Array<CodacyIssue | FileError>().concat(...fileCodacyIssues);
 }
 
-function getCodacyIssue(path: string, msg: VFileMessage): CodacyIssue {
-  return {
-    file: path,
-    line: msg.location.start.line || msg.line || 1,
-    message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
-    patternId: `${msg.source}-${msg.ruleId}`
-  };
+function getCodacyIssue(
+  path: string,
+  msg: VFileMessage
+): CodacyIssue | FileError {
+  if (msg.fatal) {
+    return { file: path, message: msg.reason };
+  } else {
+    return {
+      file: path,
+      line: msg.location.start.line || msg.line || 1,
+      message: `${msg.ruleId ? `[${msg.ruleId}] ` : ''}${msg.reason}`,
+      patternId: `${msg.source}-${msg.ruleId}`
+    };
+  }
 }

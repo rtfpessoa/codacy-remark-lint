@@ -1,56 +1,68 @@
-# https://circleci.com/docs/2.0/language-javascript/
-version: 2
+version: 2.1
+
+orbs:
+  codacy: codacy/base@10.8.0
+  codacy_plugins_test: codacy/plugins-test@1.1.1
+
 jobs:
-  "node-8":
+  build_and_test:
     docker:
-      - image: circleci/node:8
+      - image: cimg/node:current
     working_directory: ~/workdir
     steps:
-      - checkout
-      # Download and cache dependencies
+      - attach_workspace:
+          at: ~/workdir
       - restore_cache:
+          name: Restore Yarn Package Cache
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-      - run: yarn
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
       - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn run test
-      - run: yarn run cov:send
-
-  "node-latest":
-    docker:
-      - image: circleci/node:latest
-    working_directory: ~/workdir
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      - run: yarn
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn run test
-
-  "docker":
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - checkout
-      - run: npm run docker:build
-      - run: npm run docker:login
-      - run: npm run docker:push
+            - ~/.cache/yarn
+      - run:
+          name: Build
+          command: yarn run build
+      - run:
+          name: Test
+          command: yarn run test
 
 workflows:
   version: 2
-  build:
+  compile_test_deploy:
     jobs:
-      - "node-8"
-      - "node-latest"
-      - "docker"
+      - codacy/checkout_and_version
+      - build_and_test:
+          name: build_and_test_latest
+          requires:
+            - codacy/checkout_and_version
+      - codacy/shell:
+          name: publish_docker_local
+          cmd: |
+            docker build --no-cache -t $CIRCLE_PROJECT_REPONAME:latest .
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+          persist_to_workspace: true
+          requires:
+            - codacy/checkout_and_version
+      - codacy_plugins_test/run:
+          name: plugins_test
+          run_multiple_tests: true
+          requires:
+            - publish_docker_local
+      - codacy/publish_docker:
+          context: CodacyDocker
+          requires:
+            - plugins_test
+          filters:
+            branches:
+              only:
+                - master
+      - codacy/tag_version:
+          name: tag_version
+          context: CodacyAWS
+          requires:
+            - codacy/publish_docker

@@ -20,7 +20,7 @@ interface CodacyParameter {
 
 interface CodacyPattern {
   readonly patternId: string;
-  readonly parameters?: ReadonlyArray<CodacyParameter>;
+  readonly parameters: ReadonlyArray<CodacyParameter>;
 }
 
 interface CodacyTool {
@@ -68,7 +68,6 @@ function parseCodacyConfiguration(
     // tslint:disable-next-line:no-expression-statement
     process.stderr.write(`${err}\n`);
     process.exit(50);
-    return;
   }
 }
 
@@ -81,11 +80,10 @@ function getPluginsToExecute(
     );
 
     if (toolPatterns && toolPatterns.patterns) {
-      return toolPatterns.patterns.map(
-        (pattern: CodacyPattern) =>
-          pattern.parameters && pattern.parameters.length === 1
-            ? [pattern.patternId, pattern.parameters[0].value]
-            : [pattern.patternId]
+      return toolPatterns.patterns.map((pattern: CodacyPattern) =>
+        pattern.parameters && pattern.parameters.length === 1
+          ? [pattern.patternId, pattern.parameters[0].value]
+          : [pattern.patternId]
       );
     }
   }

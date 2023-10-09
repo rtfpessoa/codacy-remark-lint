@@ -1,41 +1,57 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
-import allRules from './docs/documentation-builder';
+import {
+  getAllRules,
+  remarkPresetLintRecommended
+} from './docs/documentation-builder';
 import { Rule } from './docs/util/rule';
 
 /* tslint:disable:no-expression-statement*/
+const defaults = remarkPresetLintRecommended();
 
 const root = path.resolve(__dirname);
 const docsPath = path.resolve(`${root}/../../docs`);
 const descripionPath = path.resolve(`${docsPath}/description`);
 
-if (!fs.existsSync(docsPath)) {
-  fs.mkdirSync(docsPath);
+const allRules = getAllRules();
+
+if (fs.existsSync(docsPath)) {
+  fs.removeSync(descripionPath);
 }
 
-if (!fs.existsSync(descripionPath)) {
-  fs.mkdirSync(descripionPath);
-}
+fs.mkdirSync(descripionPath);
 
 fs.writeFileSync(
   `${docsPath}/patterns.json`,
-  JSON.stringify(getPatterns(allRules))
+  JSON.stringify(getPatterns(allRules, defaults), null, 2)
 );
 
 fs.writeFileSync(
   `${descripionPath}/description.json`,
-  JSON.stringify(getDescriptions(allRules))
+  JSON.stringify(getDescriptions(allRules), null, 2)
 );
 
 allRules.forEach((rule: Rule) => {
   fs.writeFileSync(`${descripionPath}/${rule.ruleId}.md`, rule.description);
 });
 
+fs.writeFileSync(
+  `${docsPath}/tool-description.md`,
+  `remark-lint is a markdown code style linter.
+  Another linter? Yes.
+  Ensuring the markdown you (and contributors) write is of great quality will provide better rendering
+  in all the different markdown parsers, and makes sure less refactoring is needed afterwards.
+  remark-lint is built on remark, a powerful markdown processor powered by plugins.`
+);
+
 /* tslint:enable:no-expression-statement*/
 
-function getPatterns(rules: ReadonlyArray<Rule>): object {
+function getPatterns(
+  rules: ReadonlyArray<Rule>,
+  enabledByDefaultPatterns: ReadonlyArray<string>
+): object {
   const patterns = rules.map((rule: Rule) => {
     const parameters = rule.defaultValue
       ? {
@@ -51,16 +67,18 @@ function getPatterns(rules: ReadonlyArray<Rule>): object {
     return {
       ...parameters,
       category: 'CodeStyle',
+      enabled: enabledByDefaultPatterns.includes(rule.ruleId),
       level: 'Warning',
       patternId: rule.ruleId
     };
   });
 
-  return {
-    name: 'remark-lint',
-    patterns,
-    version: '6.0.2'
-  };
+  // tslint:disable-next-line:no-unsafe-any
+  const toolVersion = require('../../package.json').dependencies[
+    'remark-lint'
+  ].replace('^', '');
+
+  return { name: 'remark-lint', patterns, version: toolVersion };
 }
 
 function getDescriptions(rules: ReadonlyArray<Rule>): ReadonlyArray<object> {

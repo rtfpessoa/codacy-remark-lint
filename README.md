@@ -1,9 +1,9 @@
 # codacy-remark-lint
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b2b737cd8a4745b30112a91a1db4e0)](https://www.codacy.com/app/rtfpessoa/codacy-remark-lint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rtfpessoa/codacy-remark-lint&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/59b2b737cd8a4745b30112a91a1db4e0)](https://www.codacy.com/app/rtfpessoa/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=rtfpessoa/codacy-remark-lint&utm_campaign=Badge_Coverage)
-[![CircleCI](https://circleci.com/gh/rtfpessoa/codacy-remark-lint.svg?style=svg)](https://circleci.com/gh/rtfpessoa/codacy-remark-lint)
-[![Docker Version](https://images.microbadger.com/badges/version/rtfpessoa/codacy-remark-lint.svg)](https://microbadger.com/images/rtfpessoa/codacy-remark-lint "Get your own version badge on microbadger.com")
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/gh/codacy/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-remark-lint&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/gh/codacy/codacy-remark-lint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-remark-lint&utm_campaign=Badge_Coverage)
+[![CircleCI](https://circleci.com/gh/codacy/codacy-remark-lint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-remark-lint)
+[![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-remark-lint.svg)](https://microbadger.com/images/codacy/codacy-remark-lint "Get your own version badge on microbadger.com")
 
 Docker engine to allow Codacy to have [remark-lint](https://github.com/remarkjs/remark-lint) support.
 
@@ -12,7 +12,7 @@ Docker engine to allow Codacy to have [remark-lint](https://github.com/remarkjs/
 You can create the docker by doing:
 
 ```sh
-yarn run docker
+yarn run docker:build
 ```
 
 The docker is ran with the following command:
@@ -36,6 +36,24 @@ You can follow the instructions there to make sure your tool is working as expec
 yarn run docs:gen
 ```
 
+## Limitations
+
+- `remark-validate-links` is only supported with `repository: false`, details
+on the [official documentation](https://github.com/remarkjs/remark-validate-links/tree/main#configuration):
+
+```json
+{
+  "plugins": [
+    [
+      "remark-validate-links",
+      {
+        "repository": false
+      }
+    ]
+  ]
+}
+```
+
 ## What is Codacy
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool
@@ -45,11 +63,11 @@ and helps you save time in Code Reviews.
 
 ### Among Codacy's features
 
-* Identify new Static Analysis issues
-* Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
-* Auto-comments on Commits and Pull Requests
-* Integrations with Slack, HipChat, Jira, YouTrack
-* Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
+- Identify new Static Analysis issues
+- Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
+- Auto-comments on Commits and Pull Requests
+- Integrations with Slack, HipChat, Jira, YouTrack
+- Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
 
 Codacy also helps keep track of Code Coverage, Code Duplication,
 and Code Complexity.

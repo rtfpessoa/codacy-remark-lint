@@ -1,18 +1,25 @@
-FROM node:8-alpine AS build
+ARG NODE_IMAGE_VERSION=20-alpine
+
+FROM node:$NODE_IMAGE_VERSION as build
+
+LABEL maintainer="Codacy <code@codacy.com>"
 
 ENV NODE_PATH /usr/lib/node_modules
 
-COPY . /workdir
-
 WORKDIR /workdir
 
-RUN \
-    yarn && \
-    yarn run build
+COPY package.json .
+COPY yarn.lock .
 
-FROM node:8-alpine
+RUN yarn
 
-LABEL MAITAINER="Rodrigo Fernandes <rodrigo@codacy.com>"
+COPY . .
+
+RUN yarn run build
+
+FROM node:$NODE_IMAGE_VERSION
+
+LABEL maintainer="Codacy <code@codacy.com>"
 
 ENV NODE_PATH /app/node_modules
 ENV PATH /app/node_modules/.bin:$PATH
@@ -23,6 +30,7 @@ COPY --from=build --chown=docker:docker /workdir/build/main /app/build/main
 COPY --from=build --chown=docker:docker /workdir/package.json /app/package.json
 COPY --from=build --chown=docker:docker /workdir/yarn.lock /app/yarn.lock
 COPY --from=build --chown=docker:docker /workdir/docs /docs
+COPY --from=build --chown=docker:docker /workdir/docs-tests /docs/tests
 
 WORKDIR /app
 
@@ -37,4 +45,4 @@ WORKDIR /src
 USER docker
 
 ENTRYPOINT ["codacy-remark-lint"]
-CMD []  
+CMD []
